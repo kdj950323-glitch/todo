@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-left">
+        <h1 class="title">My Tasks</h1>
+        <span class="subtitle" id="current-date"></span>
+      </div>
+      <button class="theme-btn" id="theme-toggle" title="테마 전환">◐</button>
+    </header>
+
+    <main class="main">
+      <form class="add-form" id="add-form">
+        <div class="input-row">
+          <input
+            type="text"
+            class="todo-input"
+            id="todo-input"
+            placeholder="새 할일을 입력하세요..."
+            autocomplete="off"
+            maxlength="200"
+          >
+          <button type="submit" class="add-btn" title="추가">+</button>
+        </div>
+        <div class="meta-row">
+          <select class="meta-select" id="priority-select">
+            <option value="none">우선순위 없음</option>
+            <option value="low">낮음</option>
+            <option value="medium">보통</option>
+            <option value="high">높음</option>
+          </select>
+          <input type="date" class="meta-select date-input" id="due-date-input" title="마감일">
+        </div>
+      </form>
+
+      <div class="stats-bar">
+        <span class="stats-text" id="stats-text"></span>
+        <button class="clear-btn" id="clear-completed">완료 항목 지우기</button>
+      </div>
+
+      <div class="filter-tabs" role="tablist">
+        <button class="filter-tab active" data-filter="all" role="tab">전체</button>
+        <button class="filter-tab" data-filter="active" role="tab">진행중</button>
+        <button class="filter-tab" data-filter="completed" role="tab">완료</button>
+      </div>
+
+      <ul class="todo-list" id="todo-list"></ul>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <div class="empty-icon">✓</div>
+        <p class="empty-text">할일이 없습니다</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
