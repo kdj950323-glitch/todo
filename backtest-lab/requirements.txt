@@ -1,3 +1,4 @@
+setuptools<81  # pkg_resources (needed by pykrx) was removed starting setuptools 81
 streamlit>=1.38
 pandas>=2.2
 numpy>=1.26
