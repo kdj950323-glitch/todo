@@ -1,35 +1,35 @@
-"""매수/매도 결과(LumpSumResult)를 규칙 기반 템플릿 문장으로 요약. LLM 미사용."""
+"""물타기 계산 결과(AveragingResult)를 규칙 기반 템플릿 문장으로 요약. LLM 미사용."""
 from __future__ import annotations
 
-from backtest.runner import LumpSumResult
+from backtest.runner import AveragingResult
 
 
-def _cagr_comment(cagr_pct: float | None) -> str:
-    if cagr_pct is None:
-        return "보유 기간이 너무 짧아 연환산수익률은 계산하지 않았습니다."
-    if cagr_pct >= 15:
-        return f"연환산수익률(CAGR)은 {cagr_pct:.1f}%로 높은 편입니다."
-    if cagr_pct >= 0:
-        return f"연환산수익률(CAGR)은 {cagr_pct:.1f}%입니다."
-    return f"연환산수익률(CAGR)은 {cagr_pct:.1f}%로 손실 구간입니다."
-
-
-def build_report(result: LumpSumResult) -> list[str]:
+def build_report(result: AveragingResult) -> list[str]:
     """텍스트 문단 리스트 반환 (각 문단은 계산된 수치를 고정 템플릿에 대입한 결과)."""
+    direction = "낮아졌습니다" if result.avg_price_change_pct < 0 else "높아졌습니다"
     lines = [
-        f"매수가 {result.buy_price:,.2f} → 매도가 {result.sell_price:,.2f}로, "
-        f"수익률은 {result.return_pct:+.2f}%입니다.",
-        f"투자금 {result.invested_amount:,.0f} 기준 손익은 {result.profit_loss:+,.0f}이며, "
-        f"평가금액은 {result.final_value:,.0f}입니다.",
-        f"보유 기간은 {result.holding_days}일({result.holding_years:.2f}년)입니다.",
-        _cagr_comment(result.cagr_pct),
+        f"기존 {result.existing_qty:,.4f}주(평단 {result.existing_avg_price:,.2f}) + "
+        f"추가 매수 {result.add_qty:,.4f}주(단가 {result.add_price:,.2f}, {result.add_amount:,.0f}) "
+        f"= 총 {result.total_qty:,.4f}주.",
+        f"평균 매수단가는 {result.existing_avg_price:,.2f} → {result.new_avg_price:,.2f}로 "
+        f"{abs(result.avg_price_change_pct):.2f}% {direction}.",
+        f"총 투자원금은 {result.total_invested:,.0f}입니다.",
     ]
-    if result.buy_snap.adjusted:
+
+    if result.current_price is not None:
         lines.append(
-            f"매수일이 휴장일이라 다음 거래일({result.buy_snap.resolved.date()})에 체결된 것으로 계산했습니다."
+            f"현재가 {result.current_price:,.2f} 기준 평가금액은 {result.valuation:,.0f}이며, "
+            f"손익은 {result.profit_loss:+,.0f}({result.return_pct:+.2f}%)입니다."
         )
-    if result.sell_snap.adjusted:
+        diff = result.return_pct - result.return_pct_without_averaging
+        comp = "개선" if diff > 0 else "악화" if diff < 0 else "동일"
         lines.append(
-            f"매도일이 휴장일이라 직전 거래일({result.sell_snap.resolved.date()})의 종가로 계산했습니다."
+            f"물타기를 하지 않았다면 손익률은 {result.return_pct_without_averaging:+.2f}%였을 것이며, "
+            f"물타기 이후 손익률은 {result.return_pct:+.2f}%로 {abs(diff):.2f}%p {comp}되었습니다."
         )
+        if result.breakeven_gap_pct > 0:
+            lines.append(f"새 평균단가(손익분기)까지는 {result.breakeven_gap_pct:.2f}% 추가 상승이 필요합니다.")
+        else:
+            lines.append(f"현재가가 이미 새 평균단가보다 {abs(result.breakeven_gap_pct):.2f}% 높아 평가이익 구간입니다.")
+
     return lines
