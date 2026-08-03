@@ -19,6 +19,36 @@ DEFAULT_KR_TICKER = "005930"  # 삼성전자
 DEFAULT_US_TICKER = "AAPL"
 DEFAULT_CRYPTO_TICKER = "BTC-USD"
 
+# 인기 국내 종목/ETF (퀵 선택용). 자유 입력도 가능.
+POPULAR_KR_TICKERS = {
+    "005930": "삼성전자",
+    "000660": "SK하이닉스",
+    "035420": "NAVER",
+    "035720": "카카오",
+    "005380": "현대차",
+    "000270": "기아",
+    "051910": "LG화학",
+    "006400": "삼성SDI",
+    "068270": "셀트리온",
+    "105560": "KB금융",
+    "069500": "KODEX 200 (ETF)",
+    "091160": "KODEX 반도체 (ETF)",
+}
+
+# 인기 미국 종목/ETF (yfinance 표기, 퀵 선택용). 자유 입력도 가능.
+POPULAR_US_TICKERS = {
+    "AAPL": "애플",
+    "MSFT": "마이크로소프트",
+    "GOOGL": "알파벳(구글)",
+    "AMZN": "아마존",
+    "NVDA": "엔비디아",
+    "TSLA": "테슬라",
+    "META": "메타",
+    "SPY": "S&P500 ETF",
+    "QQQ": "나스닥100 ETF",
+    "VOO": "S&P500 ETF (뱅가드)",
+}
+
 # 인기 코인 티커 (yfinance 표기, 퀵 선택용). 자유 입력도 가능.
 POPULAR_CRYPTO_TICKERS = {
     "BTC-USD": "비트코인",

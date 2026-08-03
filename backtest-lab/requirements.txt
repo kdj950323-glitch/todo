@@ -8,5 +8,4 @@ pykrx>=1.0.51
 finance-datareader>=0.9.96
 yfinance>=0.2.54
 curl_cffi>=0.15
-backtesting>=0.3.3
 pytest>=8.3
