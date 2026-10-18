@@ -1,1 +1,1 @@
-{"date":"2026-10-16","state":"판정보류","trigger_date":null,"break_date":null,"break_day_count":null,"spy_2w":null,"qqq_2w":null,"spy_ig60":null,"qqq_ig60":null,"vix":null,"note":"일봉 수집 불가(Yahoo 차단)"}
+{"date":"2026-10-16","state":"평시","trigger_date":null,"break_date":null,"break_day_count":null,"spy_2w":-2.03,"qqq_2w":-6.56,"iwm_2w":-4.57,"spy_ig60":99.7,"qqq_ig60":98.4,"iwm_ig60":93.3,"vix":19.99,"vix_chg_pct":21.4,"tnx":5.098,"tlt":80.05,"tlt_ig60":98.7,"note":"2026-10-18 로컬(Yahoo) 소급 계산, W42 프레임워크 2차. 강의 기준(2주 -15%/-10%) 미해당, 참고값 QQQ 약한 조정(-5% 초과)"}
