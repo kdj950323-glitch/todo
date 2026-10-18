@@ -1,11 +1,15 @@
-id: 2026-W42-framework
-요청: 지난주(2026-10-12 ~ 2026-10-16) 기록에 가위남 강의 프레임워크(ADDENDUM I·J·K)를 적용한 분석을 덧붙인다.
-대상 노션 페이지(기존 내용은 수정·삭제하지 말고 맨 아래에 덧붙임):
-- 주간: 2026년 10월 3주차 주간 결산 — https://app.notion.com/p/3fbb490d444d8136a147fb4cddcb5ccb (id 3fbb490d-444d-8136-a147-fb4cddcb5ccb)
-- 금요일 일간: 2026-10-16 (금) 일간 분석 — https://app.notion.com/p/3fbb490d444d815d89c4d325ddfcfd0e (id 3fbb490d-444d-815d-89c4-d325ddfcfd0e)
-처리 방법:
-1. 시장 국면 판정(섹션 I)을 **지난주 5거래일 각각**에 대해 소급 계산한다. Yahoo 일봉(range=1y)으로 SPY·QQQ·IWM·^VIX 종가 이력을 받아 10/12·13·14·15·16 각 날짜 기준의 2주 낙폭, 이격도60, 상태 전이(평시→낙폭과대구간→바겐세일 여부, 브레이크 신호 여부)를 표로 만든다. 마지막 날(10/16) 값으로 `market-log/state/regime.json` 을 초기화한다.
-2. ADR20·엔벨로프 종목 수(섹션 J)는 과거 값을 소급할 수 없으므로 **10/16 종가 기준 현재값만** 구한다(Finviz `ta_sma20_pb20`/`pa20` 개수, 홈의 Advancing/Declining). breadth.csv 에 10/16 행으로 기록하고 "누적 시작(1/20일)"로 표시한다. 국면 조건(env_lower ≥ 10 또는 낙폭과대/바겐세일)이 충족되면 후보 스캔(섹션 J)도 실행한다.
-3. 자산배분·금리·분기 전략(섹션 K)은 10/16 기준으로 작성한다(다음 쿼드러플 위칭 2026-12-18 D-day 포함).
-4. 위 결과를 "강의 프레임워크 보강 (10/12~10/16, 소급 분석)" 블록으로 두 노션 페이지 맨 아래에 덧붙인다(주간 페이지에는 5일 소급 표 포함, 일간 페이지에는 10/16 기준 요약). 데이터 한계(소급 불가 항목)와 강의 수치 vs 참고값(미검증)을 명시한다. 매수·매도 지시 금지, 용어는 쉽게 풀어쓴다.
-5. GitHub 백업: `market-log/weekly/2026-W42.md` 와 `market-log/daily/2026-10-16.md` 맨 아래에도 같은 블록을 추가한다.
+id: 2026-W42-framework-2
+요청: 도메인 허용 설정을 바꾼 뒤의 재시도. (이전 id 2026-W42-framework 는 Yahoo·stooq·investing.com 차단으로 부분 처리됨)
+0. **먼저 접속 테스트**를 하고 결과 표(도메인 / HTTP 코드 / 성공 여부)를 최종 보고와 수집 로그에 남긴다. 각 도메인을 curl(-sSL -A 'Mozilla/5.0 ...' -o /dev/null -w '%{http_code}')과 WebFetch 두 방식으로 모두 시도한다:
+   - https://www.investing.com/earnings-calendar/
+   - https://www.investing.com/economic-calendar/
+   - https://query1.finance.yahoo.com/v8/finance/chart/SPY?range=1mo&interval=1d
+   - https://query2.finance.yahoo.com/v8/finance/chart/SPY?range=1mo&interval=1d
+   - https://stooq.com/q/d/l/?s=spy.us&i=d
+   - https://finviz.com/
+   차단된 도메인은 그 사실(코드, 에러 메시지)과 함께 최종 보고에 명시한다. 차단되면 그 도메인에 의존하는 항목은 추측하지 않고 "수집 불가"로 두며, 가능한 대체 경로(WebFetch 또는 다른 무료 소스)를 한 번씩 시도해 결과를 적는다.
+1. 가능한 만큼 이전 부분 처리(노션 주간 페이지 id 3fbb490d-444d-8136-a147-fb4cddcb5ccb, 금요일 일간 페이지 id 3fbb490d-444d-815d-89c4-d325ddfcfd0e 맨 아래의 "강의 프레임워크 보강 ... 부분 수집" 블록)를 **보완**한다. 기존 블록은 지우지 말고 맨 아래에 "보완(2차)" 블록을 새로 덧붙인다:
+   - Yahoo 일봉이 되면: 섹션 I 를 10/12~10/16 각 날짜에 대해 소급 계산한 표(2주 낙폭, 이격도60, VIX, ^TNX, TLT, 상태 전이, 브레이크 신호 여부)와 ADDENDUM J 후보 스캔(엔벨로프 하단 100개 풀, 시총 상위 30종목 대상)을 수행하고 `market-log/state/regime.json` 을 갱신한다.
+   - investing.com 이 되면: ADDENDUM H 대로 노션 "실적 발표 캘린더" DB(https://app.notion.com/p/337d79940ea84344b540cfd5e42d9ce3)의 이번 달(10월) 일정을 전체 갱신하고(발표 완료 건의 실제치·결과 채우기 포함), `market-log/earnings/2026-10.md` 도 갱신한다.
+2. 두 노션 페이지 맨 아래 보완 블록과 GitHub 백업 파일에 접속 테스트 결과 표를 포함한다.
+3. 끝나면 `market-log/state/rerun_done.txt` 에 위 id 를 추가하고 커밋·푸시한다.
