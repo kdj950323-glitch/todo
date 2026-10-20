@@ -130,3 +130,10 @@
 
 **N-3. 적용 범위**: 이 변경은 일간 기록에 적용한다. 주간 결산은 그 주 일간 기록의 보강 내용을 그대로 활용한다. 관심종목·바닥 후보 루틴의 네이버 사용(어닝콜 재시도 등)은 EARNINGS_CONTEXT.md 규칙대로 유지한다.
 
+## O. 일간 HTML 리포트 저장 (Notion과 별개, 블로그 업로드용 — 2026-10-20 추가)
+- 일간 기록(마크다운 `market-log/daily/YYYY-MM-DD.md`)을 쓴 뒤, 같은 실행에서 **스크립트로** HTML 을 만들어 `market-log/html/YYYY-MM-DD.html` 로 저장한다(모델이 HTML 을 직접 타이핑하지 않는다 — 옮겨 쓰다 숫자가 틀릴 수 있으므로 반드시 스크립트 사용):
+  `python3 market-log/tools/make_email.py market-log/daily/YYYY-MM-DD.md market-log/html/YYYY-MM-DD.html --fragment`
+- `--fragment` 출력은 `<html>/<head>/<style>` 없이 인라인 스타일만 쓴 블록이라 블로그(티스토리 HTML 모드 등)에 그대로 붙여넣을 수 있다. 스크립트가 실패하면 수집 로그에 사유를 적고 건너뛴다(기록 전체를 실패로 보지 않는다).
+- 익일 네이버 뉴스 보강(섹션 N)으로 마크다운이 갱신되면 같은 날짜의 HTML 도 같은 명령으로 다시 만들어 덮어쓴다.
+- 오늘 기록과 같은 커밋에 `git add market-log/html` 을 포함한다. 이 폴더는 Notion 과 독립적이며 Notion 쓰기가 실패해도 만든다.
+
