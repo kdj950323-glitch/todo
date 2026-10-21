@@ -1,0 +1,71 @@
+ticker,name_ko,query,aliases,source
+NVDA,엔비디아,엔비디아 주가,엔비디아;NVIDIA,both
+AAPL,애플,애플 주가,애플;Apple,universe
+MSFT,마이크로소프트,마이크로소프트 주가,마이크로소프트;MS;Microsoft,both
+AVGO,브로드컴,브로드컴 주가,브로드컴;Broadcom,both
+MU,마이크론,마이크론 주가,마이크론;Micron,both
+GOOGL,알파벳,알파벳 구글 주가,알파벳;구글;Alphabet,both
+META,메타,메타 플랫폼스 주가,메타 플랫폼;메타플랫폼;페이스북;Meta Platforms,both
+NFLX,넷플릭스,넷플릭스 주가,넷플릭스;Netflix,universe
+DIS,디즈니,디즈니 주가,디즈니;Disney,universe
+VZ,버라이즌,버라이즌 주가,버라이즌;Verizon,universe
+AMZN,아마존,아마존 주가,아마존;Amazon,both
+TSLA,테슬라,테슬라 주가,테슬라;Tesla,both
+HD,홈디포,홈디포 주가,홈디포;Home Depot,universe
+MCD,맥도날드,맥도날드 주가,맥도날드;McDonald,universe
+TJX,TJX,TJX 주가,TJX,universe
+WMT,월마트,월마트 주가,월마트;Walmart,universe
+COST,코스트코,코스트코 주가,코스트코;Costco,universe
+KO,코카콜라,코카콜라 주가,코카콜라;Coca-Cola,universe
+PG,P&G,P&G 프록터앤갬블 주가,P&G;프록터앤갬블;Procter,universe
+PM,필립모리스,필립모리스 주가,필립모리스;Philip Morris,universe
+LLY,일라이릴리,일라이릴리 주가,일라이릴리;릴리;Eli Lilly,universe
+JNJ,존슨앤존슨,존슨앤존슨 주가,존슨앤존슨;J&J,universe
+ABBV,애브비,애브비 주가,애브비;AbbVie,universe
+UNH,유나이티드헬스,유나이티드헬스 주가,유나이티드헬스;UnitedHealth,universe
+MRK,머크,머크 주가,머크;Merck,universe
+BRK-B,버크셔B,버크셔해서웨이 주가,버크셔;Berkshire,universe
+JPM,JP모건,JP모건 주가,JP모건;JPMorgan;제이피모건,universe
+V,비자,비자 카드 주가,비자카드;비자 카드;Visa,universe
+MA,마스터카드,마스터카드 주가,마스터카드;Mastercard,universe
+BAC,뱅크오브아메리카,뱅크오브아메리카 주가,뱅크오브아메리카;BofA;Bank of America,both
+SPCX,스페이스X,스페이스X 주가,스페이스X;SpaceX,both
+CAT,캐터필러,캐터필러 주가,캐터필러;Caterpillar,universe
+GE,GE에어로스페이스,GE에어로스페이스 주가,GE에어로스페이스;GE Aerospace,universe
+RTX,RTX,RTX 레이시온 주가,RTX;레이시온,both
+GEV,GE버노바,GE버노바 주가,GE버노바;GE 버노바;GE Vernova,universe
+XOM,엑슨모빌,엑슨모빌 주가,엑슨모빌;Exxon,universe
+CVX,셰브론,셰브론 주가,셰브론;Chevron,universe
+COP,코노코필립스,코노코필립스 주가,코노코필립스;ConocoPhillips,universe
+MPC,마라톤페트롤리엄,마라톤페트롤리엄 주가,마라톤페트롤리엄;Marathon Petroleum,universe
+VLO,발레로,발레로 에너지 주가,발레로;Valero,universe
+SCCO,서던코퍼,서던코퍼 주가,서던코퍼;Southern Copper,universe
+NEM,뉴몬트,뉴몬트 주가,뉴몬트;Newmont,universe
+FCX,프리포트맥모란,프리포트맥모란 주가,프리포트;Freeport,universe
+SHW,셔윈윌리엄스,셔윈윌리엄스 주가,셔윈윌리엄스;Sherwin,universe
+ECL,에코랩,에코랩 주가,에코랩;Ecolab,universe
+NEE,넥스트에라,넥스트에라 에너지 주가,넥스트에라;NextEra,universe
+SO,서던컴퍼니,서던컴퍼니 주가,서던컴퍼니;Southern Company,universe
+DUK,듀크에너지,듀크에너지 주가,듀크에너지;Duke Energy,universe
+CEG,컨스텔레이션,컨스텔레이션 에너지 주가,컨스텔레이션;Constellation Energy,universe
+AEP,AEP,아메리칸일렉트릭파워 주가,아메리칸일렉트릭파워;American Electric Power,universe
+WELL,웰타워,웰타워 주가,웰타워;Welltower,universe
+PLD,프롤로지스,프롤로지스 주가,프롤로지스;Prologis,universe
+EQIX,에퀴닉스,에퀴닉스 주가,에퀴닉스;Equinix,universe
+AMT,아메리칸타워,아메리칸타워 주가,아메리칸타워;American Tower,universe
+SPG,사이먼프로퍼티,사이먼프로퍼티 주가,사이먼프로퍼티;Simon Property,universe
+AMD,AMD,AMD 주가,AMD,watchlist
+PLTR,팔란티어,팔란티어 주가,팔란티어;Palantir,watchlist
+TSM,TSMC,TSMC 주가,TSMC;대만 반도체;타이완세미컨덕터,watchlist
+INTC,인텔,인텔 주가,인텔;Intel,watchlist
+SNDK,샌디스크,샌디스크 주가,샌디스크;SanDisk,watchlist
+MRVL,마벨,마벨 테크놀로지 주가,마벨;Marvell,watchlist
+DELL,델,델 테크놀로지스 주가,델 테크;델테크;Dell Technologies,watchlist
+NOC,노스롭그루먼,노스롭그루먼 주가,노스롭그루먼;노스럽;Northrop,watchlist
+GD,제너럴다이내믹스,제너럴다이내믹스 주가,제너럴다이내믹스;General Dynamics,watchlist
+LMT,록히드마틴,록히드마틴 주가,록히드마틴;Lockheed,watchlist
+GS,골드만삭스,골드만삭스 주가,골드만삭스;골드만;Goldman,watchlist
+C,씨티그룹,씨티그룹 주가,씨티그룹;씨티;Citigroup,watchlist
+WFC,웰스파고,웰스파고 주가,웰스파고;Wells Fargo,watchlist
+BLK,블랙록,블랙록 주가,블랙록;BlackRock,watchlist
+FAS,FAS 금융 3배,FAS 금융 레버리지 ETF,FAS;디렉시온 금융,watchlist

@@ -1,0 +1,29 @@
+<callout icon="📰" color="gray_bg">
+	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-10-21, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
+	전체 14건(🟢 호재 6 · 🔴 악재 3 · 🟡 불확실 3 · ⚪ 중립 2), 오늘 새로 추가 14건, 이번 정리로 삭제 0건.
+</callout>
+## 오늘 새로 추가된 뉴스
+오늘 처음 기록해 아래 전체 표와 같습니다.
+## 최근 14일 전체 (최신순)
+<table header-row="true">
+<tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
+<tr><td>10-21 21:32</td><td>SPCX 스페이스X</td><td>🟡 불확실</td><td>실적</td><td>[스페이스X(SPCX) 매출 161% '껑충'...196억 달러 투자, 돈 될까?](http://coinreaders.com/264467)</td><td>coinreaders.com</td><td>3분기 매출이 161% 늘었지만 196억 달러 규모 투자(설비투자)와 잉여현금흐름 부담이 쟁점이라는 분석.</td></tr>
+<tr><td>10-21 20:36</td><td>MU 마이크론</td><td>⚪ 중립</td><td>투자의견</td><td>[마이크론, 주가 17% 급락에도 월가 "120% 상승 가능"…목표가 2,000달러 유...](http://coinreaders.com/264452)</td><td>coinreaders.com</td><td>주가가 17% 급락한 뒤에도 일부 월가 분석가가 목표가 2,000달러를 제시(기사 기준 상승 여력 약 119%). 거시 환경 변화와 경쟁 심화로 조정을 받았다고 설명.</td></tr>
+<tr><td>10-21 19:40</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>실적</td><td>[스페이스X 주가 하루 새 9% 급등…머스크가 제시한 '2027년 매출 1조 달...](http://coinreaders.com/264440)</td><td>coinreaders.com</td><td>시장 예상을 웃돈 3분기 실적(매출 2배 가까이 증가, AI 사업 호조)에 시간외 9%대 급등. 머스크는 2027년 매출 1조 달러 가능성을 언급했다는 보도.</td></tr>
+<tr><td>10-21 17:28</td><td>NFLX 넷플릭스</td><td>🔴 악재</td><td>실적·가이던스</td><td>[넷플릭스, 광고 매출 전망 30억→27억달러로 낮췄다](https://www.tokenpost.kr/news/market/425514)</td><td>tokenpost.kr</td><td>3분기 실적은 예상을 웃돌았지만 올해 광고 매출 전망을 30억→27억달러로 낮췄고, 시간외 주가는 약 6% 하락해 52주 최저가(65.10달러)를 밑돌았다는 보도.</td></tr>
+<tr><td>10-21 17:05</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>M&A</td><td>[테슬라·스페이스X 합병 검토 공식화…테슬라 주주 지분 희석 우려](https://www.donga.com/news/Economy/article/all/20261021/134883638/1)</td><td>donga.com</td><td>머스크가 테슬라·스페이스X 합병 검토를 공식화. 주식 교환 방식이 유력하게 거론되며 테슬라 주주 지분 희석 우려가 제기됨(방식은 미공개).</td></tr>
+<tr><td>10-21 14:46</td><td>MU 마이크론</td><td>🟡 불확실</td><td>공급·노사</td><td>[삼전닉스, 마이크론 대만 D램 공장 파업 가능성에 4~5% 급등...타오위안...](http://www.beyondpost.co.kr/view.php?ud=2026102114395963682aaae0046f_30)</td><td>beyondpost.co.kr</td><td>마이크론 대만 타오위안 D램 공장 노조가 파업 찬반투표에서 99% 찬성. 삼성전자·SK하이닉스는 4~5% 반등했다는 보도(마이크론 공급 차질 가능성 관련).</td></tr>
+<tr><td>10-21 12:18</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>투자의견</td><td>[씨티그룹, 스페이스X 목표주가 240달러로 상향 보도](https://www.tokenpost.kr/news/breaking/425365)</td><td>tokenpost.kr</td><td>씨티그룹이 스페이스X 목표주가를 240달러로 상향했다는 보도.</td></tr>
+<tr><td>10-21 08:54</td><td>NFLX 넷플릭스</td><td>🔴 악재</td><td>구조조정</td><td>[넷플릭스, 3년 만에 최저 매출 증가율…직원 1000명 감원](https://www.hankyung.com/article/202610214873i)</td><td>hankyung.com</td><td>매출 증가율이 3년 만에 가장 낮았고 직원 약 1,000명을 감원한다는 보도. 시간외 주가 5.9% 하락.</td></tr>
+<tr><td>10-21 05:52</td><td>NOC 노스롭그루먼</td><td>🟢 호재</td><td>실적</td><td>[(뉴욕증시) 3M·노스롭그루먼 호실적에 다우 529p 급등](https://www.g-enews.com/view.php?ud=202610210547377375e250e8e188_1)</td><td>g-enews.com</td><td>3M과 함께 호실적을 발표해 다우지수 529포인트 급등을 이끈 종목으로 보도(조선·와우티비 기사에 따르면 수주잔고 사상 최대).</td></tr>
+<tr><td>10-21 03:50</td><td>RTX RTX</td><td>🟢 호재</td><td>가이던스</td><td>[RTX, 연간 전망 3분기 연속 상향…수주잔고 3400억달러 사상 최대](https://www.tokenpost.kr/news/market/425144)</td><td>tokenpost.kr</td><td>연간 전망을 3분기 연속 상향하고 수주잔고가 3,400억 달러로 사상 최대라는 보도.</td></tr>
+<tr><td>10-20 14:46</td><td>WFC 웰스파고</td><td>🔴 악재</td><td>업황</td><td>[(미국 특징주) 웰스파고 "美 3분기 어닝 시즌 최악 수준의 출발"](https://www.newspim.com/news/view/20261020000840)</td><td>newspim.com</td><td>웰스파고 보고서가 이번 3분기 어닝 시즌을 "역대 가장 부진한 시작 중 하나"로 평가(EPS가 컨센서스를 0.3% 하회). 은행주는 2008년 이후 가장 긴 주간 하락세라는 보도.</td></tr>
+<tr><td>10-17 16:28</td><td>BRK-B 버크셔B</td><td>⚪ 중립</td><td>투자</td><td>[버크셔, 벤딩스푼스에 3억3000만달러 추가 투자 발표](https://www.tokenpost.kr/news/market/423667)</td><td>tokenpost.kr</td><td>버크셔해서웨이가 벤딩스푼스에 3억3,000만 달러를 추가 투자한다고 발표. 해당 종목 주가는 40%대 급등했다는 보도.</td></tr>
+<tr><td>10-16 13:34</td><td>KO 코카콜라</td><td>🟢 호재</td><td>계약</td><td>[“KFC마저 코카콜라에 뺏겼다”… 입지 좁아지는 펩시](https://biz.chosun.com/international/international_general/2026/10/16/VZBHPPT6NNG2RP5RW6UTATK2FM/?utm_source=naver&utm_medium=original&utm_campaign=biz)</td><td>biz.chosun.com</td><td>KFC가 40년 만에 펩시와 결별하고 내년부터 코카콜라 음료로 교체. 기사 기준 코카콜라 주가는 0.2% 상승.</td></tr>
+<tr><td>10-14 07:00</td><td>V 비자</td><td>🟢 호재</td><td>규제·승인</td><td>[비자카드, 중국시장 승인…유니온페이 독점 깨질까 (클릭 e종목)](https://view.asiae.co.kr/article/2026101316510650679)</td><td>view.asiae.co.kr</td><td>비자가 중국에서 자국 내 은행카드 결제(클리어링) 사업을 시작하기 위한 승인을 받았다는 보도.</td></tr>
+</table>
+## 읽는 법과 한계
+- 기사 후보는 종목명(별칭)이 제목에 있고 실적·수주·소송·규제·목표가·인수합병 등 영향 키워드가 있는 것만 봅니다. 키워드가 없는 기사나 시황 기사 속 단순 언급은 빠질 수 있습니다.
+- 한 줄 요약은 기사 제목·요약(description)에 나온 내용만 근거로 직접 쓴 것입니다. 사실 확인이 필요하면 기사 원문을 열어 보세요.
+- 미국 종목은 한국어 기사만 검색하므로 현지 속보보다 늦을 수 있습니다. 한국 아침에 전날 밤~새벽 기사가 모입니다.
+- 발행일이 14일 지난 기사는 이 페이지와 `market-log/state/news_log.csv` 에서 삭제됩니다(GitHub 커밋 이력에는 남을 수 있음).
