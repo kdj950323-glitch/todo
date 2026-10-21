@@ -38,3 +38,12 @@
 ## 6. 관심종목 루틴 공통 의무 (2026-10-20 추가)
 - **관심종목 데일리 체크 루틴**은 매 실행 관심종목 전체의 대상 거래일 종가를 `market-log/state/watchlist_prices.csv`(열: date,ticker,close)에 한 줄씩 추가한다(같은 date+ticker 중복 금지). 커밋에 `market-log/state` 를 포함한다.
 - Finviz 표/JSON 파싱은 `market-log/tools/finviz.py` 를 쓴다(사용법은 파일 맨 위, 주식과 ETF 는 따로 조회). 다음 실적일이 지난 날짜면 `finviz.py earnings 티커` 로 판별해 재확인한다(ADDENDUM 섹션 M).
+
+## 7. 바닥 반등 참고 지표 '방어 상승일' (2026-10-21 추가, 참고용 — 매수·매도 신호 아님)
+- 정의: 시장(SPY)이 -0.8% 이하인 날 종목이 +2% 이상 오르고 SPY 보다 3%p 이상 더 오른 날. 최근 5거래일 안의 횟수를 센다. 배경·근거·한계는 `market-log/learning/2026-10-defense-primes-reversal.md` 와 `2026-10-financials-and-sector-cases.md` 참고(검증 표본 작고 연도별로 들쭉날쭉해 '추적할 가설' 단계).
+- 계산은 스크립트로 한다(직접 계산하지 않음): `python3 market-log/tools/reversal_flags.py ...` (사용법은 파일 맨 위).
+- **관심종목 데일리 체크 루틴**: 종가를 `state/watchlist_prices.csv` 에 추가한 뒤 `python3 market-log/tools/reversal_flags.py watchlist` 를 실행해, 종목 현황 표에 열 '방어 상승일(5일)'(횟수, 날짜는 메모)을 추가하고 `days_recorded` 가 5 미만이면 '누적 중(N일)' 으로 표시한다. 바닥 신호 점수 2 이상이면서 1회 이상이면 변화 목록에 '반등 초기 관찰: 방어 상승일 N회'를 한 줄 넣는다(알림 대상 아님).
+- **바닥 후보 스크리너 루틴**: 후보 목록(티커, Finviz `change`, `industry`)을 JSON 으로 저장한 뒤 `python3 market-log/tools/reversal_flags.py log-candidates --date <대상 거래일> --json <파일>` 로 `state/candidate_daily.csv` 에 누적하고, `python3 market-log/tools/reversal_flags.py candidates` 로 후보별 방어 상승일과 업종 동조(`industry_cluster`, 같은 업종 3종목 이상이면 `cluster: true`)를 얻어 후보 표에 참고 열('방어 상승일(5일)', '업종 동조')로 넣는다. 기록이 쌓이기 전에는 '누적 중(N일)'. 후보 상태 파일 `state/` 변경은 같은 커밋에 포함한다(`git add market-log/state`).
+- **촉매 표시**: 다음 실적이 10일 이내인 과매도 후보(RSI≤30 또는 52주 고점 대비 -15% 이하)는 표 비고에 '촉매: 실적 D-n' 을 붙인다(이번 NOC·RTX 처럼 실적이 반등을 확인해 주는 경우가 있어 참고).
+- 표시 문구 고정: '참고 지표이며 매수·매도 신호가 아닙니다'. 이 값만으로 종목을 추천하지 않는다.
+
