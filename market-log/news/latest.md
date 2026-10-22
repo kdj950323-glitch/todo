@@ -1,12 +1,28 @@
 <callout icon="📰" color="gray_bg">
-	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-10-21, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
-	전체 20건(🟢 호재 8 · 🔴 악재 6 · 🟡 불확실 4 · ⚪ 중립 2), 오늘 새로 추가 20건, 이번 정리로 삭제 0건.
+	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-10-22, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
+	전체 27건(🟢 호재 12 · 🔴 악재 7 · 🟡 불확실 6 · ⚪ 중립 2), 오늘 새로 추가 7건, 이번 정리로 삭제 0건.
 </callout>
 ## 오늘 새로 추가된 뉴스
-오늘 처음 기록해 아래 전체 표와 같습니다.
+<table header-row="true">
+<tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
+<tr><td>10-23 08:24</td><td>AMD AMD</td><td>🟢 호재</td><td>투자의견</td><td>[AMD 목표주가 620달러로 상향…서스쿼해나 애널리스트](https://www.tokenpost.kr/news/breaking/426071)</td><td>tokenpost.kr</td><td>서스쿼해나 애널리스트가 AMD 목표주가를 620달러로 상향했다는 보도.</td></tr>
+<tr><td>10-23 07:52</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>실적·가이던스</td><td>[(美증시 특징주) 방산업체 록히드마틴 깜짝실적에 급등…"수주잔고 2900...](https://www.mediapen.com/news/view/1131896)</td><td>mediapen.com</td><td>록히드마틴이 3분기 깜짝 실적을 발표하고 수주잔고가 약 2,900억 달러로 늘었으며 22일 주가가 6.96% 상승한 589.91달러에 마감했다는 보도.</td></tr>
+<tr><td>10-23 07:50</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>M&A</td><td>[iM증권 “테슬라·스페이스X 합병 논의 본격화…머스크 지배력 확대 주...](https://www.etoday.co.kr/news/view/2639170)</td><td>etoday.co.kr</td><td>iM증권이 테슬라·스페이스X 합병 논의가 본격화됐다며 성사 시 테슬라 기존 주주는 프리미엄을 받는 대신 의결권이 약화될 수 있다고 분석했다는 보도.</td></tr>
+<tr><td>10-23 07:00</td><td>MRK 머크</td><td>🟡 불확실</td><td>임상</td><td>[모더나·머크 흑색종 백신 3상 재발 위험 42% 감소…X 유출설 사실로 확...](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610230002&t=NN)</td><td>wowtv.co.kr</td><td>모더나·머크 흑색종 백신 3상에서 재발 위험이 42% 감소했으나 앞선 연구보다 낮은 감소율에 대한 실망감으로 두 종목 주가가 하락 마감했다는 보도.</td></tr>
+<tr><td>10-22 14:39</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>투자의견</td><td>["스페이스X, 주가 지금의 3배는 될 것" JP모건](https://biz.sbs.co.kr/article_hub/20000341557?division=NAVER)</td><td>biz.sbs.co.kr</td><td>JP모건이 스페이스X 12개월 목표주가를 기존 240달러에서 대폭 올려 현재의 3배 수준을 전망했다는 보도.</td></tr>
+<tr><td>10-22 10:36</td><td>C 씨티그룹</td><td>🟢 호재</td><td>실적·가이던스</td><td>[씨티그룹, 중국 투자은행 1위 목표…증권업 인가 5년째 대기](https://www.g-enews.com/view.php?ud=2026102210331884089a1f309431_1)</td><td>g-enews.com</td><td>씨티그룹이 올해 3분기에 최근 10년 사이 가장 좋은 3분기 실적을 기록했고 거래와 기업 대상 서비스 사업이 실적 개선을 이끌었다는 보도.</td></tr>
+<tr><td>10-22 09:20</td><td>NFLX 넷플릭스</td><td>🔴 악재</td><td>투자의견</td><td>[월가 20곳 목표가 줄하향…넷플릭스에 무슨 일이](https://www.edaily.co.kr/News/Read?newsId=02991366645615544&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article)</td><td>edaily.co.kr</td><td>월가 20곳이 넷플릭스 목표주가를 줄하향했고 주가는 약 5% 하락, 올해 하락률은 약 28%라는 보도.</td></tr>
+</table>
 ## 최근 14일 전체 (최신순)
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
+<tr><td>10-23 08:24</td><td>AMD AMD</td><td>🟢 호재</td><td>투자의견</td><td>[AMD 목표주가 620달러로 상향…서스쿼해나 애널리스트](https://www.tokenpost.kr/news/breaking/426071)</td><td>tokenpost.kr</td><td>서스쿼해나 애널리스트가 AMD 목표주가를 620달러로 상향했다는 보도.</td></tr>
+<tr><td>10-23 07:52</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>실적·가이던스</td><td>[(美증시 특징주) 방산업체 록히드마틴 깜짝실적에 급등…"수주잔고 2900...](https://www.mediapen.com/news/view/1131896)</td><td>mediapen.com</td><td>록히드마틴이 3분기 깜짝 실적을 발표하고 수주잔고가 약 2,900억 달러로 늘었으며 22일 주가가 6.96% 상승한 589.91달러에 마감했다는 보도.</td></tr>
+<tr><td>10-23 07:50</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>M&A</td><td>[iM증권 “테슬라·스페이스X 합병 논의 본격화…머스크 지배력 확대 주...](https://www.etoday.co.kr/news/view/2639170)</td><td>etoday.co.kr</td><td>iM증권이 테슬라·스페이스X 합병 논의가 본격화됐다며 성사 시 테슬라 기존 주주는 프리미엄을 받는 대신 의결권이 약화될 수 있다고 분석했다는 보도.</td></tr>
+<tr><td>10-23 07:00</td><td>MRK 머크</td><td>🟡 불확실</td><td>임상</td><td>[모더나·머크 흑색종 백신 3상 재발 위험 42% 감소…X 유출설 사실로 확...](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610230002&t=NN)</td><td>wowtv.co.kr</td><td>모더나·머크 흑색종 백신 3상에서 재발 위험이 42% 감소했으나 앞선 연구보다 낮은 감소율에 대한 실망감으로 두 종목 주가가 하락 마감했다는 보도.</td></tr>
+<tr><td>10-22 14:39</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>투자의견</td><td>["스페이스X, 주가 지금의 3배는 될 것" JP모건](https://biz.sbs.co.kr/article_hub/20000341557?division=NAVER)</td><td>biz.sbs.co.kr</td><td>JP모건이 스페이스X 12개월 목표주가를 기존 240달러에서 대폭 올려 현재의 3배 수준을 전망했다는 보도.</td></tr>
+<tr><td>10-22 10:36</td><td>C 씨티그룹</td><td>🟢 호재</td><td>실적·가이던스</td><td>[씨티그룹, 중국 투자은행 1위 목표…증권업 인가 5년째 대기](https://www.g-enews.com/view.php?ud=2026102210331884089a1f309431_1)</td><td>g-enews.com</td><td>씨티그룹이 올해 3분기에 최근 10년 사이 가장 좋은 3분기 실적을 기록했고 거래와 기업 대상 서비스 사업이 실적 개선을 이끌었다는 보도.</td></tr>
+<tr><td>10-22 09:20</td><td>NFLX 넷플릭스</td><td>🔴 악재</td><td>투자의견</td><td>[월가 20곳 목표가 줄하향…넷플릭스에 무슨 일이](https://www.edaily.co.kr/News/Read?newsId=02991366645615544&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article)</td><td>edaily.co.kr</td><td>월가 20곳이 넷플릭스 목표주가를 줄하향했고 주가는 약 5% 하락, 올해 하락률은 약 28%라는 보도.</td></tr>
 <tr><td>10-22 08:31</td><td>TSLA 테슬라</td><td>🟢 호재</td><td>실적·가이던스</td><td>[테슬라, 3분기 매출 37조원…FSD 급증 속 AI 투자로 비용 부담](https://www.etnews.com/20261022000024)</td><td>etnews.com</td><td>3분기 매출 약 37조원, FSD 급증 속 AI 투자로 설비투자·비용 부담이 이어진다는 보도.</td></tr>
 <tr><td>10-22 08:29</td><td>SPCX 스페이스X</td><td>🔴 악재</td><td>업황</td><td>[(미국 특징주) 스페이스X, 회사채 가격 떨어지고 신용위험 지표 상승](https://www.newspim.com/news/view/20261022000089)</td><td>newspim.com</td><td>스페이스X 회사채 가격이 떨어지고 신용위험 지표가 상승했으며 대규모 지출을 예고했다는 보도.</td></tr>
 <tr><td>10-22 08:29</td><td>NFLX 넷플릭스</td><td>🔴 악재</td><td>실적·가이던스</td><td>[(미국 특징주) 넷플릭스, 광고 부진에 성장 정체 우려 심화](https://www.newspim.com/news/view/20261022000090)</td><td>newspim.com</td><td>넷플릭스가 광고 부진에 성장 정체 우려가 커졌다는 보도.</td></tr>
