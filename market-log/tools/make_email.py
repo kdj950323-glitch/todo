@@ -34,9 +34,15 @@ def sections(md):
     return out
 
 
+def _norm(t):
+    return re.sub(r'^\d+\.\s*', '', t).strip()
+
+
 def sec(S, prefix):
+    # 번호는 모델이 바꿀 수 있어(관심종목이 6번이 되는 등) 번호를 떼고 제목 앞부분으로 찾는다
+    want = _norm(prefix)
     for k, v in S.items():
-        if k.startswith(prefix):
+        if _norm(k).startswith(want):
             return v
     sys.stderr.write(f'경고: 섹션 없음 {prefix}\n')
     return ''
@@ -136,7 +142,7 @@ def main(src, dst, lite=False, fragment=False):
         P.append(h('지수'))
         P.append(tbl([[r[0], r[1], r[2], r[4], r[5], r[7]] for r in t], color_cols=(2, 3, 4)))
 
-    t = table(sec(S, '3. 섹터'))[1:]
+    t = table(sec(S, '섹터 ('))[1:]
     if t:
         P.append(h('섹터 1일 등락 (Finviz)'))
         mx = max(abs(num(r[2]) or 0) for r in t) or 1
