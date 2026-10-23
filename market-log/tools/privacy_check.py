@@ -15,7 +15,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
 ALLOW_EMAIL = ('noreply@anthropic.com', 'noreply@github.com', 'users.noreply.github.com')
 TEXT_EXT = ('.md', '.html', '.csv', '.txt', '.json', '.py')
 SKIP_DIRS = {'.git', '__pycache__', 'node_modules'}
-INSTRUCTION_FILES = {'ADDENDUM.md', 'EARNINGS_CONTEXT.md', 'RERUN.md'}  # 지침 문서는 '보유 수량' 같은 금지 표현을 설명하므로 표현 점검만 제외
+INSTRUCTION_FILES = {'ADDENDUM.md', 'EARNINGS_CONTEXT.md', 'RERUN.md', 'ROUTINE_DAILY.md', 'ROUTINE_WATCHLIST.md'}  # 지침 문서는 '보유 수량' 같은 금지 표현을 설명하므로 표현 점검만 제외
 PATTERNS = [
     ('이메일', re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}')),
     ('전화번호', re.compile(r'(?<!\d)01[016789][-. ]?\d{3,4}[-. ]?\d{4}(?!\d)')),

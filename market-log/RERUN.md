@@ -1,4 +1,7 @@
 id: 2026-W42-framework-2
+
+> **[2026-10-23 중요] Notion 폐지.** 이 문서의 Notion 관련 모든 문구(페이지 id·DB·월 페이지·토글·to_notion.py·노션 fetch)는 무시한다. 저장소는 GitHub 뿐이며 실적 캘린더 원본은 earnings/calendar.csv, 관심종목 원본은 watchlist.csv 이다. 충돌 시 ROUTINE_DAILY.md / ROUTINE_WATCHLIST.md 가 우선한다.
+
 요청: 도메인 허용 설정을 바꾼 뒤의 재시도. (이전 id 2026-W42-framework 는 Yahoo·stooq·investing.com 차단으로 부분 처리됨)
 0. **먼저 접속 테스트**를 하고 결과 표(도메인 / HTTP 코드 / 성공 여부)를 최종 보고와 수집 로그에 남긴다. 각 도메인을 curl(-sSL -A 'Mozilla/5.0 ...' -o /dev/null -w '%{http_code}')과 WebFetch 두 방식으로 모두 시도한다:
    - https://www.investing.com/earnings-calendar/

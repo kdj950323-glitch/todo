@@ -10,7 +10,7 @@
 모든 페이지에 noindex 메타를 넣어 검색 엔진 노출을 줄인다(비공개는 아님 — 주소를 아는 사람은 볼 수 있다).
 게시 전 반드시 market-log/tools/privacy_check.py 를 통과시킨다.
 """
-import glob, html, os, re, sys
+import csv, glob, html, os, re, sys
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
 ML = os.path.join(ROOT, 'market-log')
@@ -165,6 +165,8 @@ def main():
         write(os.path.join(OUT, 'learning', b + '.html'), page(title or b, body, '<div class="nav"><a href="../index.html">← 목차</a></div>'))
         extra.append((title or b, 'learning/%s.html' % b))
     special = []
+    weekly = []
+    refs = []
     bt = sorted(glob.glob(os.path.join(ML, 'bottom-tracker', '20*.md')))
     if bt:
         title, body = render(open(bt[-1], encoding='utf-8').read())
@@ -175,13 +177,42 @@ def main():
         title, body = render(open(nw, encoding='utf-8').read())
         write(os.path.join(OUT, 'news.html'), page('종목 주요 뉴스 (최근 2주)', body, '<div class="nav"><a href="index.html">← 목차</a></div>'))
         special.append(('📰 종목 주요 뉴스 (최근 2주)', 'news.html', ''))
+    for f in sorted(glob.glob(os.path.join(ML, 'weekly', '20*.md'))):
+        b = os.path.basename(f)[:-3]
+        title, body = render(open(f, encoding='utf-8').read())
+        write(os.path.join(OUT, 'weekly', b + '.html'), page(title or b, body, '<div class="nav"><a href="../index.html">← 목차</a></div>'))
+        weekly.append((title or b, 'weekly/%s.html' % b))
+    for f in sorted(glob.glob(os.path.join(ML, 'reference', '*.md'))):
+        b = os.path.basename(f)[:-3]
+        title, body = render(open(f, encoding='utf-8').read())
+        write(os.path.join(OUT, 'reference', b + '.html'), page(title or b, body, '<div class="nav"><a href="../index.html">← 목차</a></div>'))
+        refs.append((title or b, 'reference/%s.html' % b))
+    ec = os.path.join(ML, 'earnings', 'calendar.csv')
+    if os.path.exists(ec):
+        rows_e = list(csv.DictReader(open(ec, encoding='utf-8')))
+        rows_e.sort(key=lambda r: (r['date'], r['ticker']), reverse=True)
+        h = ['날짜', '티커', '기업', '구분', '예상 EPS', '실제 EPS', '결과', '주가 반응']
+        k = ['date', 'ticker', 'company', 'category', 'eps_est', 'eps_actual', 'result', 'price_reaction']
+        t = '<div class="tw"><table><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (
+            ''.join('<th>%s</th>' % x for x in h),
+            ''.join('<tr>%s</tr>' % ''.join('<td>%s</td>' % html.escape(r.get(c, '') or '') for c in k) for r in rows_e))
+        t += '<h2>메모</h2><ul>%s</ul>' % ''.join('<li><b>%s %s</b> — %s</li>' % (html.escape(r['date']), html.escape(r['ticker']), html.escape(r.get('memo', ''))) for r in rows_e if r.get('memo'))
+        write(os.path.join(OUT, 'earnings.html'), page('실적 발표 캘린더', t, '<div class="nav"><a href="index.html">← 목차</a></div>', '최신순 · 컨센서스는 출처별로 다를 수 있음'))
+        special.append(('📅 실적 발표 캘린더', 'earnings.html', '%d건' % len(rows_e)))
+    wl = os.path.join(ML, 'watchlist.csv')
+    if os.path.exists(wl):
+        rw = list(csv.DictReader(open(wl, encoding='utf-8')))
+        t = '<div class="tw"><table><thead><tr><th>티커</th><th>이름</th></tr></thead><tbody>%s</tbody></table></div>' % ''.join(
+            '<tr><td>%s</td><td>%s</td></tr>' % (html.escape(r['ticker']), html.escape(r['name_ko'])) for r in rw)
+        write(os.path.join(OUT, 'watchlist-list.html'), page('관심종목 목록', t, '<div class="nav"><a href="index.html">← 목차</a></div>', '목록 수정: market-log/watchlist.csv'))
+        special.append(('⭐ 관심종목 목록', 'watchlist-list.html', '%d종목' % len(rw)))
     cards = ''.join('<a class="card" href="%s"><b>%s</b><div class="mut">%s</div></a>' % (u, t, d) for t, u, d in special)
     rows = []
     for d in sorted(dates, reverse=True):
         links = ' · '.join('<a href="%s">%s</a>' % (dates[d][k], kinds[k]) for k in kinds if k in dates[d])
         rows.append('<tr><td>%s</td><td>%s</td></tr>' % (d, links))
     body = ('<div class="grid">%s</div><h2>날짜별 기록</h2><div class="tw"><table><thead><tr><th>날짜</th><th>보기</th></tr></thead><tbody>%s</tbody></table></div>'
-            '<h2>학습 노트</h2><ul>%s</ul>') % (cards, ''.join(rows), ''.join('<li><a href="%s">%s</a></li>' % (u, t) for t, u in extra))
+            '<h2>주간 정리</h2><ul>%s</ul><h2>학습 노트</h2><ul>%s</ul><h2>참고 자료</h2><ul>%s</ul>') % ((cards, ''.join(rows)) + tuple(''.join('<li><a href="%s">%s</a></li>' % (u, t) for t, u in L) for L in (weekly[::-1], extra, refs)))
     write(os.path.join(OUT, 'index.html'), page('미국 증시 기록', body, '', '매일 자동 갱신 · 휴대폰 열람용'))
     write(os.path.join(ROOT, 'docs', 'index.html'), '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=market/"><a href="market/">미국 증시 기록</a>')
     write(os.path.join(ROOT, 'docs', '.nojekyll'), '')
