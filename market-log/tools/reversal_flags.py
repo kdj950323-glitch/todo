@@ -54,7 +54,7 @@ def flags(series, spy):
     return res
 
 
-def cmd_watchlist(a):
+def flags_for_watchlist():
     rows = read_csv('watchlist_prices.csv')
     by = {}
     for r in rows:
@@ -63,7 +63,11 @@ def cmd_watchlist(a):
     for t, L in by.items():
         L.sort()
         series[t] = [(L[i][0], (L[i][1] / L[i - 1][1] - 1) * 100) for i in range(1, len(L))]
-    print(json.dumps(flags(series, spy_returns()), ensure_ascii=False))
+    return flags(series, spy_returns())
+
+
+def cmd_watchlist(a):
+    print(json.dumps(flags_for_watchlist(), ensure_ascii=False))
 
 
 def cmd_log(a):

@@ -66,14 +66,13 @@ def next_date(txt, today):
     m = re.match(r'([A-Z][a-z]{2}) (\d{1,2})', txt or '')
     if not m:
         return None
-    for y in (today.year, today.year + 1):
-        try:
-            d = datetime.datetime.strptime(f'{m.group(1)} {m.group(2)} {y}', '%b %d %Y').date()
-        except ValueError:
-            return None
-        if y == today.year:
-            first = d
-    return first
+    try:
+        d = datetime.datetime.strptime('%s %s %d' % (m.group(1), m.group(2), today.year), '%b %d %Y').date()
+    except ValueError:
+        return None
+    if (today - d).days > 180:  # 연말에 'Jan 15' 같은 날짜가 오면 내년으로 본다
+        d = d.replace(year=today.year + 1)
+    return d
 
 
 def cmd_earnings(a):

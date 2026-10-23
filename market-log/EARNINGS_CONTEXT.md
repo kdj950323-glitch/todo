@@ -72,3 +72,17 @@
   7. 푸시 알림에 이번에 새로 추가된 기사 중 관심종목(`source` 가 watchlist/both)의 호재·악재 상위 2건을 `티커 영향: 요약 앞부분` 형태로 한 줄 덧붙인다(없으면 덧붙이지 않음).
   8. `git add market-log/state market-log/news` 를 같은 커밋에 포함한다.
 - 이 단계는 네이버 키(NAVER_CLIENT_ID/SECRET)를 쓴다. 키 값을 출력·기록·커밋하지 않는다.
+
+## 10. 고정 도구 사용 규칙 (2026-10-23 추가 — 루틴이 매일 같은 코드를 새로 짜지 않도록)
+저장소의 `market-log/tools/` 스크립트를 쓴다. 직접 같은 기능을 다시 짜지 않는다(실행 오류·결과 편차의 원인). 스크립트가 실패(`error`)하면 사유를 수집 로그에 적고 그 부분만 기존 방식(curl+python)으로 대체한다.
+
+**바닥 후보 스크리너 루틴**
+1. 후보 수집·점수·신규/탈락: `python3 market-log/tools/screener_score.py --date <대상 거래일> --out-dir /tmp/scr` (선택 `--lead "Healthcare,Energy"` 로 주도 섹터를 직접 지정). 결과: `/tmp/scr/candidates.json`(전체 후보), `tables.md`(주도 섹터 상위 30·기타 상위 20 표, 노션 표 형식), `meta.json`(시장 상태, 주도 섹터, 신규·탈락, 직전 스냅샷, 티커 CSV 한 줄). 점수 규칙은 도구가 갖고 있으며 기본 프롬프트 3단계와 같다.
+2. 뉴스 근거(상위 10종목), 실적 앞둔 낙폭 종목 분석(섹션 1~5), 대형주 추적(섹션 8)은 기존대로 한다. 후보 일간 변화율 이력(`reversal_flags.py log-candidates`)은 `candidates.json` 에서 `ticker`·`change`·`industry` 를 뽑아 JSON 으로 저장한 뒤 쓴다.
+3. 노션 날짜 토글은 GitHub 백업 마크다운을 완성한 뒤 `python3 market-log/tools/to_notion.py market-log/screener/YYYY-MM-DD.md --toggle "📅 YYYY-MM-DD (요일) · 후보 N개 · 주도섹터 M개 · 신규 K개 · 시장 🟡 조정" --skip-heading "후보 티커" --skip-heading "수집 로그" --out-dir /tmp/tg` 로 만들고, `/tmp/tg/part1.md` 내용을 **그대로** 월 페이지 맨 위에 `insert_content`(position start) 한다. 쓴 뒤 fetch 로 토글이 맨 위에 있고 표 열 수가 맞는지 확인한다.
+
+**관심종목 데일리 체크 루틴**
+1. 노션 관심 종목 표를 읽은 뒤 `python3 market-log/tools/watchlist_status.py --date <대상 거래일> --tickers "티커:종목명:하단:상단,..." --out-dir /tmp/wl` (표 순서 유지, 관심 가격 하단·상단이 없으면 `티커:종목명`). 결과: `table.md`(종목 현황 표, 16열), `changes.md`(오늘의 변화 초안 — 뉴스·실적 맥락을 덧붙여 다듬는다), `state.csv`(백업 파일 하단 CSV로 그대로 붙임), `summary.json`(평균 등락, 상승·하락 상위 3, 변화 건수, 조회 불가·stale 실적일 종목, 실적 임박 종목).
+2. 뉴스 표, 실적 앞둔 낙폭 종목 분석, 뉴스 트래커(섹션 9)는 기존대로 한다. `earn_stale` 에 나온 종목은 실적일을 WebSearch 로 재확인한다(ADDENDUM M).
+3. 노션 날짜 토글은 백업 마크다운 완성 뒤 `to_notion.py ... --toggle "📅 YYYY-MM-DD (요일) · N종목 · 변화 K건 · 평균 등락 ±x.x%" --skip-heading "종목별 상태 CSV" --skip-heading "수집 로그"` 로 만들고 part1.md 를 그대로 월 페이지 맨 위에 넣는다.
+
