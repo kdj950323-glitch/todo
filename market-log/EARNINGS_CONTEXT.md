@@ -86,3 +86,6 @@
 2. 뉴스 표, 실적 앞둔 낙폭 종목 분석, 뉴스 트래커(섹션 9)는 기존대로 한다. `earn_stale` 에 나온 종목은 실적일을 WebSearch 로 재확인한다(ADDENDUM M).
 3. 노션 날짜 토글은 백업 마크다운 완성 뒤 `to_notion.py ... --toggle "📅 YYYY-MM-DD (요일) · N종목 · 변화 K건 · 평균 등락 ±x.x%" --skip-heading "종목별 상태 CSV" --skip-heading "수집 로그"` 로 만들고 part1.md 를 그대로 월 페이지 맨 위에 넣는다.
 
+## 11. 공개 저장소 규칙 (스크리너·관심종목 루틴 공통, 2026-10-23 추가)
+저장소가 공개이고 `docs/` 가 GitHub Pages 로 게시된다(ADDENDUM Q절). 커밋 전에 `python3 market-log/tools/privacy_check.py` 를 실행해 통과시키고(실패 시 해당 줄 수정 후 재실행), 통과하면 `python3 market-log/tools/build_site.py` 를 실행해 `git add market-log docs` 에 포함한다. 관심종목 노션 표의 '메모' 열 내용은 GitHub 파일·HTML 에 옮기지 않는다(티커·종목명·관심 가격대 진입 여부만). 보유 수량·평균단가·손익 등 포트폴리오 정보는 어디에도 쓰지 않는다.
+
