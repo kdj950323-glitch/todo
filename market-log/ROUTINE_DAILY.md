@@ -39,7 +39,7 @@
 
 ## 6. 빌드·점검·저장
 1. 블로그용 HTML: `python3 market-log/tools/make_email.py` 로 `market-log/html/` 갱신(ADDENDUM O절).
-2. 사이트: `python3 market-log/tools/build_site.py` (docs/market 재생성).
+2. 블로그용 PNG 차트: `python3 market-log/tools/charts_png.py` (docs/market/img 에 저장, Pillow·한글 폰트가 없으면 알아서 건너뜀. 실패해도 계속 진행). 이어서 사이트: `python3 market-log/tools/build_site.py` (docs/market 재생성, SVG 차트와 '이미지로 저장' 영역 포함).
 3. **`python3 market-log/tools/privacy_check.py` 가 '이상 없음'이 될 때까지** 고친다(통과 전 커밋·푸시 금지).
 4. `git add market-log docs` → 커밋 `market-log: YYYY-MM-DD` → master 에 push. 거부되면 `git pull --rebase` 후 재시도(docs/ 충돌은 build_site 로 재생성해 `git add docs`). 그래도 안 되면 `claude/market-log` 브랜치에 push.
 5. market-log/ 와 docs/ 밖의 파일은 수정·삭제하지 않는다.

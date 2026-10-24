@@ -33,6 +33,7 @@ details{border:1px solid var(--bd);border-radius:8px;padding:6px 10px;margin:8px
 ul{padding-left:20px;margin:6px 0}li{margin:3px 0}pre{background:var(--card);padding:8px;border-radius:6px;overflow-x:auto;font-size:12px}code{background:var(--card);padding:1px 4px;border-radius:4px;font-size:13px}
 .nav{font-size:13px;margin-bottom:8px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px}
 .foot{margin-top:28px;font-size:12px;color:var(--mut)}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:8px;margin-top:8px}.gal img{width:100%;border:1px solid var(--bd);border-radius:8px;background:#fff}
 """ + charts.CSS
 
 
@@ -146,6 +147,15 @@ def page(title, body, nav='', desc=''):
         html.escape(title), CSS, nav, inline(title), ('<div class="mut">%s</div>' % html.escape(desc)) if desc else '', body)
 
 
+def gallery(folder, rel):
+    """charts_png.py 가 만든 PNG 를 '이미지로 저장' 영역으로(블로그 붙여넣기용: 길게 누르거나 우클릭으로 저장)."""
+    files = sorted(glob.glob(os.path.join(folder, '*.png')))
+    if not files:
+        return ''
+    imgs = ''.join('<a href="%s/%s" target="_blank"><img src="%s/%s" loading="lazy" alt="%s"></a>' % (rel, os.path.basename(f), rel, os.path.basename(f), os.path.basename(f)[2:-4]) for f in files)
+    return '<h2>이미지로 저장</h2><div class="mut">블로그에 올릴 때는 이미지를 길게 누르거나 우클릭해서 저장하세요(PNG).</div><div class="gal">%s</div>' % imgs
+
+
 def write(path, text):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, 'w', encoding='utf-8', newline='\n').write(text)
@@ -165,6 +175,8 @@ def main():
                 body = charts.watchlist(md, ML) + body
             elif k == 'screener':
                 body = charts.screener(md, ML) + body
+            if k == 'daily':
+                body += gallery(os.path.join(OUT, 'img', d), '../img/' + d)
             nav = '<div class="nav"><a href="../index.html">← 목차</a></div>'
             write(os.path.join(OUT, k, d + '.html'), page(title or d, body, nav))
             dates.setdefault(d, {})[k] = '%s/%s.html' % (k, d)
@@ -181,7 +193,7 @@ def main():
     if bt:
         bmd = open(bt[-1], encoding='utf-8').read()
         title, body = render(bmd)
-        body = charts.tracker(bmd, ML) + body
+        body = charts.tracker(bmd, ML) + body + gallery(os.path.join(OUT, 'img', 'tracker'), 'img/tracker')
         write(os.path.join(OUT, 'tracker.html'), page('대형주 섹터별 바닥 추적', body, '<div class="nav"><a href="index.html">← 목차</a></div>', '기준일 ' + os.path.basename(bt[-1])[:10]))
         special.append(('🏛️ 대형주 섹터별 바닥 추적', 'tracker.html', os.path.basename(bt[-1])[:10]))
     nw = os.path.join(ML, 'news', 'latest.md')
