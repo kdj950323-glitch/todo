@@ -12,6 +12,27 @@ details{border:1px solid var(--bd);border-radius:8px;padding:6px 10px;margin:8px
 ul{padding-left:20px;margin:6px 0}li{margin:3px 0}pre{background:var(--card);padding:8px;border-radius:6px;overflow-x:auto;font-size:12px}code{background:var(--card);padding:1px 4px;border-radius:4px;font-size:13px}
 .nav{font-size:13px;margin-bottom:8px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px}
 .foot{margin-top:28px;font-size:12px;color:var(--mut)}
+
+.dash{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));margin:10px 0 18px}
+.dash>.kpis{grid-column:1/-1}.ch.wide{grid-column:1/-1}
+.ch{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;min-width:0}
+.ch h3{margin:0 0 2px;font-size:15px}.ch .mut{margin-bottom:6px}.ch .sv+.sv,.ch .sv+.mut,.ch .mut+.sv{margin-top:10px}
+.sv{display:block;max-width:560px;height:auto;overflow:visible}
+.sv text{font-size:11px;font-family:inherit}.sv .t{fill:var(--fg)}.sv .m{fill:var(--mut)}.sv .wt{fill:#fff;font-weight:600}
+.sv .ax,.sv .gr{stroke:var(--bd);stroke-width:1}.sv .rf{stroke:var(--mut);stroke-width:1;stroke-dasharray:4 3}
+.sv .bu,.bu{fill:var(--up)}.sv .bd,.bd{fill:var(--dn)}.sv .tr{fill:var(--bd)}.sv .bw{fill:#d99a1f}.sv .bm{fill:#8b93a1}.sv .bo{fill:#e08a2e}.sv .bm2{fill:#a9b0bd}.sv .bn{fill:#6aa7a0}
+.sv .dn{fill:var(--mut);fill-opacity:.75;stroke:var(--card)}.sv .dh{fill:var(--dn);fill-opacity:.9;stroke:var(--card)}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}.pt{stroke:none}
+.l1{stroke:var(--acc);fill:var(--acc)}.l2{stroke:#d9822b;fill:#d9822b}.l3{stroke:var(--up);fill:var(--up)}.l4{stroke:var(--dn);fill:var(--dn)}.l5{stroke:#8e6bd1;fill:#8e6bd1}
+.ln.l1,.ln.l2,.ln.l3,.ln.l4,.ln.l5{fill:none}.su{stroke:var(--up)}.sd{stroke:var(--dn)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;color:var(--mut);margin-top:4px}.lg{display:inline-flex;align-items:center;gap:4px}
+.lg.l1::before,.lg.l2::before,.lg.l3::before,.lg.l4::before,.lg.l5::before{content:"";width:10px;height:3px;border-radius:2px;background:currentColor}
+.lg.l1{color:var(--acc)}.lg.l2{color:#d9822b}.lg.l3{color:var(--up)}.sw{display:inline-block;width:10px;height:10px;border-radius:2px}
+.sw.bu{background:var(--up)}.sw.bd{background:var(--dn)}.sw.bw{background:#d99a1f}.sw.bm{background:#8b93a1}.sw.bo{background:#e08a2e}.sw.bm2{background:#a9b0bd}.sw.bn{background:#6aa7a0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}.kpis.sm{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
+.kc{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 10px;min-width:0}.kv{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.3}
+.kv.u{color:var(--up)}.kv.d{color:var(--dn)}.sp{display:block;margin-top:4px;max-width:100%}.sp .ln{stroke-width:1.6}
+table.heat td{text-align:right;font-variant-numeric:tabular-nums}table.heat td.l1{text-align:left;font-weight:600}table.heat th{text-align:right}table.heat th:first-child{text-align:left}
 </style></head><body><div class="nav"><a href="../index.html">← 목차</a></div><h1>바닥 후보 스크리너 2026-10-12</h1><div class="quote"><b>기준일</b> 2026-10-12(월) 마감 | <b>시장 상태</b> 🟢 공격 (SPY SMA50 +1.29%, SMA200 +7.56%) | <b>주도 섹터</b> Energy, Technology, Healthcare, Consumer Defensive (3개월 상위 5위 &amp; 1·3개월 모두 +; market-log/daily 10/12 섹터 표 기준) | <b>필터</b> 시총 20억$↑, 평균거래량 50만↑, 주가 10$↑, 52주 고점 -20%↓, 1년 +30%↑, 200일선 위 | <b>총 후보 78개</b></div>
 <h2>요약</h2>
 <ul><li>후보 78개 (주도 섹터 63개, 기타 15개). 직전 스냅샷 2026-10-09 대비 신규 11개, 탈락 8개.</li><li>신규: LSCC, VG, EWTX, FRPT, MU, MPWR, FSLY, OUST, TRLV, TER, MT</li><li>탈락: AXTI, COHR, DNTH, GLW, GNRC, ICHR, NOK, TKR</li><li>점수는 '바닥'이라는 판정이 아니라 확인할 후보의 우선순위 정리용이다. 최고 점수는 4/5.</li></ul>

@@ -12,6 +12,9 @@
 """
 import csv, glob, html, os, re, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import charts
+
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
 ML = os.path.join(ROOT, 'market-log')
 OUT = os.path.join(ROOT, 'docs', 'market')
@@ -30,7 +33,7 @@ details{border:1px solid var(--bd);border-radius:8px;padding:6px 10px;margin:8px
 ul{padding-left:20px;margin:6px 0}li{margin:3px 0}pre{background:var(--card);padding:8px;border-radius:6px;overflow-x:auto;font-size:12px}code{background:var(--card);padding:1px 4px;border-radius:4px;font-size:13px}
 .nav{font-size:13px;margin-bottom:8px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px}
 .foot{margin-top:28px;font-size:12px;color:var(--mut)}
-"""
+""" + charts.CSS
 
 
 def inline(s):
@@ -154,7 +157,14 @@ def main():
     for k in kinds:
         for f in sorted(glob.glob(os.path.join(ML, k, '20*.md'))):
             d = os.path.basename(f)[:10]
-            title, body = render(open(f, encoding='utf-8').read())
+            md = open(f, encoding='utf-8').read()
+            title, body = render(md)
+            if k == 'daily':
+                body = charts.daily(md, ML) + body
+            elif k == 'watchlist':
+                body = charts.watchlist(md, ML) + body
+            elif k == 'screener':
+                body = charts.screener(md, ML) + body
             nav = '<div class="nav"><a href="../index.html">← 목차</a></div>'
             write(os.path.join(OUT, k, d + '.html'), page(title or d, body, nav))
             dates.setdefault(d, {})[k] = '%s/%s.html' % (k, d)
@@ -169,7 +179,9 @@ def main():
     refs = []
     bt = sorted(glob.glob(os.path.join(ML, 'bottom-tracker', '20*.md')))
     if bt:
-        title, body = render(open(bt[-1], encoding='utf-8').read())
+        bmd = open(bt[-1], encoding='utf-8').read()
+        title, body = render(bmd)
+        body = charts.tracker(bmd, ML) + body
         write(os.path.join(OUT, 'tracker.html'), page('대형주 섹터별 바닥 추적', body, '<div class="nav"><a href="index.html">← 목차</a></div>', '기준일 ' + os.path.basename(bt[-1])[:10]))
         special.append(('🏛️ 대형주 섹터별 바닥 추적', 'tracker.html', os.path.basename(bt[-1])[:10]))
     nw = os.path.join(ML, 'news', 'latest.md')
@@ -197,7 +209,7 @@ def main():
             ''.join('<th>%s</th>' % x for x in h),
             ''.join('<tr>%s</tr>' % ''.join('<td>%s</td>' % html.escape(r.get(c, '') or '') for c in k) for r in rows_e))
         t += '<h2>메모</h2><ul>%s</ul>' % ''.join('<li><b>%s %s</b> — %s</li>' % (html.escape(r['date']), html.escape(r['ticker']), html.escape(r.get('memo', ''))) for r in rows_e if r.get('memo'))
-        write(os.path.join(OUT, 'earnings.html'), page('실적 발표 캘린더', t, '<div class="nav"><a href="index.html">← 목차</a></div>', '최신순 · 컨센서스는 출처별로 다를 수 있음'))
+        write(os.path.join(OUT, 'earnings.html'), page('실적 발표 캘린더', charts.earnings(ec) + t, '<div class="nav"><a href="index.html">← 목차</a></div>', '최신순 · 컨센서스는 출처별로 다를 수 있음'))
         special.append(('📅 실적 발표 캘린더', 'earnings.html', '%d건' % len(rows_e)))
     wl = os.path.join(ML, 'watchlist.csv')
     if os.path.exists(wl):
@@ -211,7 +223,7 @@ def main():
     for d in sorted(dates, reverse=True):
         links = ' · '.join('<a href="%s">%s</a>' % (dates[d][k], kinds[k]) for k in kinds if k in dates[d])
         rows.append('<tr><td>%s</td><td>%s</td></tr>' % (d, links))
-    body = ('<div class="grid">%s</div><h2>날짜별 기록</h2><div class="tw"><table><thead><tr><th>날짜</th><th>보기</th></tr></thead><tbody>%s</tbody></table></div>'
+    body = charts.home(ML) + ('<div class="grid">%s</div><h2>날짜별 기록</h2><div class="tw"><table><thead><tr><th>날짜</th><th>보기</th></tr></thead><tbody>%s</tbody></table></div>'
             '<h2>주간 정리</h2><ul>%s</ul><h2>학습 노트</h2><ul>%s</ul><h2>참고 자료</h2><ul>%s</ul>') % ((cards, ''.join(rows)) + tuple(''.join('<li><a href="%s">%s</a></li>' % (u, t) for t, u in L) for L in (weekly[::-1], extra, refs)))
     write(os.path.join(OUT, 'index.html'), page('미국 증시 기록', body, '', '매일 자동 갱신 · 휴대폰 열람용'))
     write(os.path.join(ROOT, 'docs', 'index.html'), '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=market/"><a href="market/">미국 증시 기록</a>')

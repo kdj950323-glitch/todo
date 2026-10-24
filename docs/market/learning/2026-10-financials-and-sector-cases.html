@@ -12,6 +12,27 @@ details{border:1px solid var(--bd);border-radius:8px;padding:6px 10px;margin:8px
 ul{padding-left:20px;margin:6px 0}li{margin:3px 0}pre{background:var(--card);padding:8px;border-radius:6px;overflow-x:auto;font-size:12px}code{background:var(--card);padding:1px 4px;border-radius:4px;font-size:13px}
 .nav{font-size:13px;margin-bottom:8px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px}
 .foot{margin-top:28px;font-size:12px;color:var(--mut)}
+
+.dash{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));margin:10px 0 18px}
+.dash>.kpis{grid-column:1/-1}.ch.wide{grid-column:1/-1}
+.ch{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;min-width:0}
+.ch h3{margin:0 0 2px;font-size:15px}.ch .mut{margin-bottom:6px}.ch .sv+.sv,.ch .sv+.mut,.ch .mut+.sv{margin-top:10px}
+.sv{display:block;max-width:560px;height:auto;overflow:visible}
+.sv text{font-size:11px;font-family:inherit}.sv .t{fill:var(--fg)}.sv .m{fill:var(--mut)}.sv .wt{fill:#fff;font-weight:600}
+.sv .ax,.sv .gr{stroke:var(--bd);stroke-width:1}.sv .rf{stroke:var(--mut);stroke-width:1;stroke-dasharray:4 3}
+.sv .bu,.bu{fill:var(--up)}.sv .bd,.bd{fill:var(--dn)}.sv .tr{fill:var(--bd)}.sv .bw{fill:#d99a1f}.sv .bm{fill:#8b93a1}.sv .bo{fill:#e08a2e}.sv .bm2{fill:#a9b0bd}.sv .bn{fill:#6aa7a0}
+.sv .dn{fill:var(--mut);fill-opacity:.75;stroke:var(--card)}.sv .dh{fill:var(--dn);fill-opacity:.9;stroke:var(--card)}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}.pt{stroke:none}
+.l1{stroke:var(--acc);fill:var(--acc)}.l2{stroke:#d9822b;fill:#d9822b}.l3{stroke:var(--up);fill:var(--up)}.l4{stroke:var(--dn);fill:var(--dn)}.l5{stroke:#8e6bd1;fill:#8e6bd1}
+.ln.l1,.ln.l2,.ln.l3,.ln.l4,.ln.l5{fill:none}.su{stroke:var(--up)}.sd{stroke:var(--dn)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12px;color:var(--mut);margin-top:4px}.lg{display:inline-flex;align-items:center;gap:4px}
+.lg.l1::before,.lg.l2::before,.lg.l3::before,.lg.l4::before,.lg.l5::before{content:"";width:10px;height:3px;border-radius:2px;background:currentColor}
+.lg.l1{color:var(--acc)}.lg.l2{color:#d9822b}.lg.l3{color:var(--up)}.sw{display:inline-block;width:10px;height:10px;border-radius:2px}
+.sw.bu{background:var(--up)}.sw.bd{background:var(--dn)}.sw.bw{background:#d99a1f}.sw.bm{background:#8b93a1}.sw.bo{background:#e08a2e}.sw.bm2{background:#a9b0bd}.sw.bn{background:#6aa7a0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}.kpis.sm{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
+.kc{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 10px;min-width:0}.kv{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.3}
+.kv.u{color:var(--up)}.kv.d{color:var(--dn)}.sp{display:block;margin-top:4px;max-width:100%}.sp .ln{stroke-width:1.6}
+table.heat td{text-align:right;font-variant-numeric:tabular-nums}table.heat td.l1{text-align:left;font-weight:600}table.heat th{text-align:right}table.heat th:first-child{text-align:left}
 </style></head><body><div class="nav"><a href="../index.html">← 목차</a></div><h1>학습 노트 2: 미국 금융주·FAS 사례와 업종별 사례 수집 (2026-10-21 작성)</h1><p>이전 노트: <code>2026-10-defense-primes-reversal.md</code>. 데이터: Yahoo 일봉(로컬 PC), 네이버 뉴스 API, WebSearch/WebFetch. 수치는 2026-10-20 종가 기준.</p>
 <h2>1. 금융주·FAS 일봉 사실</h2>
 <div class="tw"><table><thead><tr><th>종목</th><th>고점(날짜)</th><th>저점(날짜)</th><th>고점→저점</th><th>현재 저점 대비</th><th>RSI(저점/현재)</th><th>상태</th></tr></thead><tbody><tr><td>GS</td><td>1152 (7/15)</td><td>876 (10/19)</td><td>-24.0%</td><td>+1.0%</td><td>29 / 37</td><td>신저가 갱신 직후, 반등 미확인</td></tr><tr><td>BAC</td><td>64.8 (8/12)</td><td>50.4 (10/19)</td><td>-22.2%</td><td>+0.5%</td><td>22 / 24</td><td>신저가 갱신 직후, 반등 미확인</td></tr><tr><td>C</td><td>145.7 (6/22)</td><td>121.7 (10/19)</td><td>-16.5%</td><td>+0.7%</td><td>33 / 37</td><td>신저가 갱신 직후, 반등 미확인</td></tr><tr><td>WFC</td><td>90.3 (9/11)</td><td>80.1 (9/30)</td><td>-11.3%</td><td>+2.7%</td><td>32 / 47</td><td>20일선 근처</td></tr><tr><td>JPM</td><td>365.2 (8/12)</td><td>329.6 (10/7)</td><td>-9.7%</td><td>+1.7%</td><td>32 / 46</td><td>20일선 근처</td></tr><tr><td>BLK</td><td>1182.8 (8/13)</td><td>1037.2 (9/16)</td><td>-12.3%</td><td>+8.8%</td><td>32 / 61</td><td>반등 확인(20·50·200일선 위)</td></tr><tr><td>FAS(3배 레버리지)</td><td>186.5 (9/3)</td><td>140.5 (9/30)</td><td>-24.7%</td><td>+12.6%</td><td>25 / 54</td><td>20일선 위, 50일선 아래</td></tr><tr><td>XLF(참고)</td><td>58.6 (9/3)</td><td>53.4 (9/30)</td><td>-8.8%</td><td>+4.3%</td><td>25 / 56</td><td>20일선 위</td></tr></tbody></table></div>
