@@ -251,9 +251,19 @@ def daily_pngs(md, date):
 def tracker_pngs(md, date):
     tabs = C.html_table(md)
     full = next((t for t in tabs if t and any('시총' in c for c in t[0]) and '단계' in t[0] and len(t) > 30), None)
-    if not full:
-        return []
     out = os.path.join(IMG, 'tracker')
+    made = []
+    lead = next((t for t in tabs if t and '주도주' in t[0] and '근접' in t[0]), None)
+    if lead:
+        lh = lead[0]
+        ls, l4, le = C.col(lh, '섹터'), C.col(lh, '주도주'), C.col(lh, 'SPY 대비')
+        ex = [(r[ls], C.num(r[le])) for r in lead[1:] if C.num(r[le]) is not None]
+        hbars(os.path.join(out, '3_leader_strength.png'), '섹터별 3개월 강도 (SPY 대비)', date + ' · 위쪽일수록 강한 섹터', ex, lambda v: '%+.1f%%p' % v, row=24)
+        cnt = [(r[ls], C.num(r[l4])) for r in lead[1:] if C.num(r[l4]) is not None]
+        hbars(os.path.join(out, '4_leader_count.png'), '섹터별 주도주 수', date + ' · 4가지 조건 충족 (섹터당 5종목 중)', cnt, lambda v: '%d개' % v, row=24)
+        made = ['3_leader_strength.png', '4_leader_count.png']
+    if not full:
+        return made
     h = full[0]
     cs, ctk, co, cst = C.col(h, '섹터'), C.col(h, '티커'), C.col(h, '고점 대비'), C.col(h, '단계')
     counts = {}
@@ -268,7 +278,7 @@ def tracker_pngs(md, date):
         if v is not None:
             groups.setdefault(r[cs], []).append(v)
     dotstrip(os.path.join(out, '2_sector_drawdown.png'), '섹터별 고점 대비 낙폭', date + ' · 붉은 점은 -20% 이하', list(groups.items()))
-    return ['1_stages.png', '2_sector_drawdown.png']
+    return made + ['1_stages.png', '2_sector_drawdown.png']
 
 
 def main():

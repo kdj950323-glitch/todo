@@ -31,7 +31,7 @@
 4. 방어 상승일 참고 지표: EARNINGS_CONTEXT 7절 (`reversal_flags.py log-candidates`).
 
 ## 4. 대형주 섹터별 바닥 추적 + 실적 캘린더
-- `python3 market-log/tools/bottom_tracker.py` 로 `market-log/bottom-tracker/<대상일>.md`, `state/bottom_tracker.csv` 갱신(EARNINGS_CONTEXT 8절, Notion 쓰기 단계는 생략). 단계 변화가 있으면 스크리너 파일 요약에도 한 줄 언급.
+- `python3 market-log/tools/bottom_tracker.py` 로 `market-log/bottom-tracker/<대상일>.md`, `state/bottom_tracker.csv` 갱신(EARNINGS_CONTEXT 8절, Notion 쓰기 단계는 생략). 단계 변화가 있으면 스크리너 파일 요약에도 한 줄 언급. 같은 파일 위쪽에 '섹터별 주도주 현황'(주도주 4조건: 3개월 수익률>SPY, 50일선 위, 200일선 위, 52주 고점 -10% 이내)이 함께 만들어지고 `state/leaders.csv` 에 이력이 쌓인다(별도 페이지 없음, 대형주 섹터별 현황 페이지 한 곳에서 본다). 일간 한줄 요약이나 섹터 해설을 쓸 때 '신규 주도'·'주도 이탈' 종목이 있으면 한 줄 언급한다.
 - 실적 캘린더는 **`market-log/earnings/calendar.csv`** 가 원본이다(Notion DB 폐지). 열: date,ticker,company,time,category,eps_est,rev_est,eps_actual,rev_actual,result,price_reaction,memo,checked. ADDENDUM H절의 선정·갱신 규칙(관심종목·주도 섹터 대표·시총 대형, 발표 후 실제치·주가 반응 기입, 확인 못 한 값은 비워 두고 memo 에 사유)을 그대로 적용하되 CSV 행을 추가·수정한다. 같은 (date,ticker) 는 한 행만 둔다. 컨센서스가 출처별로 다르면 memo 에 적는다.
 
 ## 5. 어제 기록 뉴스 보강 (ADDENDUM N절)

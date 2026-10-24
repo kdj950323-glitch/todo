@@ -194,8 +194,8 @@ def main():
         bmd = open(bt[-1], encoding='utf-8').read()
         title, body = render(bmd)
         body = charts.tracker(bmd, ML) + body + gallery(os.path.join(OUT, 'img', 'tracker'), 'img/tracker')
-        write(os.path.join(OUT, 'tracker.html'), page('대형주 섹터별 바닥 추적', body, '<div class="nav"><a href="index.html">← 목차</a></div>', '기준일 ' + os.path.basename(bt[-1])[:10]))
-        special.append(('🏛️ 대형주 섹터별 바닥 추적', 'tracker.html', os.path.basename(bt[-1])[:10]))
+        write(os.path.join(OUT, 'tracker.html'), page('대형주 섹터별 현황 (주도주 · 바닥 추적)', body, '<div class="nav"><a href="index.html">← 목차</a></div>', '기준일 ' + os.path.basename(bt[-1])[:10]))
+        special.append(('🏛️ 대형주 섹터별 현황 (주도주 · 바닥 추적)', 'tracker.html', os.path.basename(bt[-1])[:10]))
     nw = os.path.join(ML, 'news', 'latest.md')
     if os.path.exists(nw):
         title, body = render(open(nw, encoding='utf-8').read())

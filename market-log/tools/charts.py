@@ -433,6 +433,16 @@ STAGE_CLS = [('위험', 'bd'), ('가치함정', 'bw'), ('펀더멘털 미확인'
 def tracker(md, ml):
     tabs = html_table(md)
     parts = []
+    lead = next((t for t in tabs if t and '주도주' in t[0] and '근접' in t[0]), None)
+    if lead:
+        h = lead[0]
+        cs, c4, ce = col(h, '섹터'), col(h, '주도주'), col(h, 'SPY 대비')
+        ex = [(r[cs], num(r[ce])) for r in lead[1:] if num(r[ce]) is not None]
+        if ex:
+            parts.append(card('섹터별 3개월 강도', 'SPY보다 3개월 수익률이 평균 몇 %p 높았나(위쪽이 강한 섹터)', hbars(ex, label_w=76)))
+        cnt = [(r[cs], num(r[c4])) for r in lead[1:] if num(r[c4]) is not None]
+        if cnt:
+            parts.append(card('섹터별 주도주 수', '4가지 조건을 모두 충족한 종목 수(섹터당 5종목 중)', hbars(cnt, label_w=76, fmt=lambda v: '%d개' % v)))
     full = next((t for t in tabs if t and any('시총' in c for c in t[0]) and '단계' in t[0] and len(t) > 30), None)
     if full:
         h = full[0]

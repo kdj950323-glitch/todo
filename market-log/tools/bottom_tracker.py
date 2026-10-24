@@ -92,6 +92,14 @@ def stage_of(off_high, fund, sma20, rsi):
     return '정상'
 
 
+def leader_score(r, spy13):
+    """주도주 4조건 충족 개수: 3개월 수익률 > SPY, 50일선 위, 200일선 위, 52주 고점 대비 -10% 이내."""
+    p13, s50, s200, off = fnum(r.get('perf13w')), fnum(r.get('sma50')), fnum(r.get('sma200')), fnum(r.get('high52w'))
+    ok = [p13 is not None and spy13 is not None and p13 > spy13, s50 is not None and s50 > 0,
+          s200 is not None and s200 > 0, off is not None and off >= -10]
+    return sum(ok), ok
+
+
 def spy_returns():
     rows, out, prev = read_csv(os.path.join(STATE, 'prices.csv')), {}, None
     for r in rows:
@@ -152,7 +160,11 @@ def main():
     uni = read_csv(os.path.join(STATE, 'universe_large.csv'))
     tk = [u['ticker'] for u in uni]
     try:
-        v171, v121, v161 = fetch(171, tk), fetch(121, tk), fetch(161, tk)
+        v171, v121, v161, v141 = fetch(171, tk), fetch(121, tk), fetch(161, tk), fetch(141, tk)
+        try:
+            spy13 = fnum(fetch(141, ['SPY']).get('SPY', {}).get('perf13w'))
+        except Exception:
+            spy13 = None
     except Exception as e:
         print(json.dumps({'error': str(e)}, ensure_ascii=False))
         return 1
@@ -168,7 +180,7 @@ def main():
     for u in uni:
         t = u['ticker']
         r = {}
-        for src in (v121, v161, v171):
+        for src in (v121, v161, v171, v141):
             r.update(src.get(t, {}))
         if not r:
             rows.append({'u': u, 'missing': True})
@@ -186,7 +198,8 @@ def main():
             note.append('과매도')
         if t in prev_stage and prev_stage[t] != stg:
             note.append(f'전일 {prev_stage[t]}→')
-        rows.append({'u': u, 'r': r, 'fund': fund, 'stage': stg, 'off': off, 's20': s20, 's200': s200, 'rsi': rsi,
+        lead = leader_score(r, spy13)
+        rows.append({'lead': lead, 'u': u, 'r': r, 'fund': fund, 'stage': stg, 'off': off, 's20': s20, 's200': s200, 'rsi': rsi,
                      'dn': dn, 'dd': dd, 'note': ' · '.join(note), 'earn': earn(r, today), 'miss': miss})
     # 이력 기록(추가만)
     exist = {(h['date'], h['ticker']) for h in hist}
@@ -204,7 +217,62 @@ def main():
     ok = [x for x in rows if not x.get('missing')]
     cnt = {s: sum(1 for x in ok if x['stage'] == s) for s, _ in STAGES}
     lines = []
-    lines.append('<callout icon="🏛️" color="blue_bg">\n\t**대형주 섹터별 바닥 추적** — 섹터별 시가총액 상위 5개(미국 본사, 총 %d종목)를 매일 갱신합니다. 기준일 %s. 고점 대비 많이 하락했지만 펀더멘털에 큰 문제가 없는 종목을 **단계**로 분류한 참고 자료이며 매수·매도 추천이 아닙니다.%s\n</callout>' % (len(ok), a.date, ('\n\t' + a.note) if a.note else ''))
+    lines.append('<callout icon="🏛️" color="blue_bg">\n\t**대형주 섹터별 현황(주도주 · 바닥 추적)** — 섹터별 시가총액 상위 5개(미국 본사, 총 %d종목)를 매일 갱신합니다. 기준일 %s. 위쪽은 강세·주도주 점검, 아래쪽은 고점 대비 많이 하락했지만 펀더멘털에 큰 문제가 없는 종목을 **단계**로 분류한 참고 자료이며 매수·매도 추천이 아닙니다.%s\n</callout>' % (len(ok), a.date, ('\n\t' + a.note) if a.note else ''))
+    # 섹터별 주도주 현황 (state/leaders.csv 에 이력 기록)
+    lp = os.path.join(STATE, 'leaders.csv')
+    lhist = read_csv(lp)
+    ldates = sorted({h['date'] for h in lhist if h['date'] < a.date})
+    prev_lead = {h['ticker'] for h in lhist if ldates and h['date'] == ldates[-1] and h['score'] == '4'}
+    lexist = {(h['date'], h['ticker']) for h in lhist}
+    lnew = not os.path.exists(lp)
+    with open(lp, 'a', encoding='utf-8', newline='') as f:
+        w = csv.writer(f, lineterminator='\n')
+        if lnew:
+            w.writerow(['date', 'ticker', 'sector', 'perf4w', 'perf13w', 'excess13', 'sma50', 'off_high', 'score'])
+        for x in ok:
+            if (a.date, x['u']['ticker']) in lexist:
+                continue
+            r = x['r']
+            p13 = fnum(r.get('perf13w'))
+            w.writerow([a.date, x['u']['ticker'], x['u']['sector'], r.get('perf4w'), r.get('perf13w'),
+                        '' if p13 is None or spy13 is None else round(p13 - spy13, 2), r.get('sma50'), x['off'], x['lead'][0]])
+    sectors = []
+    for x in ok:
+        if x['u']['sector'] not in sectors:
+            sectors.append(x['u']['sector'])
+    def ex13(x):
+        p13 = fnum(x['r'].get('perf13w'))
+        return None if p13 is None or spy13 is None else p13 - spy13
+    lines.append('## 섹터별 주도주 현황')
+    lines.append('SPY의 최근 3개월 수익률은 %s입니다. **주도주**는 아래 4가지를 모두 충족한 종목, **근접**은 3가지를 충족한 종목입니다: ① 3개월 수익률이 SPY보다 높음 ② 50일선 위 ③ 200일선 위 ④ 52주 고점 대비 -10%% 이내. 강세 종목을 모아 본 참고 자료이며 매수 추천이 아닙니다.' % pct(spy13))
+    lines.append('<table header-row="true">\n<tr><td>섹터</td><td>주도주</td><td>근접</td><td>종목 수</td><td>평균 3개월</td><td>SPY 대비 평균</td><td>주도주 종목</td></tr>')
+    srows = []
+    for sct in sectors:
+        g = [x for x in ok if x['u']['sector'] == sct]
+        lead4 = [x for x in g if x['lead'][0] == 4]
+        near = [x for x in g if x['lead'][0] == 3]
+        p13s = [fnum(x['r'].get('perf13w')) for x in g if fnum(x['r'].get('perf13w')) is not None]
+        e = [ex13(x) for x in g if ex13(x) is not None]
+        srows.append((sum(e) / len(e) if e else -999, sct, len(lead4), len(near), len(g),
+                      sum(p13s) / len(p13s) if p13s else None, sum(e) / len(e) if e else None,
+                      ', '.join(x['u']['ticker'] for x in sorted(lead4, key=lambda y: -(ex13(y) or -999)))))
+    for _, sct, n4, n3, n, avg, avge, names in sorted(srows, key=lambda t: -t[0]):
+        lines.append('<tr><td>%s</td><td>%d</td><td>%d</td><td>%d</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (sct, n4, n3, n, pct(avg), pct(avge), names or '-'))
+    lines.append('</table>')
+    lines.append('### 종목별 주도 점검')
+    lines.append('<table header-row="true">\n<tr><td>섹터</td><td>티커</td><td>종목</td><td>1개월</td><td>3개월</td><td>SPY 대비</td><td>50일선</td><td>고점 대비</td><td>거래량 배수</td><td>충족</td><td>판정</td><td>비고</td></tr>')
+    srank = {s_[1]: i for i, s_ in enumerate(sorted(srows, key=lambda t: -t[0]))}
+    for x in sorted(ok, key=lambda y: (srank[y['u']['sector']], -(ex13(y) if ex13(y) is not None else -999))):
+        r = x['r']
+        sc = x['lead'][0]
+        verdict = {4: '🟢 주도', 3: '🟡 근접'}.get(sc, '-')
+        t = x['u']['ticker']
+        nt = ('신규 주도' if sc == 4 and t not in prev_lead else ('주도 이탈' if sc < 4 and t in prev_lead else '')) if ldates else ''
+        rv = fnum(r.get('relativeVolume'))
+        lines.append('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%d/4</td><td>%s</td><td>%s</td></tr>' % (
+            x['u']['sector'], t, x['u']['name_ko'], pct(fnum(r.get('perf4w'))), pct(fnum(r.get('perf13w'))), pct(ex13(x)),
+            pct(fnum(r.get('sma50'))), pct(x['off']), '-' if rv is None else '%.1f배' % rv, sc, verdict, nt))
+    lines.append('</table>')
     lines.append('## 오늘의 단계 요약')
     lines.append('<table header-row="true">\n<tr><td>단계</td><td>종목 수</td><td>뜻</td></tr>')
     meaning = {
