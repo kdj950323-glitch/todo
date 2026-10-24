@@ -100,6 +100,88 @@ def leader_score(r, spy13):
     return sum(ok), ok
 
 
+SECTOR_ETF = [('정보기술', 'XLK', '기술주'), ('커뮤니케이션', 'XLC', '통신·미디어주'), ('경기소비재', 'XLY', '경기소비재'),
+              ('필수소비재', 'XLP', '필수소비재'), ('헬스케어', 'XLV', '헬스케어'), ('금융', 'XLF', '금융주'),
+              ('산업재', 'XLI', '산업재'), ('에너지', 'XLE', '에너지'), ('소재', 'XLB', '소재'),
+              ('유틸리티', 'XLU', '유틸리티'), ('부동산', 'XLRE', '부동산')]
+
+
+def etf_flow_lines(date):
+    """섹터 ETF 11개를 SPY 와 비교해 쉬운 문장과 표로 만든다. 거래량 신호는 실제 자금 이동이 아니라 추정이다."""
+    try:
+        d = fetch(141, [e for _, e, _ in SECTOR_ETF] + ['SPY'])
+    except Exception:
+        return []
+    spy = d.get('SPY') or {}
+    sp = [fnum(spy.get(k)) for k in ('perf1w', 'perf4w', 'perf13w')]
+    if None in sp:
+        return []
+    rows = []
+    for sct, etf, nick in SECTOR_ETF:
+        r = d.get(etf)
+        if not r:
+            continue
+        p = [fnum(r.get(k)) for k in ('perf1w', 'perf4w', 'perf13w')]
+        if None in p:
+            continue
+        ex = [p[i] - sp[i] for i in range(3)]
+        rv, ch = fnum(r.get('relativeVolume')), fnum(r.get('change')) or 0.0
+        if ex[2] > 0 and ex[1] > 0:
+            flow = '계속 강함'
+        elif ex[2] > 0:
+            flow = '강했지만 최근 힘 빠짐'
+        elif ex[1] > 0:
+            flow = '약했지만 최근 돌아오는 중'
+        else:
+            flow = '계속 약함'
+        vol = '보통'
+        if rv is not None and rv >= 1.3:
+            vol = '유입 추정 (거래량↑ 상승)' if ch >= 0 else '유출 추정 (거래량↑ 하락)'
+        rows.append({'sct': sct, 'etf': etf, 'nick': nick, 'p': p, 'ex': ex, 'flow': flow, 'vol': vol, 'rv': rv})
+    if len(rows) < 8:
+        return []
+    hp = os.path.join(STATE, 'sector_etf.csv')
+    hh = read_csv(hp)
+    have = {(h['date'], h['etf']) for h in hh}
+    with open(hp, 'a', encoding='utf-8', newline='') as f:
+        w = csv.writer(f, lineterminator='\n')
+        if not hh:
+            w.writerow(['date', 'etf', 'perf1w', 'perf4w', 'perf13w', 'ex1w', 'ex4w', 'ex13w', 'relvol'])
+        for x in rows:
+            if (date, x['etf']) not in have:
+                w.writerow([date, x['etf']] + [round(v, 2) for v in x['p']] + [round(v, 2) for v in x['ex']] + ['' if x['rv'] is None else round(x['rv'], 2)])
+    by13 = sorted(rows, key=lambda x: -x['ex'][2])
+    rank = {x['sct']: i + 1 for i, x in enumerate(by13)}
+    ln = ['## 섹터 ETF 자금 흐름', '섹터를 대표하는 ETF 11개(XLK, XLV 등)를 미국 대표 지수 ETF인 SPY와 비교했습니다. **SPY보다 강하다**는 말은 같은 기간 SPY보다 더 많이 올랐거나 덜 내렸다는 뜻으로, 시장에서 돈이 상대적으로 그 섹터로 몰렸다고 읽습니다.']
+    strong = [x for x in by13 if x['ex'][2] > 0]
+    weak = by13[-1]
+    ln.append('- **한 줄 결론**: 최근 3개월 기준 SPY(%+.1f%%)보다 강한 섹터는 %s입니다. 가장 약한 섹터는 %s(SPY보다 %+.1f%%p)입니다.' % (
+        sp[2], '·'.join(x['nick'] for x in strong) if strong else '없음', weak['nick'], weak['ex'][2]))
+    tech = next((x for x in rows if x['sct'] == '정보기술'), None)
+    if tech:
+        better = [x['nick'] for x in rows if x is not tech and x['ex'][2] > tech['ex'][2] and x['ex'][1] > tech['ex'][1]]
+        worse = [x['nick'] for x in rows if x is not tech and x['ex'][2] < tech['ex'][2] and x['ex'][1] < tech['ex'][1]]
+        ln.append('- **기술주와 비교**: 기술주는 11개 섹터 중 3개월 기준 %d위입니다. 3개월·1개월 모두 기술주보다 더 좋은 섹터는 %s, 모두 기술주보다 나쁜 섹터는 %s입니다.' % (
+            rank['정보기술'], '·'.join(better) if better else '없음', '·'.join(worse) if worse else '없음'))
+    back = [x['nick'] for x in rows if x['flow'] == '약했지만 최근 돌아오는 중']
+    fade = [x['nick'] for x in rows if x['flow'] == '강했지만 최근 힘 빠짐']
+    if back:
+        ln.append('- **최근 자금이 돌아오는 섹터**: %s. 3개월로는 시장보다 약했지만 최근 1개월은 SPY보다 강해졌습니다.' % '·'.join(back))
+    if fade:
+        ln.append('- **힘이 빠지는 섹터**: %s. 3개월로는 시장보다 강했지만 최근 1개월은 SPY보다 약해졌습니다.' % '·'.join(fade))
+    inflow = [x['nick'] for x in rows if x['vol'].startswith('유입')]
+    outflow = [x['nick'] for x in rows if x['vol'].startswith('유출')]
+    if inflow or outflow:
+        ln.append('- **오늘 거래량 신호**: 거래량이 평소의 1.3배 이상 터진 섹터 중 오른 쪽은 %s, 내린 쪽은 %s입니다. 실제 자금 이동이 아니라 거래량과 방향으로 짐작한 추정입니다.' % ('·'.join(inflow) or '없음', '·'.join(outflow) or '없음'))
+    ln.append('<table header-row="true">\n<tr><td>섹터</td><td>ETF</td><td>1주</td><td>1개월</td><td>3개월</td><td>1개월 SPY 대비</td><td>3개월 SPY 대비</td><td>쉬운 풀이</td><td>거래량 신호</td></tr>')
+    for x in by13:
+        ln.append('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
+            x['sct'], x['etf'], pct(x['p'][0]), pct(x['p'][1]), pct(x['p'][2]), pct(x['ex'][1]), pct(x['ex'][2]), x['flow'], x['vol']))
+    ln.append('</table>')
+    ln.append('표는 3개월 기준 강한 순서입니다. 쉬운 풀이는 3개월과 1개월을 함께 본 분류입니다(계속 강함 / 강했지만 최근 힘 빠짐 / 약했지만 최근 돌아오는 중 / 계속 약함). 미국 시장은 기관·외국인·개인별 일간 매매 데이터가 공개되지 않아 거래량으로 대신 추정했으며, 참고용이고 매수·매도 추천이 아닙니다.')
+    return ln
+
+
 def spy_returns():
     rows, out, prev = read_csv(os.path.join(STATE, 'prices.csv')), {}, None
     for r in rows:
@@ -243,6 +325,7 @@ def main():
     def ex13(x):
         p13 = fnum(x['r'].get('perf13w'))
         return None if p13 is None or spy13 is None else p13 - spy13
+    lines.extend(etf_flow_lines(a.date))
     lines.append('## 섹터별 주도주 현황')
     lines.append('SPY의 최근 3개월 수익률은 %s입니다. **주도주**는 아래 4가지를 모두 충족한 종목, **근접**은 3가지를 충족한 종목입니다: ① 3개월 수익률이 SPY보다 높음 ② 50일선 위 ③ 200일선 위 ④ 52주 고점 대비 -10%% 이내. 강세 종목을 모아 본 참고 자료이며 매수 추천이 아닙니다.' % pct(spy13))
     lines.append('<table header-row="true">\n<tr><td>섹터</td><td>주도주</td><td>근접</td><td>종목 수</td><td>평균 3개월</td><td>SPY 대비 평균</td><td>주도주 종목</td></tr>')

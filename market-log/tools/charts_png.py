@@ -253,6 +253,14 @@ def tracker_pngs(md, date):
     full = next((t for t in tabs if t and any('시총' in c for c in t[0]) and '단계' in t[0] and len(t) > 30), None)
     out = os.path.join(IMG, 'tracker')
     made = []
+    etf = next((t for t in tabs if t and '쉬운 풀이' in t[0]), None)
+    if etf:
+        eh = etf[0]
+        es, e1, e3 = C.col(eh, '섹터'), C.col(eh, '1개월 SPY'), C.col(eh, '3개월 SPY')
+        for ci, fn, ttl in ((e3, '5_etf_3m.png', '섹터 ETF 3개월 강도 (SPY 대비)'), (e1, '6_etf_1m.png', '섹터 ETF 1개월 강도 (SPY 대비)')):
+            items = [(r[es], C.num(r[ci])) for r in etf[1:] if C.num(r[ci]) is not None]
+            hbars(os.path.join(out, fn), ttl, date + ' · 초록=시장보다 강함, 빨강=시장보다 약함', items, lambda v: '%+.1f%%p' % v, row=24)
+            made.append(fn)
     lead = next((t for t in tabs if t and '주도주' in t[0] and '근접' in t[0]), None)
     if lead:
         lh = lead[0]
@@ -261,7 +269,7 @@ def tracker_pngs(md, date):
         hbars(os.path.join(out, '3_leader_strength.png'), '섹터별 3개월 강도 (SPY 대비)', date + ' · 위쪽일수록 강한 섹터', ex, lambda v: '%+.1f%%p' % v, row=24)
         cnt = [(r[ls], C.num(r[l4])) for r in lead[1:] if C.num(r[l4]) is not None]
         hbars(os.path.join(out, '4_leader_count.png'), '섹터별 주도주 수', date + ' · 4가지 조건 충족 (섹터당 5종목 중)', cnt, lambda v: '%d개' % v, row=24)
-        made = ['3_leader_strength.png', '4_leader_count.png']
+        made += ['3_leader_strength.png', '4_leader_count.png']
     if not full:
         return made
     h = full[0]

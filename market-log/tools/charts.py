@@ -433,13 +433,21 @@ STAGE_CLS = [('위험', 'bd'), ('가치함정', 'bw'), ('펀더멘털 미확인'
 def tracker(md, ml):
     tabs = html_table(md)
     parts = []
+    etf = next((t for t in tabs if t and '쉬운 풀이' in t[0]), None)
+    if etf:
+        h = etf[0]
+        cs, c1, c3 = col(h, '섹터'), col(h, '1개월 SPY'), col(h, '3개월 SPY')
+        for ci, ttl in ((c3, '섹터 ETF 3개월 강도'), (c1, '섹터 ETF 1개월 강도')):
+            items = [(r[cs], num(r[ci])) for r in etf[1:] if num(r[ci]) is not None]
+            if items:
+                parts.append(card(ttl, 'SPY보다 몇 %p 더 올랐나(오른쪽 초록=시장보다 강함, 왼쪽 빨강=시장보다 약함)', hbars(items, label_w=76)))
     lead = next((t for t in tabs if t and '주도주' in t[0] and '근접' in t[0]), None)
     if lead:
         h = lead[0]
         cs, c4, ce = col(h, '섹터'), col(h, '주도주'), col(h, 'SPY 대비')
         ex = [(r[cs], num(r[ce])) for r in lead[1:] if num(r[ce]) is not None]
         if ex:
-            parts.append(card('섹터별 3개월 강도', 'SPY보다 3개월 수익률이 평균 몇 %p 높았나(위쪽이 강한 섹터)', hbars(ex, label_w=76)))
+            parts.append(card('섹터별 대표주 3개월 강도', '섹터 대표 5종목 평균이 SPY보다 몇 %p 높았나(위쪽이 강한 섹터)', hbars(ex, label_w=76)))
         cnt = [(r[cs], num(r[c4])) for r in lead[1:] if num(r[c4]) is not None]
         if cnt:
             parts.append(card('섹터별 주도주 수', '4가지 조건을 모두 충족한 종목 수(섹터당 5종목 중)', hbars(cnt, label_w=76, fmt=lambda v: '%d개' % v)))
