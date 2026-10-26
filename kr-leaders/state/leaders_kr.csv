@@ -7,7 +7,7 @@ code,name,market,status,segment,first_seen,last_seen,evidence,evidence_title,evi
 002380,KCC,KOSPI,확인,무기단열재 시장 1위 사업자,2026-10-26,2026-10-26,1,"[기업분석] KCC 무기단열재, '불에 타지 않는다' 명제 이면···규제가 ...",https://www.polinews.co.kr/news/articleView.html?idxno=746403,규제 수혜 시장
 033780,KT&G,KOSPI,확인,국내 궐련 시장 점유율 1위(67.9%),2026-10-26,2026-10-26,2,"KT&G, 블랙 궐련지 적용한 '레종 프렌치 나이트 에펠' 출시",http://www.joseilbo.com/news/news_read.php?uid=577921&class=17&grp=,
 051900,LG생활건강,KOSPI,확인,국내 헤어케어(엘라스틴) 점유율 19년 연속 1위,2026-10-26,2026-10-26,1,"[그때 그 광고]""엘라스틴 했어요""…전지현 머릿결이 만든 전설",https://news.bizwatch.co.kr/article/consumer/2026/10/20/0020,브랜드 한정
-066570,LG전자,KOSPI,확인,"텔레매틱스 세계 1위, 올레드 TV 세계 1위",2026-10-26,2026-10-26,54,"LG전자, '상업용 세탁가전' 유럽 시장 공략 가속화....B2B 영토 확장",http://www.popcornnews.net/news/articleView.html?idxno=137200,복수 기사
+066570,LG전자,KOSPI,확인,"텔레매틱스 세계 1위, 올레드 TV 세계 1위",2026-10-26,2026-10-26,53,"LG전자, '상업용 세탁가전' 유럽 시장 공략 가속화....B2B 영토 확장",http://www.popcornnews.net/news/articleView.html?idxno=137200,복수 기사
 051910,LG화학,KOSPI,확인,ABS(고기능 플라스틱) 세계 점유율 1위,2026-10-26,2026-10-26,1,"[단독] 'ABS 1위' LG화학, 소재값 또 올린다…공산품 줄인상 경고등",https://biz.sbs.co.kr/article_hub/20000342053?division=NAVER,
 456040,OCI,KOSPI,확인,반도체용 인산 국내 점유율 1위,2026-10-26,2026-10-26,1,"OCI 범용TDI 사업 연말로 중단, 매출 6%규모.... 티케이휴켐스도 영향",https://www.moneystorm.kr/news/articleView.html?idxno=6912,
 000660,SK하이닉스,KOSPI,확인,HBM 시장 점유율 1위 (D램 전체는 2위),2026-10-26,2026-10-26,11,"위기 딛고 HBM4 승부수…삼성 반도체 초격차 재건 [이재용 4년, 미래 지...",https://www.etoday.co.kr/news/view/2639480,HBM 한정
@@ -16,21 +16,21 @@ code,name,market,status,segment,first_seen,last_seen,evidence,evidence_title,evi
 011780,금호석유화학,KOSPI,확인,NB라텍스 세계 1위(점유율 약 25%),2026-10-26,2026-10-26,1,[Who Is ?] 박준경 금호석유화학 총괄사장,https://www.businesspost.co.kr/BP?command=article_view&num=449126,
 003920,남양유업,KOSPI,확인,국내 오프라인 액상 단백질 시장 판매액 점유율 1위,2026-10-26,2026-10-26,4,두유 양강 점유율 줄자…매일·남양 이어 서울우유도 시장 공략,https://www.news1.kr/industry/distribution/6326455,세부 품목
 004370,농심,KOSPI,확인,국내 라면 점유율 55.5% 1위,2026-10-26,2026-10-26,1,"‘신라면 들고 파리로’…농심, 유럽 시장 공략 가속",https://www.sentv.co.kr/article/view/sentv202610210077,
-003220,대원제약,KOSPI,확인,국내 시럽·현탁액제 시장 점유율 1위,2026-10-26,2026-10-26,2,"대원제약, 먹는 당뇨·비만약 美서 공개…“오리지널 대비 흡수율 3배”",https://www.etnews.com/20261023000057,세부 품목
+003220,대원제약,KOSPI,확인,국내 시럽·현탁액제 시장 점유율 1위,2026-10-26,2026-10-26,1,"대원제약, 먹는 당뇨·비만약 美서 공개…“오리지널 대비 흡수율 3배”",https://www.etnews.com/20261023000057,세부 품목
 336260,두산퓨얼셀,KOSPI,확인,발전용 연료전지 국내 점유율 1위,2026-10-26,2026-10-26,1,"두산퓨얼셀, 4000억 CB, BW발행으로 일단 유동성위기 모면",http://www.newsfc.co.kr/news/articleView.html?idxno=81715,유동성 이슈 기사 있음
 042510,라온시큐어,KOSDAQ,확인,모바일 신분증·생체인증(FIDO) 국내 점유율 1위,2026-10-26,2026-10-26,1,AI 위조 잡고 실적까지 터졌다… 라온시큐어로 쏠린 시장 매수세 뚜렷,https://www.pinpointnews.co.kr/news/articleView.html?idxno=494336,
 267980,매일유업,KOSDAQ,확인,국내 저당 두유 시장 5년 연속 점유율 1위,2026-10-26,2026-10-26,3,"애보트, 11조 뉴트리션 사업 떼어낸다…분유 소송 책임이 변수",https://www.biotimes.co.kr/news/articleView.html?idxno=35541,세부 품목
 317450,명인제약,KOSPI,확인,국내 중추신경계(CNS) 의약품 점유율 1위,2026-10-26,2026-10-26,1,[Who Is ?] 이행명 명인제약 회장,https://www.businesspost.co.kr/BP?command=article_view&num=449013,
-006800,미래에셋증권,KOSPI,확인,국내 퇴직연금 업계 1위,2026-10-26,2026-10-26,2,인니 증시 강등 위기에 韓증권사 긴장…현지 사업 영향은?,http://www.iminju.net/news/articleView.html?idxno=171258,금융업
+006800,미래에셋증권,KOSPI,확인,국내 퇴직연금 업계 1위,2026-10-26,2026-10-26,1,인니 증시 강등 위기에 韓증권사 긴장…현지 사업 영향은?,http://www.iminju.net/news/articleView.html?idxno=171258,금융업
 003850,보령,KOSPI,확인,국내 3제 복합제 시장 점유율 56% 1위,2026-10-26,2026-10-26,2,"'항암 명가' 보령, 3분기 누적 영업익 694억…작년 연간 실적 넘었다",https://www.hankyung.com/article/202610228719i,세부 품목
-009150,삼성전기,KOSPI,확인,AI 서버용 MLCC 점유율 40%+ 1위,2026-10-26,2026-10-26,2,"컨설팅 무료, 도입비 50% 할인...SAP, 성장기업 100곳 파격 지원",https://www.thelec.kr/news/articleView.html?idxno=63977,
-005930,삼성전자,KOSPI,확인,"D램 세계 1위(점유율 39.4%, 2026 2Q)",2026-10-26,2026-10-26,75,이재용 회장 취임 4주년…반도체 초격차·미래 성장 밑그림 '속도',https://news.tf.co.kr/read/economy/2380601.htm,기사 직접 근거
+009150,삼성전기,KOSPI,확인,AI 서버용 MLCC 점유율 40%+ 1위,2026-10-26,2026-10-26,1,"컨설팅 무료, 도입비 50% 할인...SAP, 성장기업 100곳 파격 지원",https://www.thelec.kr/news/articleView.html?idxno=63977,
+005930,삼성전자,KOSPI,확인,"D램 세계 1위(점유율 39.4%, 2026 2Q)",2026-10-26,2026-10-26,68,이재용 회장 취임 4주년…반도체 초격차·미래 성장 밑그림 '속도',https://news.tf.co.kr/read/economy/2380601.htm,기사 직접 근거
 010140,삼성중공업,KOSPI,확인,셔틀탱커 세계 1위,2026-10-26,2026-10-26,1,"셔틀탱커 세계 1위 삼성重, '배터리 하이브리드'로 초격차 선점",https://www.ntoday.co.kr/news/articleView.html?idxno=130305,
 0120G0,삼양바이오팜,KOSPI,확인,"생분해성 봉합원사 글로벌 1위, 국내 파클리탁셀 1위",2026-10-26,2026-10-26,4,"삼양바이오팜·크로스포인트, 차세대 표적 유전자치료제 개발 협력",https://www.ebn.co.kr/news/articleView.html?idxno=1729134,
 004690,삼천리,KOSPI,확인,국내 도시가스 시장점유율 1위,2026-10-26,2026-10-26,1,"삼천리, 도시가스 1위 넘어 친환경 에너지 기업으로…탄소중립 속도",https://www.pinpointnews.co.kr/news/articleView.html?idxno=498280,
 007540,샘표,KOSPI,확인,상온 콩된장 판매액 점유율 1위(토장),2026-10-26,2026-10-26,1,"샘표, 한식페스타서 조선고추장·토장 알린다",https://www.megaeconomy.co.kr/news/newsview.php?ncode=1065595099961241,세부 품목
 068270,셀트리온,KOSPI,확인,바이오시밀러 일부 국가(홍콩·태국 등) 점유율 1위,2026-10-26,2026-10-26,3,"키트루다 SC 매출, 3개월 사이 3.6배…K-바이오 수익 전략도 분화[바이오...",https://www.newsway.co.kr/news/view?ud=2026102211243013588,"국가별 1위, 전체 1위 아님"
-271560,오리온,KOSPI,확인,국내 반생케이크(카스타드) 점유율 1위,2026-10-26,2026-10-26,47,"오리온, 한국·베트남·인도 '카스타드' 생산라인 증설",http://www.biztribune.co.kr/news/articleView.html?idxno=361111,소매점 조사 기준
+271560,오리온,KOSPI,확인,국내 반생케이크(카스타드) 점유율 1위,2026-10-26,2026-10-26,45,"오리온, 한국·베트남·인도 '카스타드' 생산라인 증설",http://www.biztribune.co.kr/news/articleView.html?idxno=361111,소매점 조사 기준
 153710,옵티팜,KOSDAQ,확인,국내 가축 질병 병성감정 점유율 1위(약 60%+),2026-10-26,2026-10-26,1,'형질전환 미니돼지'에 거는 기대…장기 이식 대안 될까,https://www.dailypharm.com/user/news/343132?REFERER=NP,소형주
 065950,웰크론,KOSDAQ,확인,국내 방탄 복합소재 점유율 70% 1위,2026-10-26,2026-10-26,2,"""웰크론, 방산 매출 성장 본격화…흑자전환 기대"" - 스터닝밸류리서치",http://www.popcornnews.net/news/articleView.html?idxno=136355,소형주
 014830,유니드,KOSPI,확인,칼륨계 화학제품 세계 점유율 1위,2026-10-26,2026-10-26,1,"유니드, 3분기 매출 증가에도 21억원 영업손실…해상운임·환율 등 영향",https://www.energy-news.co.kr/news/articleView.html?idxno=229144,
