@@ -4,8 +4,8 @@
 실행 시각: 한국시간 월~금 오후 4시 30분(장 마감 15:30 이후). 도구: Bash(python3, curl), Read/Write/Edit, PushNotification. 네이버 증권 모바일 주소와 네이버 검색 API 키(환경변수 NAVER_CLIENT_ID/SECRET, 키 출력 금지)를 쓴다.
 
 ## 0. 준비
-1. `git pull --rebase`. 커밋 작성자가 없으면 `git config user.name "Claude Routine"`, `git config user.email "noreply@anthropic.com"`.
-2. 한국 증시 휴장일(주말, 공휴일, 12/31 등)이면 `python3 kr-leaders/tools/track.py` 가 직전 거래일 지수 일자를 쓴다. 이미 `kr-leaders/daily/<해당일>.md` 가 있으면 새로 만들지 말고 끝낸다.
+1. 저장소 최신화: 브랜치 없는(detached HEAD) 환경이면 `git fetch origin master && git checkout -B master origin/master`, 아니면 `git pull --rebase`. 커밋 작성자가 없으면 `git config user.name "Claude Routine"`, `git config user.email "noreply@anthropic.com"`.
+2. 한국 증시 휴장일(주말, 공휴일, 12/31 등)이면 `python3 kr-leaders/tools/track.py` 가 직전 거래일 지수 일자를 쓴다. 이미 `kr-leaders/daily/<해당일>.md` 가 있으면 새로 만들지 말고 끝낸다(단, 프롬프트에 '강제 재실행' 이 있으면 무시하고 진행).
 
 ## 1. 점유율 1위 후보 갱신 (뉴스)
 1. `python3 kr-leaders/tools/discover.py fetch --days 14 --out /tmp/kr_cand.json`
@@ -23,7 +23,7 @@
 ## 3. 사이트 빌드·점검·저장
 1. `python3 kr-leaders/tools/build_kr_site.py` (docs/kr 재생성). 이어서 미국 증시 사이트 목차에 링크가 반영되도록 `python3 market-log/tools/build_site.py`.
 2. **`python3 market-log/tools/privacy_check.py kr-leaders docs` 가 '이상 없음'이 될 때까지** 고친다(통과 전 커밋·푸시 금지).
-3. `git add kr-leaders docs` → 커밋 `kr-leaders: YYYY-MM-DD` → master 에 push. 거부되면 `git pull --rebase` 후 재시도(docs/ 충돌은 build_kr_site·build_site 로 재생성해 `git add docs`).
+3. `git add kr-leaders docs` → 커밋 `kr-leaders: YYYY-MM-DD` → master 에 push. 거부되면 `git fetch origin master && git rebase origin/master` 후 재시도(docs/ 충돌은 build_kr_site·build_site 로 재생성해 `git add docs`).
 4. kr-leaders/ 와 docs/ 밖의 파일은 수정·삭제하지 않는다.
 
 ## 4. 알림·보고
