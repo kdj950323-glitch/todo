@@ -1,21 +1,28 @@
 <callout icon="📰" color="gray_bg">
-	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-10-23, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
-	전체 34건(🟢 호재 15 · 🔴 악재 8 · 🟡 불확실 9 · ⚪ 중립 2), 오늘 새로 추가 7건, 이번 정리로 삭제 0건.
+	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-10-26, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
+	전체 41건(🟢 호재 19 · 🔴 악재 8 · 🟡 불확실 12 · ⚪ 중립 2), 오늘 새로 추가 7건, 이번 정리로 삭제 0건.
 </callout>
 ## 오늘 새로 추가된 뉴스
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
-<tr><td>10-24 05:56</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[테슬라 3분기 마진율 18%…관세 환급이 끌어올린 착시](https://www.g-enews.com/view.php?ud=2026102405481840882bd56fbc3c_1)</td><td>g-enews.com</td><td>테슬라 3분기 마진율 18%는 관세 환급이 끌어올린 면이 있어 일회성 제외 시 본업 성장 정체라는 분석.</td></tr>
-<tr><td>10-24 00:22</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>투자의견</td><td>[AI 투자 불안에 국채 급등…메타 증자·스페이스X 통신 진출 주목(박신...](https://www.hankyung.com/article/202610242083i)</td><td>hankyung.com</td><td>필립캐피털이 스페이스X 목표주가를 75달러에서 250달러로 올렸다는 CNBC 인용 보도, AI 컴퓨팅 사업 성장 기대.</td></tr>
-<tr><td>10-23 10:50</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>실적·가이던스</td><td>[덕산넵코어스, 록히드마틴 등 美 방산기업 핵심 '항재밍' 기술 보유…글...](https://www.financialpost.co.kr/news/articleView.html?idxno=282163)</td><td>financialpost.co.kr</td><td>미사일 수요 확대로 올해 실적 전망치를 상향, 22일 장중 10.24% 상승.</td></tr>
-<tr><td>10-23 09:51</td><td>MRK 머크</td><td>🟡 불확실</td><td>신제품 승인·임상</td><td>[모더나·머크 암 백신, 흑색종 재발·사망 위험 42% 낮췄다](https://www.ytn.co.kr/_ln/0104_202610230951025079)</td><td>ytn.co.kr</td><td>모더나·머크 암 백신 3상에서 재발·사망 위험 42% 감소, 시장 기대에 못 미쳤다는 평가 속 머크 주가 1.8% 하락.</td></tr>
-<tr><td>10-23 09:28</td><td>GOOGL 알파벳</td><td>🟡 불확실</td><td>투자의견</td><td>[시티즌스 JMP, 알파벳 목표주가 12% 낮췄다는 보도](https://www.tokenpost.kr/news/breaking/426115)</td><td>tokenpost.kr</td><td>시티즌스 JMP 애널리스트가 알파벳 목표주가를 12% 낮췄다는 보도(핀볼드 인용).</td></tr>
-<tr><td>10-23 09:02</td><td>NFLX 넷플릭스</td><td>🔴 악재</td><td>실적·가이던스</td><td>[실적 성장 이어간 넷플릭스…광고 사업이 향후 기업가치 가른다 (엔터코...](https://news.mtn.co.kr/article/2026102116382116220)</td><td>news.mtn.co.kr</td><td>넷플릭스가 연간 광고 매출 전망을 약 30억달러에서 27억달러로 낮춰 시간외 5% 안팎 하락.</td></tr>
-<tr><td>10-23 08:52</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>수주·계약</td><td>[록히드마틴, 美와 F-35 전투기 850대 공급 합의…최소 103조원 규모](https://www.edaily.co.kr/News/Read?newsId=02988086645615872&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article)</td><td>edaily.co.kr</td><td>미 국방부와 F-35 850대 10년 공급 기본합의, 실적 발표와 맞물려 장중 최대 10% 상승.</td></tr>
+<tr><td>10-27 08:34</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>투자의견</td><td>[모건스탠리, 록히드마틴 '비중확대' 상향…F-35 장기 계약으로 리스크 ...](https://news.einfomax.co.kr/news/articleView.html?idxno=4441214)</td><td>news.einfomax.co.kr</td><td>모건스탠리가 F-35 장기 계약으로 리스크가 줄었다며 투자의견을 상향, 주가 +5.13% 마감</td></tr>
+<tr><td>10-27 08:22</td><td>TSLA 테슬라</td><td>🟢 호재</td><td>투자의견</td><td>[테슬라, 바클레이스 목표가 상향에 3개월래 최고치…5%↑](https://news.einfomax.co.kr/news/articleView.html?idxno=4441212)</td><td>news.einfomax.co.kr</td><td>바클레이스 목표가 상향에 주가가 3개월 최고 수준(+5%)이라는 보도</td></tr>
+<tr><td>10-27 08:08</td><td>PLTR 팔란티어</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[팔란티어, 3분기 실적 발표 앞두고 긴장 고조…주가 10% 변동 가능성 주...](https://www.jemin.com/news/articleView.html?idxno=845438)</td><td>jemin.com</td><td>3분기 실적 발표 전후 옵션시장이 약 10% 변동 가능성을 반영했다는 보도</td></tr>
+<tr><td>10-27 08:00</td><td>MSFT 마이크로소프트</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[(GAM)MSFT 670달러 직행 VS 재조정 ① 애저 첫 단독 매출 공개 시선집중](https://www.newspim.com/news/view/20261026000603)</td><td>newspim.com</td><td>회계연도 1분기 애저 단독 매출 공개를 앞두고 클라우드 성장 확인 여부가 주가 변수라는 전망</td></tr>
+<tr><td>10-27 07:22</td><td>INTC 인텔</td><td>🟢 호재</td><td>업황</td><td>[뉴욕증시, 엔트로픽 기업공개  등 영향 상승⋯엔비디아 2%대 상승-인텔 ...](http://www.econonews.co.kr/news/articleView.html?idxno=446264)</td><td>econonews.co.kr</td><td>엔트로픽 IPO 기대 등으로 반도체주가 오른 날 인텔 +4.04%</td></tr>
+<tr><td>10-27 07:00</td><td>GS 골드만삭스</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[골드만삭스가 꼽은 '실적 시즌 바구니' ( 글로벌 IB리포트 )](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610270012&t=NN)</td><td>wowtv.co.kr</td><td>골드만삭스가 실적 시즌 유망 바구니를 제시한 보도(주가 눈높이 상승, 실적으로 입증 필요)</td></tr>
+<tr><td>10-27 06:50</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>투자의견</td><td>[(美증시) 방산주, 증권사 투자의견·목표가 줄상향에 급등…록히드마틴...](https://www.mediapen.com/news/view/1132658)</td><td>mediapen.com</td><td>방산주가 증권사 투자의견·목표가 상향에 동반 급등했다는 보도</td></tr>
 </table>
 ## 최근 14일 전체 (최신순)
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
+<tr><td>10-27 08:34</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>투자의견</td><td>[모건스탠리, 록히드마틴 '비중확대' 상향…F-35 장기 계약으로 리스크 ...](https://news.einfomax.co.kr/news/articleView.html?idxno=4441214)</td><td>news.einfomax.co.kr</td><td>모건스탠리가 F-35 장기 계약으로 리스크가 줄었다며 투자의견을 상향, 주가 +5.13% 마감</td></tr>
+<tr><td>10-27 08:22</td><td>TSLA 테슬라</td><td>🟢 호재</td><td>투자의견</td><td>[테슬라, 바클레이스 목표가 상향에 3개월래 최고치…5%↑](https://news.einfomax.co.kr/news/articleView.html?idxno=4441212)</td><td>news.einfomax.co.kr</td><td>바클레이스 목표가 상향에 주가가 3개월 최고 수준(+5%)이라는 보도</td></tr>
+<tr><td>10-27 08:08</td><td>PLTR 팔란티어</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[팔란티어, 3분기 실적 발표 앞두고 긴장 고조…주가 10% 변동 가능성 주...](https://www.jemin.com/news/articleView.html?idxno=845438)</td><td>jemin.com</td><td>3분기 실적 발표 전후 옵션시장이 약 10% 변동 가능성을 반영했다는 보도</td></tr>
+<tr><td>10-27 08:00</td><td>MSFT 마이크로소프트</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[(GAM)MSFT 670달러 직행 VS 재조정 ① 애저 첫 단독 매출 공개 시선집중](https://www.newspim.com/news/view/20261026000603)</td><td>newspim.com</td><td>회계연도 1분기 애저 단독 매출 공개를 앞두고 클라우드 성장 확인 여부가 주가 변수라는 전망</td></tr>
+<tr><td>10-27 07:22</td><td>INTC 인텔</td><td>🟢 호재</td><td>업황</td><td>[뉴욕증시, 엔트로픽 기업공개  등 영향 상승⋯엔비디아 2%대 상승-인텔 ...](http://www.econonews.co.kr/news/articleView.html?idxno=446264)</td><td>econonews.co.kr</td><td>엔트로픽 IPO 기대 등으로 반도체주가 오른 날 인텔 +4.04%</td></tr>
+<tr><td>10-27 07:00</td><td>GS 골드만삭스</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[골드만삭스가 꼽은 '실적 시즌 바구니' ( 글로벌 IB리포트 )](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610270012&t=NN)</td><td>wowtv.co.kr</td><td>골드만삭스가 실적 시즌 유망 바구니를 제시한 보도(주가 눈높이 상승, 실적으로 입증 필요)</td></tr>
+<tr><td>10-27 06:50</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>투자의견</td><td>[(美증시) 방산주, 증권사 투자의견·목표가 줄상향에 급등…록히드마틴...](https://www.mediapen.com/news/view/1132658)</td><td>mediapen.com</td><td>방산주가 증권사 투자의견·목표가 상향에 동반 급등했다는 보도</td></tr>
 <tr><td>10-24 05:56</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[테슬라 3분기 마진율 18%…관세 환급이 끌어올린 착시](https://www.g-enews.com/view.php?ud=2026102405481840882bd56fbc3c_1)</td><td>g-enews.com</td><td>테슬라 3분기 마진율 18%는 관세 환급이 끌어올린 면이 있어 일회성 제외 시 본업 성장 정체라는 분석.</td></tr>
 <tr><td>10-24 00:22</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>투자의견</td><td>[AI 투자 불안에 국채 급등…메타 증자·스페이스X 통신 진출 주목(박신...](https://www.hankyung.com/article/202610242083i)</td><td>hankyung.com</td><td>필립캐피털이 스페이스X 목표주가를 75달러에서 250달러로 올렸다는 CNBC 인용 보도, AI 컴퓨팅 사업 성장 기대.</td></tr>
 <tr><td>10-23 10:50</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>실적·가이던스</td><td>[덕산넵코어스, 록히드마틴 등 美 방산기업 핵심 '항재밍' 기술 보유…글...](https://www.financialpost.co.kr/news/articleView.html?idxno=282163)</td><td>financialpost.co.kr</td><td>미사일 수요 확대로 올해 실적 전망치를 상향, 22일 장중 10.24% 상승.</td></tr>
