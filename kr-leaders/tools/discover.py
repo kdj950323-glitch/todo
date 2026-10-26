@@ -37,10 +37,16 @@ def lid(link):
 def universe():
     """상장사 목록 캐시(7일). state/universe_kr.csv"""
     p = os.path.join(K.STATE, 'universe_kr.csv')
-    if os.path.exists(p) and (datetime.datetime.now() - datetime.datetime.fromtimestamp(os.path.getmtime(p))).days < UNI_AGE_DAYS:
+    meta = os.path.join(K.STATE, 'universe_kr.date')  # 클라우드는 매번 새로 받아 파일 수정시각이 의미 없어 날짜를 따로 기록
+    try:
+        fetched = datetime.date.fromisoformat(open(meta, encoding='utf-8').read().strip())
+    except (OSError, ValueError):
+        fetched = None
+    if os.path.exists(p) and fetched and (datetime.date.today() - fetched).days < UNI_AGE_DAYS:
         return [dict(r, mcap=float(r['mcap'] or 0)) for r in K.read_csv('universe_kr.csv')]
     rows = K.listing()
     K.write_csv('universe_kr.csv', rows, ['code', 'name', 'market', 'mcap', 'close'])
+    open(meta, 'w', encoding='utf-8').write(datetime.date.today().isoformat() + '\n')
     return rows
 
 

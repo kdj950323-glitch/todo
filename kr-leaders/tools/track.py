@@ -12,6 +12,7 @@ state/kr_status.csv(이력), state/kr_flow.csv(지수 투자자 수급 이력)�
 출력은 모두 '상태 분류'이며 매수·매도 시점을 알려 주지 않는다.
 """
 import argparse, csv, datetime, json, os, sys, time
+from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import krlib as K  # noqa: E402
@@ -131,18 +132,23 @@ def main():
             flows[m] = None
     uni = {u['code']: u for u in K.read_csv('universe_kr.csv')}
     rows, fails = [], []
-    for L in leaders:
+    def work(L):
+        r = stock_row(L, reg['KOSDAQ']['dd10'] if reg['KOSDAQ'] else None)
+        r['u'] = L
+        r['mcap'] = float(uni.get(L['code'], {}).get('mcap') or 0)
+        fe = '금융업' in (L.get('note') or '')
+        r['state'], r['why'] = classify(r, fe)
+        r['fin_exempt'] = fe
+        return r
+
+    # 종목별 호출이 5~6번이라 순차로는 클라우드에서 2분 넘게 걸려 8개씩 병렬 처리
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futs = [(L, ex.submit(work, L)) for L in leaders]
+    for L, fu in futs:
         try:
-            r = stock_row(L, reg['KOSDAQ']['dd10'] if reg['KOSDAQ'] else None)
-            r['u'] = L
-            r['mcap'] = float(uni.get(L['code'], {}).get('mcap') or 0)
-            fe = '금융업' in (L.get('note') or '')
-            r['state'], r['why'] = classify(r, fe)
-            r['fin_exempt'] = fe
-            rows.append(r)
+            rows.append(fu.result())
         except Exception as e:
             fails.append('%s %s: %s' % (L['code'], L['name'], str(e)[:80]))
-        time.sleep(0.05)
     # 이력 저장
     st = K.read_csv('kr_status.csv')
     st = [x for x in st if x['date'] != date]
