@@ -81,7 +81,7 @@ def cmd_fetch(a):
     cutoff = datetime.date.today() - datetime.timedelta(days=a.days)
     arts, ids = [], set()
     for q in QUERIES:
-        for start in (1, 101):
+        for start in (1, 101, 201, 301, 401):
             items = K.news_search(q, cid, sec, base, display=100, start=start)
             if items is None:
                 print(json.dumps({'warn': '검색 실패: ' + q}, ensure_ascii=False), file=sys.stderr)
