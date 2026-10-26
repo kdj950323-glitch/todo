@@ -230,6 +230,9 @@ def main():
             '<tr><td>%s</td><td>%s</td></tr>' % (html.escape(r['ticker']), html.escape(r['name_ko'])) for r in rw)
         write(os.path.join(OUT, 'watchlist-list.html'), page('관심종목 목록', t, '<div class="nav"><a href="index.html">← 목차</a></div>', '목록 수정: market-log/watchlist.csv'))
         special.append(('⭐ 관심종목 목록', 'watchlist-list.html', '%d종목' % len(rw)))
+    krd = sorted(glob.glob(os.path.join(ROOT, 'kr-leaders', 'daily', '20*.md')))
+    if os.path.exists(os.path.join(ROOT, 'docs', 'kr', 'index.html')) and krd:
+        special.append(('🇰🇷 국내 시장 점유율 1위 기업 추적', '../kr/index.html', os.path.basename(krd[-1])[:10]))
     cards = ''.join('<a class="card" href="%s"><b>%s</b><div class="mut">%s</div></a>' % (u, t, d) for t, u, d in special)
     rows = []
     for d in sorted(dates, reverse=True):
