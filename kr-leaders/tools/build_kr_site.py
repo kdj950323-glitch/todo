@@ -14,7 +14,8 @@ sys.path.insert(0, os.path.join(ROOT, 'market-log', 'tools'))
 import build_site as B  # noqa: E402
 import charts as C  # noqa: E402
 
-CSS_EXTRA = '.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;background:var(--bd)}'
+SCOPE_NARROW = ('세부 품목', '브랜드 한정', '사업부 한정', '품목 한정', 'HBM 한정', '국가별', '일부 국가', '복수 품목', '일부 품목', '한정')
+CSS_EXTRA ='.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;background:var(--bd)}'
 
 
 def read_csv(name):
@@ -57,12 +58,22 @@ def leaders_page():
     ok = [r for r in rows if r['status'] == '확인']
     cand = [r for r in rows if r['status'] == '후보']
     ex = [r for r in rows if r['status'] == '제외']
-    L = ['## 확인된 점유율 1위 기업 (%d)' % len(ok),
-         '뉴스 기사에서 해당 분야 점유율 1위로 소개된 코스피·코스닥 상장사입니다. 분야·지역(국내/세계)은 기사 표현 그대로 요약했습니다.',
-         '<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>1위 분야</td><td>근거 기사</td><td>처음 발견</td><td>비고</td></tr>']
+    mcap = {r['code']: float(r['mcap'] or 0) for r in read_csv('universe_kr.csv')}
     for r in ok:
-        L.append('<tr><td>%s (%s)</td><td>%s</td><td>%s</td><td><a href="%s">%s</a></td><td>%s</td><td>%s</td></tr>' % (
-            r['name'], r['code'], r['market'], r['segment'], r['evidence_link'], (r['evidence_title'] or '')[:36].replace('|', '/'), r['first_seen'], r['note']))
+        r['_mcap'] = mcap.get(r['code'], 0)
+        r['_scope'] = '품목 한정' if any(k in (r['note'] + r['segment']) for k in SCOPE_NARROW) else '전체'
+    ok.sort(key=lambda r: (r['market'] != 'KOSDAQ', -r['_mcap']))
+    n_kq = sum(1 for r in ok if r['market'] == 'KOSDAQ')
+    L = ['## 확인된 점유율 1위 기업 (%d)' % len(ok),
+         '뉴스 기사에서 해당 분야 점유율 1위로 소개된 코스피·코스닥 상장사입니다. 분야·지역(국내/세계)은 기사 표현 그대로 요약했습니다. '
+         '이 전략은 코스닥 중견·중소 기업 발굴이 목적이라 코스닥(%d곳)을 위에 시가총액 큰 순으로, 코스피(%d곳)를 아래에 두었습니다.' % (n_kq, len(ok) - n_kq),
+         '규모는 시가총액 기준 대형(5조 이상)·중형(5천억~5조)·소형(5천억 미만)입니다. 범위가 "품목 한정"인 곳은 기업 전체가 아니라 일부 품목·브랜드·사업부·일부 국가의 1위라는 뜻으로, 기록은 하되 판단은 직접 합니다.',
+         '<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>시총(억)</td><td>규모</td><td>범위</td><td>1위 분야</td><td>근거 기사</td><td>처음 발견</td><td>비고</td></tr>']
+    for r in ok:
+        m = r['_mcap']
+        L.append('<tr><td>%s (%s)</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td><a href="%s">%s</a></td><td>%s</td><td>%s</td></tr>' % (
+            r['name'], r['code'], r['market'], '{:,.0f}'.format(m) if m else '-', '대형' if m >= 50000 else '중형' if m >= 5000 else '소형' if m else '-',
+            r['_scope'], r['segment'], r['evidence_link'], (r['evidence_title'] or '')[:36].replace('|', '/'), r['first_seen'], r['note']))
     L.append('</table>')
     if cand:
         L.append('## 보류 (%d)' % len(cand))
