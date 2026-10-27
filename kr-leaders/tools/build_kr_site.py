@@ -4,7 +4,7 @@
 만드는 것: index.html(최신 일간 + SVG 차트), leaders.html(추적 명단과 근거 기사), daily/YYYY-MM-DD.html
 market-log 의 렌더러(build_site)·차트 함수(charts)를 재사용한다.
 """
-import csv, glob, html, os, sys
+import csv, datetime, glob, html, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..'))
@@ -64,16 +64,48 @@ def leaders_page():
         r['_scope'] = '품목 한정' if any(k in (r['note'] + r['segment']) for k in SCOPE_NARROW) else '전체'
     ok.sort(key=lambda r: (r['market'] != 'KOSDAQ', -r['_mcap']))
     n_kq = sum(1 for r in ok if r['market'] == 'KOSDAQ')
-    L = ['## 확인된 점유율 1위 기업 (%d)' % len(ok),
+    rep, stt = {}, {}
+    for x in read_csv('reports_kr.csv'):
+        rep.setdefault(x['code'], []).append(x)
+    stat = read_csv('kr_status.csv')
+    if stat:
+        last = max(x['date'] for x in stat)
+        stt = {x['code']: x for x in stat if x['date'] == last}
+    recent = (datetime.date.today() - datetime.timedelta(days=30)).isoformat()
+    mom = [x for xs in rep.values() for x in xs if x['verdict'] == '모멘텀' and x['date'] >= recent]
+    by_code = {r['code']: r for r in ok}
+    L = []
+    if mom:
+        L += ['## 증권사 모멘텀 리포트 정밀분석 (최근 30일, %d건)' % len(mom),
+              '증권사 종목분석 리포트에서 모멘텀·턴어라운드·수혜 같은 키워드가 걸린 리포트를 본문까지 읽고 구체적 근거(수치)가 있는 것만 "모멘텀"으로 분류했습니다. 코스닥을 먼저, 최신순입니다. 증권사 의견은 낙관 쪽으로 치우치는 경향이 있어 참고 자료로만 보세요.',
+              '<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>작성일</td><td>증권사</td><td>의견·목표가</td><td>모멘텀 근거</td><td>리스크</td><td>수급 신호</td></tr>']
+        for x in sorted(mom, key=lambda x: x['date'], reverse=True):
+            x['_kq'] = by_code.get(x['code'], {}).get('market') == 'KOSDAQ'
+        for x in sorted(mom, key=lambda x: (not x['_kq'], ''.join(chr(0x10ffff - ord(c)) for c in x['date']))):
+            L.append('<tr><td>%s (%s)</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
+                x['name'], x['code'], by_code.get(x['code'], {}).get('market', ''), x['date'], x['broker'],
+                '%s %s원' % (x['opinion'] or '-', '{:,.0f}'.format(float(x['goal']))) if x['goal'] else (x['opinion'] or '-'),
+                '<a href="%s">%s</a>' % (x['link'], x['note']), x['risk'], (stt.get(x['code'], {}).get('flow') or '-')))
+        L.append('</table>')
+        both = sorted({x['code'] for x in mom if stt.get(x['code'], {}).get('flow', '').startswith(('외국인·기관 동반 매수', '외국인 매수', '기관 매수'))})
+        if both:
+            L.append('**모멘텀 리포트가 있고 외국인·기관 수급도 들어오는 종목**: ' + ', '.join('%s(%s)' % (by_code[c]['name'], by_code[c]['market']) for c in both if c in by_code))
+    L += ['## 확인된 점유율 1위 기업 (%d)' % len(ok),
          '뉴스 기사에서 해당 분야 점유율 1위로 소개된 코스피·코스닥 상장사입니다. 분야·지역(국내/세계)은 기사 표현 그대로 요약했습니다. '
          '이 전략은 코스닥 중견·중소 기업 발굴이 목적이라 코스닥(%d곳)을 위에 시가총액 큰 순으로, 코스피(%d곳)를 아래에 두었습니다.' % (n_kq, len(ok) - n_kq),
-         '규모는 시가총액 기준 대형(5조 이상)·중형(5천억~5조)·소형(5천억 미만)입니다. 범위가 "품목 한정"인 곳은 기업 전체가 아니라 일부 품목·브랜드·사업부·일부 국가의 1위라는 뜻으로, 기록은 하되 판단은 직접 합니다.',
-         '<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>시총(억)</td><td>규모</td><td>범위</td><td>1위 분야</td><td>근거 기사</td><td>처음 발견</td><td>비고</td></tr>']
+         '규모는 시가총액 기준 대형(5조 이상)·중형(5천억~5조)·소형(5천억 미만)입니다. 범위가 "품목 한정"인 곳은 기업 전체가 아니라 일부 품목·브랜드·사업부·일부 국가의 1위라는 뜻으로, 기록은 하되 판단은 직접 합니다. 수급 신호는 외국인·기관 최근 20거래일 순매수 요약, 리포트는 최근 90일 증권사 종목분석 건수입니다.',
+         '<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>시총(억)</td><td>규모</td><td>범위</td><td>1위 분야</td><td>수급 신호</td><td>리포트(90일)</td><td>최신 의견·목표가</td><td>근거 기사</td><td>처음 발견</td><td>비고</td></tr>']
     for r in ok:
         m = r['_mcap']
-        L.append('<tr><td>%s (%s)</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td><a href="%s">%s</a></td><td>%s</td><td>%s</td></tr>' % (
+        xs = sorted(rep.get(r['code'], []), key=lambda x: x['date'], reverse=True)
+        nm = sum(1 for x in xs if x['verdict'] == '모멘텀')
+        lt = xs[0] if xs else None
+        L.append('<tr><td>%s (%s)</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td><a href="%s">%s</a></td><td>%s</td><td>%s</td></tr>' % (
             r['name'], r['code'], r['market'], '{:,.0f}'.format(m) if m else '-', '대형' if m >= 50000 else '중형' if m >= 5000 else '소형' if m else '-',
-            r['_scope'], r['segment'], r['evidence_link'], (r['evidence_title'] or '')[:36].replace('|', '/'), r['first_seen'], r['note']))
+            r['_scope'], r['segment'], stt.get(r['code'], {}).get('flow') or '-',
+            ('%d건(모멘텀 %d)' % (len(xs), nm)) if xs else '없음',
+            ('%s %s %s원 (%s)' % (lt['date'][5:], lt['opinion'] or '-', '{:,.0f}'.format(float(lt['goal'])), lt['broker'])) if lt and lt['goal'] else (('%s (%s)' % (lt['date'][5:], lt['broker'])) if lt else '-'),
+            r['evidence_link'], (r['evidence_title'] or '')[:36].replace('|', '/'), r['first_seen'], r['note']))
     L.append('</table>')
     if cand:
         L.append('## 보류 (%d)' % len(cand))

@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import krlib as K  # noqa: E402
 
 DAILY = os.path.join(K.ROOT, 'daily')
-STATUS_HEAD = ['date', 'code', 'name', 'close', 'chg', 'off52', 'dd10', 'env', 'debt', 'op', 'dps', 'mult2y', 'state']
+STATUS_HEAD = ['date', 'code', 'name', 'close', 'chg', 'off52', 'dd10', 'env', 'debt', 'op', 'dps', 'mult2y', 'state', 'flow', 'f20', 'o20', 'hold_chg']
 FLOW_HEAD = ['date', 'market', 'personal', 'foreign', 'institutional']
 
 
@@ -91,8 +91,12 @@ def stock_row(u, idx_dd10):
         flow5['foreign'] += K.num(f.get('foreignerPureBuyQuant')) or 0
         flow5['organ'] += K.num(f.get('organPureBuyQuant')) or 0
         flow5['individual'] += K.num(f.get('individualPureBuyQuant')) or 0
+    try:
+        sig = K.flow_signal(K.trend(code, 60))
+    except Exception:
+        sig = None
     return {'u': u, 'close': close, 'chg': chg, 'off52': off52, 'dd10': dd10, 'env': env, 'debt': debt, 'op': op, 'dps': dps, 'mult2y': mult2y,
-            'qyoy': qyoy, 'flow5': flow5, 'dyield': K.num(inf.get('dividendYieldRatio')), 'per': K.num(inf.get('per')), 'pbr': K.num(inf.get('pbr'))}
+            'qyoy': qyoy, 'flow5': flow5, 'sig': sig, 'dyield': K.num(inf.get('dividendYieldRatio')), 'per': K.num(inf.get('per')), 'pbr': K.num(inf.get('pbr'))}
 
 
 def classify(r, fin_exempt):
@@ -155,7 +159,10 @@ def main():
     for r in rows:
         st.append({'date': date, 'code': r['u']['code'], 'name': r['u']['name'], 'close': r['close'], 'chg': '%.2f' % r['chg'] if r['chg'] is not None else '',
                    'off52': '%.1f' % r['off52'] if r['off52'] is not None else '', 'dd10': '%.1f' % r['dd10'] if r['dd10'] is not None else '',
-                   'env': r['env'], 'debt': r['debt'], 'op': r['op'], 'dps': r['dps'], 'mult2y': '%.1f' % r['mult2y'] if r['mult2y'] else '', 'state': r['state']})
+                   'env': r['env'], 'debt': r['debt'], 'op': r['op'], 'dps': r['dps'], 'mult2y': '%.1f' % r['mult2y'] if r['mult2y'] else '', 'state': r['state'],
+                   'flow': (r['sig']['label'] + (' · ' + r['sig']['turn'] if r['sig']['turn'] else '')) if r['sig'] else '',
+                   'f20': '%.1f' % r['sig']['f20'] if r['sig'] else '', 'o20': '%.1f' % r['sig']['o20'] if r['sig'] else '',
+                   'hold_chg': '%.2f' % r['sig']['hold_chg'] if r['sig'] and r['sig']['hold_chg'] is not None else ''})
     K.write_csv('kr_status.csv', st, STATUS_HEAD)
     fl = [x for x in K.read_csv('kr_flow.csv') if x['date'] != date]
     for m, f in flows.items():
@@ -192,15 +199,28 @@ def main():
     cnt = {s: sum(1 for r in ok if r['state'] == s) for s in ('정상', '주의', '제외 후보')}
     L.append('## 추적 종목 현황')
     L.append('확인된 점유율 1위 기업 %d개: 정상 %d · 주의 %d · 제외 후보 %d. 낙폭(52주 고점 대비)이 큰 순서입니다. 상태는 강의의 재무 3가지(부채비율 200%% 미만, 영업이익 흑자, 배당)와 "저점 대비 10배 이상 상승 종목 제외" 규칙을 단순 적용한 값입니다.' % (len(ok), cnt['정상'], cnt['주의'], cnt['제외 후보']))
-    L.append('<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>1위 분야</td><td>종가</td><td>일간</td><td>52주 고점 대비</td><td>2주 낙폭</td><td>엔벨로프(20,20)</td><td>부채비율</td><td>영업이익(억)</td><td>배당</td><td>최근 분기 영업이익 YoY</td><td>외국인 5일(주)</td><td>기관 5일(주)</td><td>상태</td><td>사유</td></tr>')
+    L.append('<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>1위 분야</td><td>종가</td><td>일간</td><td>52주 고점 대비</td><td>2주 낙폭</td><td>엔벨로프(20,20)</td><td>부채비율</td><td>영업이익(억)</td><td>배당</td><td>최근 분기 영업이익 YoY</td><td>외국인 20일(억)</td><td>기관 20일(억)</td><td>수급 신호</td><td>상태</td><td>사유</td></tr>')
     for r in sorted(ok, key=lambda r: (r['off52'] if r['off52'] is not None else 0)):
-        u = r['u']
-        L.append('<tr><td>%s (%s)</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
+        u, sg = r['u'], r['sig']
+        L.append('<tr><td>%s (%s)</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
             u['name'], u['code'], u['market'], u['segment'], fmt(r['close']), pct(r['chg'], 2), pct(r['off52']), pct(r['dd10']), r['env'] or '-',
             ('-' if r['debt'] is None else ('금융업' if r['fin_exempt'] else '%.0f%%' % r['debt'])), fmt(r['op']),
             ('-' if r['dps'] is None else ('%s원' % fmt(r['dps']) if r['dps'] > 0 else '없음')), pct(r['qyoy'].get('영업이익'), 0),
-            '{:+,.0f}'.format(r['flow5']['foreign']), '{:+,.0f}'.format(r['flow5']['organ']), r['state'], ' · '.join(r['why'])))
+            '{:+,.0f}'.format(sg['f20']) if sg else '-', '{:+,.0f}'.format(sg['o20']) if sg else '-',
+            (sg['label'] + (' (' + sg['turn'] + ')' if sg['turn'] else '')) if sg else '-', r['state'], ' · '.join(r['why'])))
     L.append('</table>')
+    inflow = [r for r in ok if r['sig'] and r['sig']['inflow'] and r['state'] != '제외 후보']
+    if inflow:
+        L.append('## 외국인·기관 수급이 들어오는 종목')
+        L.append('최근 20거래일 순매수 금액(순매수 수량 × 당일 종가)이 20일 거래대금의 1% 이상(최소 3억원)인 종목입니다. 코스닥을 먼저, 순매수 금액이 큰 순입니다. 개인 수급만 늘어난 종목은 넣지 않았습니다.')
+        L.append('<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>수급 신호</td><td>외국인 20일(억)</td><td>기관 20일(억)</td><td>외국인 5일(억)</td><td>기관 5일(억)</td><td>외국인 보유비율 20일 변화</td><td>52주 고점 대비</td><td>상태</td></tr>')
+        for r in sorted(inflow, key=lambda r: (r['u']['market'] != 'KOSDAQ', -(r['sig']['f20'] + r['sig']['o20']))):
+            sg = r['sig']
+            L.append('<tr><td>%s (%s)</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
+                r['u']['name'], r['u']['code'], r['u']['market'], sg['label'] + (' (' + sg['turn'] + ')' if sg['turn'] else ''),
+                '{:+,.0f}'.format(sg['f20']), '{:+,.0f}'.format(sg['o20']), '{:+,.0f}'.format(sg['f5']), '{:+,.0f}'.format(sg['o5']),
+                '-' if sg['hold_chg'] is None else '%+.2f%%p' % sg['hold_chg'], pct(r['off52']), r['state']))
+        L.append('</table>')
     if cand:
         L.append('## 후보 (점유율 1위 여부 보류)')
         L.append('<table header-row="true">\n<tr><td>종목</td><td>시장</td><td>근거 기사</td><td>종가</td><td>52주 고점 대비</td><td>보류 사유</td></tr>')
@@ -213,7 +233,7 @@ def main():
     L.append('- **시장 구간**은 코스닥 지수의 최근 10거래일 최고 종가 대비 낙폭입니다(강의의 "2주간 지수 하락률"을 단순화). 코스닥 일간 지수는 네이버 증권 값입니다.\n'
              '- **브레이크 신호**는 구간 안에서 지수 일봉이 양봉이고 전일 종가보다 오르며 마감한 날입니다. 강의는 코스피도 함께 상승 마감해야 한다고 합니다.\n'
              '- **재무**는 네이버 증권의 최근 확정 사업연도 값입니다. 금융업(은행·증권·보험)은 부채비율이 구조적으로 높아 제외했습니다. 분기 YoY는 직전 확정 분기와 전년 같은 분기를 비교한 영업이익 증감률입니다.\n'
-             '- **수급**(외국인·기관 5일 순매수 수량)은 네이버 증권 최근 5거래일 합입니다. 당일 값은 잠정치일 수 있습니다.\n'
+             '- **수급 신호**는 네이버 증권 종목별 투자자 동향(최근 60거래일)에서 외국인·기관의 최근 20거래일 순매수 금액(순매수 수량 × 당일 종가)을 20일 거래대금과 비교해 만든 한 줄 요약입니다. 기관은 합산 값이라 연기금·투신 등으로 나누지 못하고, 당일 값은 잠정치일 수 있습니다. 주가 상승의 보장이 아니라 참고 자료입니다.\n'
              '- **점유율 1위** 판정은 뉴스 기사(제목·요약) 근거이며 기사 표현에 따라 국내/세계, 전체/세부 품목이 다릅니다. 1위 분야 열을 함께 보세요.\n'
              '- 강의의 신용잔고(반대매매) 지표는 아직 포함하지 않았습니다. 이 페이지는 투자 권유가 아닙니다.')
     os.makedirs(DAILY, exist_ok=True)

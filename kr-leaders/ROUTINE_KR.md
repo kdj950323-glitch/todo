@@ -17,8 +17,17 @@
 3. `python3 kr-leaders/tools/discover.py apply --cand /tmp/kr_cand.json --decided /tmp/kr_decided.json`
 4. 기존 '확인' 종목은 다시 판정하지 않는다. 새로 '확인'된 종목이 있으면 보고에 이름과 분야를 적는다.
 
+## 1-2. 증권사 리포트 모멘텀 정밀분석
+1. `python3 kr-leaders/tools/research.py fetch --days 14 --out /tmp/kr_reports.json` (추적 '확인' 종목의 최근 종목분석 리포트 수집, 새 리포트만 처리).
+2. JSON `candidates` (키워드 모멘텀·턴어라운드·수혜·서프라이즈 등이 걸린 새 리포트)가 있으면 각 리포트 `text`(본문 요약)를 읽고 판정한다:
+   - **모멘텀**: 본문에 구체적 근거(수치·수주·신제품·업황 등)가 있다. `note` 에 근거 한 줄(수치 포함), `risk` 에 리스크 한 줄.
+   - **단기 이벤트**: 서프라이즈가 일회성(환급·평가이익·래깅 등)이거나 이후 감익이 예상된다.
+   - **근거 약함**: 키워드만 있고 근거가 없거나 주주환원·재평가 논리뿐이다.
+   `/tmp/kr_reports_decided.json`: `[{"id":97049,"verdict":"모멘텀","note":"...","risk":"..."}]`. 본문에 있는 내용만 쓰고 추측하지 않는다. 증권사 의견은 낙관 편향이 있어 참고 자료다. 이어 `python3 kr-leaders/tools/research.py apply --decided /tmp/kr_reports_decided.json`.
+3. 후보가 없으면 건너뛴다. 새 '모멘텀' 판정이 있으면 보고에 종목명과 근거를 적는다(코스닥 우선). 리포트 본문 전문은 저장소에 남기지 않는다(research.py 가 메타만 저장).
+
 ## 2. 일일 추적
-`python3 kr-leaders/tools/track.py` → `kr-leaders/daily/YYYY-MM-DD.md`, `state/kr_status.csv`, `state/kr_flow.csv`. 출력 JSON 의 `fails` 가 있으면 보고에 적는다. 파일을 임의로 고치지 않는다(생성물).
+`python3 kr-leaders/tools/track.py` → `kr-leaders/daily/YYYY-MM-DD.md`, `state/kr_status.csv`, `state/kr_flow.csv`. 종목별 외국인·기관 수급 신호(최근 20거래일 순매수 요약)와 "외국인·기관 수급이 들어오는 종목" 표가 함께 만들어진다. 알림에는 수급이 들어오는 코스닥 종목 수와 신규 모멘텀 리포트 수를 한마디 덧붙여도 좋다. 출력 JSON 의 `fails` 가 있으면 보고에 적는다. 파일을 임의로 고치지 않는다(생성물).
 
 ## 3. 사이트 빌드·점검·저장
 1. `python3 kr-leaders/tools/build_kr_site.py` (docs/kr 재생성). 이어서 미국 증시 사이트 목차에 링크가 반영되도록 `python3 market-log/tools/build_site.py`.

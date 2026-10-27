@@ -116,6 +116,57 @@ def integration(code):
     return {'info': info, 'industry': d.get('industryCode'), 'flow': d.get('dealTrendInfos') or [], 'raw': d}
 
 
+def trend(code, size=60):
+    """종목별 일별 투자자 순매수(주) 이력, 최신순 최대 60일. 외국인 보유비율 포함."""
+    d = http_json('%s/stock/%s/trend?pageSize=%d' % (M, code, size))
+    return [{'d': x['bizdate'], 'foreign': num(x.get('foreignerPureBuyQuant')) or 0, 'organ': num(x.get('organPureBuyQuant')) or 0,
+             'indiv': num(x.get('individualPureBuyQuant')) or 0, 'hold': num(x.get('foreignerHoldRatio')),
+             'close': num(x.get('closePrice')), 'vol': num(x.get('accumulatedTradingVolume')) or 0} for x in d]
+
+
+MIN_TURNOVER = 10  # 20일 거래대금(억원) 이 값 미만이면 수급 판정 안 함
+MIN_AMOUNT = 3  # 순매수 금액(억원) 이 값 미만이면 '의미 없음'
+MATERIAL = 0.01 # 20일 거래대금 대비 순매수 금액이 이 비율 이상이어야 '의미 있는' 수급으로 본다
+
+
+def flow_signal(days):
+    """days: trend() 결과(최신순). 외국인·기관 수급을 쉬운 말로 요약한다. 금액은 순매수 수량 × 그날 종가(억원)."""
+    if len(days) < 20:
+        return None
+    def amt(key, n):
+        return sum(x[key] * (x['close'] or 0) for x in days[:n]) / 1e8
+    turn = sum((x['vol'] or 0) * (x['close'] or 0) for x in days[:20]) / 1e8
+    f20, o20, i20, f5, o5 = amt('foreign', 20), amt('organ', 20), amt('indiv', 20), amt('foreign', 5), amt('organ', 5)
+    if turn < MIN_TURNOVER:  # 거래가 거의 없는 종목(거래정지 포함)은 수급 해석 불가
+        return {'f20': f20, 'o20': o20, 'i20': i20, 'f5': f5, 'o5': o5, 'hold_chg': None, 'label': '거래 거의 없음', 'turn': '', 'inflow': False}
+    th = max(turn * MATERIAL, MIN_AMOUNT)
+    def side(v):
+        return 1 if v >= th else -1 if v <= -th else 0
+    sf, so = side(f20), side(o20)
+    if sf > 0 and so > 0:
+        label = '외국인·기관 동반 매수'
+    elif sf < 0 and so < 0:
+        label = '외국인·기관 동반 매도'
+    elif sf > 0:
+        label = '외국인 매수 우위' if so == 0 else '외국인 매수·기관 매도'
+    elif so > 0:
+        label = '기관 매수 우위' if sf == 0 else '기관 매수·외국인 매도'
+    elif sf < 0:
+        label = '외국인 매도'
+    elif so < 0:
+        label = '기관 매도'
+    else:
+        label = '개인만 매수' if side(i20) > 0 else '뚜렷한 수급 없음'
+    if sf <= 0 and so <= 0 and side(i20) > 0 and label != '개인만 매수':
+        label += ' · 개인 매수'
+    turn_note = ''
+    if (sf <= 0 and side(f5) > 0) or (so <= 0 and side(o5) > 0):
+        turn_note = '최근 5일 매수 전환'
+    h = [x['hold'] for x in days if x['hold'] is not None]
+    dh = (h[0] - h[19]) if len(h) >= 20 else None
+    return {'f20': f20, 'o20': o20, 'i20': i20, 'f5': f5, 'o5': o5, 'hold_chg': dh, 'label': label, 'turn': turn_note, 'inflow': sf > 0 or so > 0}
+
+
 FIN_ROWS = {'매출액': 'sales', '영업이익': 'op', '당기순이익': 'ni', '부채비율': 'debt', 'ROE': 'roe', '주당배당금': 'dps', '시가배당률': 'dyield'}
 
 
