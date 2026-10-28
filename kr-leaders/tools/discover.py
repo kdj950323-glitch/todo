@@ -14,6 +14,7 @@
        명단 갱신. 판정이 없는 후보는 '후보'로 저장한다. '제외'된 종목은 이후 후보에서 다시 올리지 않는다.
 """
 import argparse, csv, datetime, hashlib, json, os, re, sys
+from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import krlib as K  # noqa: E402
@@ -25,6 +26,7 @@ UNI_AGE_DAYS = 7
 NEAR = 70  # '1위' 와 회사명 사이 허용 글자 수
 # '점유율 1위' 맥락 표현 (단순 '브랜드평판 1위' 같은 순위는 제외하려는 것)
 SHARE_RX = re.compile(r'점유율\s*(?:\S{0,6})?\s*1위|(?:업계|시장|세계|글로벌|국내|독보적|압도적|업종|분야|부문)\s*(?:\S{0,4})?\s*1위|1위\s*(?:업체|기업|사업자|메이커|제조사|회사)|점유율\s*(?:\d{1,2}(?:\.\d)?%\s*)?(?:로|를|으로)?\s*(?:\S{0,3})?\s*(?:선두|1등)')
+SPAC_RX = re.compile(r'스팩|기업인수목적|제?\d+호$')
 PARTICLES = set('은는이가을를의에도와과로만')
 # 일반 단어와 겹쳐 오인식이 잦은 상장사명 (원하면 추가)
 STOP_NAMES = {'대상', '신흥', '태양', '레이', '카스', '진양', '한창', '동양', '대한', '서울', '한국', '삼화', '대원', '고려', '코리아', '글로벌', '에이스', '세종', '대성', '삼성', '현대', '동일', '선진', '신세계'}
@@ -64,7 +66,7 @@ def boundary_ok(text, m):
 
 
 def name_regex(uni):
-    names = sorted({u['name'] for u in uni if len(u['name']) >= 2}, key=len, reverse=True)
+    names = sorted({u['name'] for u in uni if len(u['name']) >= 2 and not SPAC_RX.search(u['name'])}, key=len, reverse=True)  # 스팩은 사업이 없어 제외
     return re.compile('|'.join(re.escape(n) for n in names))
 
 
@@ -80,23 +82,31 @@ def cmd_fetch(a):
     banned = {r['code'] for r in K.read_csv('leaders_kr.csv') if r['status'] == '제외'}
     cutoff = datetime.date.today() - datetime.timedelta(days=a.days)
     arts, ids = [], set()
-    for q in QUERIES:
+
+    def run_query(q):
+        got = []
         for start in (1, 101, 201, 301, 401):
             items = K.news_search(q, cid, sec, base, display=100, start=start)
             if items is None:
                 print(json.dumps({'warn': '검색 실패: ' + q}, ensure_ascii=False), file=sys.stderr)
                 break
-            for it in items:
-                link = it.get('originallink') or it.get('link')
-                i = lid(link)
-                d = K.pub_date(it.get('pubDate'))
-                if i in ids or (d and d < cutoff):
-                    continue
-                ids.add(i)
-                arts.append({'id': i, 'pub': d.isoformat() if d else '', 'title': K.clean(it['title']), 'desc': K.clean(it['description']), 'link': link,
-                             'was_seen': i in seen})
+            got += items
             if len(items) < 100:
                 break
+        return got
+
+    with ThreadPoolExecutor(max_workers=4) as ex:  # 검색어 9개 x 5페이지를 순차로 하면 클라우드에서 1분 넘게 걸림
+        results = list(ex.map(run_query, QUERIES))
+    for items in results:
+        for it in items:
+            link = it.get('originallink') or it.get('link')
+            i = lid(link)
+            d = K.pub_date(it.get('pubDate'))
+            if i in ids or (d and d < cutoff):
+                continue
+            ids.add(i)
+            arts.append({'id': i, 'pub': d.isoformat() if d else '', 'title': K.clean(it['title']), 'desc': K.clean(it['description']), 'link': link,
+                         'was_seen': i in seen})
     cand = {}
     for ar in arts:
         text = ar['title'] + ' ' + ar['desc']

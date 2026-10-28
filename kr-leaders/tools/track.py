@@ -6,7 +6,7 @@ state/kr_status.csv(이력), state/kr_flow.csv(지수 투자자 수급 이력)�
   python3 kr-leaders/tools/track.py [--date YYYY-MM-DD]
 기준:
   시장 구간   코스닥 지수의 '최근 10거래일 최고 종가 대비 현재 낙폭'(2주 낙폭). -10% 이내 평상시 / -10~-15% 낙폭과대 구간 / -15% 이하 바겐세일 구간
-  브레이크    구간 안(최근 5거래일 낙폭 -10% 이하 경험)에서 지수 일봉이 양봉이고 전일보다 오르며 마감한 날
+  브레이크    구간 안(최근 5거래일 낙폭 -10% 이하 경험)에서 지수 일봉이 양봉이고 전일보다 오르며 마감한 첫 날(전일도 오른 날이면 반등 지속)
   종목 필터   부채비율 200% 미만, 영업이익 흑자, 배당 여부, 2년 안 저점 대비 10배 이상 상승 이력(제외 후보)
   엔벨로프    20일 이동평균 ±20% (하단=낙폭과대, 상단=과열)
 출력은 모두 '상태 분류'이며 매수·매도 시점을 알려 주지 않는다.
@@ -42,9 +42,11 @@ def regime(ic):
     zone = '바겐세일 구간' if dd10 <= -15 else '낙폭과대 구간' if dd10 <= -10 else '평상시'
     in_zone = recent_dd <= -10
     up_close = last['c'] > last['o'] and last['c'] > ic[-2]['c']
-    brk = in_zone and up_close
+    prev_up = len(ic) >= 3 and ic[-2]['c'] > ic[-3]['c']  # 전일도 오른 날이면 '첫 반등'이 아니라 반등 지속
+    brk = in_zone and up_close and not prev_up
+    cont = in_zone and up_close and prev_up
     return {'close': c[-1], 'chg': (c[-1] / c[-2] - 1) * 100, 'dd10': dd10, 'dd20': dd20, 'zone': zone, 'recent_dd': recent_dd,
-            'break': brk, 'up_close': up_close, 'date': last['d']}
+            'break': brk, 'cont': cont, 'up_close': up_close, 'date': last['d']}
 
 
 def latest_confirmed(row, cols):
@@ -86,6 +88,10 @@ def stock_row(u, idx_dd10):
         prev = qtr.get(key, {}).get(str(int(k) - 100)) if k else None
         if v is not None and prev not in (None, 0):
             qyoy[nm] = (v - prev) / abs(prev) * 100
+    ttm = None
+    qs = [k for k in sorted(qtr.get('op', {}), reverse=True) if not qcols.get(k, ('', True))[1] and qtr['op'][k] is not None][:4]
+    if len(qs) == 4:
+        ttm = sum(qtr['op'][k] for k in qs)
     flow5 = {'foreign': 0, 'organ': 0, 'individual': 0}
     for f in info['flow'][:5]:
         flow5['foreign'] += K.num(f.get('foreignerPureBuyQuant')) or 0
@@ -96,13 +102,14 @@ def stock_row(u, idx_dd10):
     except Exception:
         sig = None
     return {'u': u, 'close': close, 'chg': chg, 'off52': off52, 'dd10': dd10, 'env': env, 'debt': debt, 'op': op, 'dps': dps, 'mult2y': mult2y,
-            'qyoy': qyoy, 'flow5': flow5, 'sig': sig, 'dyield': K.num(inf.get('dividendYieldRatio')), 'per': K.num(inf.get('per')), 'pbr': K.num(inf.get('pbr'))}
+            'qyoy': qyoy, 'ttm': ttm, 'flow5': flow5, 'sig': sig, 'dyield': K.num(inf.get('dividendYieldRatio')), 'per': K.num(inf.get('per')), 'pbr': K.num(inf.get('pbr'))}
 
 
 def classify(r, fin_exempt):
     """(상태, 사유목록). 제외 > 주의 > 정상"""
     why = []
-    if r['op'] is not None and r['op'] <= 0:
+    turn = r['op'] is not None and r['op'] <= 0 and r.get('ttm') is not None and r['ttm'] > 0  # 직전 사업연도 적자지만 최근 4분기 합산은 흑자
+    if r['op'] is not None and r['op'] <= 0 and not turn:
         why.append('영업적자')
     if r['mult2y'] and r['mult2y'] >= 10:
         why.append('2년 저점 대비 %.0f배 상승' % r['mult2y'])
@@ -112,6 +119,8 @@ def classify(r, fin_exempt):
         why.append('부채비율 %.0f%%' % r['debt'])
     if r['dps'] is not None and r['dps'] <= 0:
         why.append('무배당')
+    if turn:
+        why.append('직전 연도 영업적자, 최근 4분기 합산 흑자(%s억)' % '{:,.0f}'.format(r['ttm']))
     if r['op'] is None:
         why.append('영업이익 미확인')
     return ('주의' if why else '정상'), why
@@ -180,7 +189,7 @@ def main():
             continue
         L.append('<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>' % (
             '코스닥' if m == 'KOSDAQ' else '코스피', fmt(g['close'], 2), pct(g['chg'], 2), pct(g['dd10']), pct(g['dd20']), g['zone'],
-            '발생' if g['break'] else ('양봉 마감(구간 밖)' if g['up_close'] else '없음'), fmt(f.get('personal')), fmt(f.get('foreign')), fmt(f.get('institutional'))))
+            '발생' if g['break'] else ('반등 지속(신호 이후)' if g['cont'] else ('양봉 마감(구간 밖)' if g['up_close'] else '없음')), fmt(f.get('personal')), fmt(f.get('foreign')), fmt(f.get('institutional'))))
     L.append('</table>')
     kq, kp = reg['KOSDAQ'], reg['KOSPI']
     if kq:
@@ -192,6 +201,8 @@ def main():
         if kq['break']:
             L.append('- 코스닥이 최근 -10%% 이상 빠진 뒤 오늘 양봉으로 오르며 마감해 **브레이크 신호 조건**에 해당합니다.%s' % (
                 ' 코스피도 상승 마감했습니다.' if kp and kp['up_close'] else ' 코스피는 함께 상승 마감하지 못했습니다.'))
+        elif kq['cont']:
+            L.append('- 급락 뒤 첫 양봉(브레이크 신호) 이후 반등이 이어지는 중입니다. 신호는 첫 양봉 날에만 표시합니다.')
         else:
             L.append('- 브레이크 신호(급락 후 지수 양봉 마감)는 오늘 없습니다.')
     ok = [r for r in rows if r['u']['status'] == '확인']
@@ -231,7 +242,7 @@ def main():
         L.append('</table>')
     L.append('## 읽는 법과 한계')
     L.append('- **시장 구간**은 코스닥 지수의 최근 10거래일 최고 종가 대비 낙폭입니다(강의의 "2주간 지수 하락률"을 단순화). 코스닥 일간 지수는 네이버 증권 값입니다.\n'
-             '- **브레이크 신호**는 구간 안에서 지수 일봉이 양봉이고 전일 종가보다 오르며 마감한 날입니다. 강의는 코스피도 함께 상승 마감해야 한다고 합니다.\n'
+             '- **브레이크 신호**는 구간 안에서 지수 일봉이 양봉이고 전일 종가보다 오르며 마감한 첫 날입니다(전일도 오른 날이면 "반등 지속"으로 표시). 강의는 코스피도 함께 상승 마감해야 한다고 합니다.\n'
              '- **재무**는 네이버 증권의 최근 확정 사업연도 값입니다. 금융업(은행·증권·보험)은 부채비율이 구조적으로 높아 제외했습니다. 분기 YoY는 직전 확정 분기와 전년 같은 분기를 비교한 영업이익 증감률입니다.\n'
              '- **수급 신호**는 네이버 증권 종목별 투자자 동향(최근 60거래일)에서 외국인·기관의 최근 20거래일 순매수 금액(순매수 수량 × 당일 종가)을 20일 거래대금과 비교해 만든 한 줄 요약입니다. 기관은 합산 값이라 연기금·투신 등으로 나누지 못하고, 당일 값은 잠정치일 수 있습니다. 주가 상승의 보장이 아니라 참고 자료입니다.\n'
              '- **점유율 1위** 판정은 뉴스 기사(제목·요약) 근거이며 기사 표현에 따라 국내/세계, 전체/세부 품목이 다릅니다. 1위 분야 열을 함께 보세요.\n'

@@ -96,18 +96,18 @@ code,name,market,status,segment,first_seen,last_seen,evidence,evidence_title,evi
 403870,HPSP,KOSDAQ,후보,,2026-10-26,2026-10-26,1,"[진격의 ‘K-소부장’]① 한미반도체, TC본더 70% 점유…HPSP는 어닐링시...",https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609291526064290776,점유율이 눈에 띈다는 표현뿐
 006260,LS,KOSPI,후보,,2026-10-26,2026-10-27,1,"LS에코에너지 주가, 13%대↑... 배경은?",https://www.ggilbo.com/news/articleView.html?idxno=1188409,1위 근거는 자회사
 285130,SK케미칼,KOSPI,후보,,2026-10-26,2026-10-28,1,"남성호르몬시장, '도도한 싸움'…네비도ㆍ센비도ㆍ휴비도 격돌",http://www.medisobizanews.com/news/articleView.html?idxno=143156,"품목 한정, 근거 약함"
-482520,교보16호스팩,KOSDAQ,후보,,2026-10-27,2026-10-27,1,[더벨][큐로드 IPO] 게임 QA 시장 점유율 15%…독립계 1위 입지,https://www.thebell.co.kr/free/content/ArticleView.asp?key=202610190252509320102982,
-002720,국제약품,KOSPI,후보,,2026-10-27,2026-10-28,1,[오늘의 제약리뷰] 유한양행·국제약품·일동제약·동아제약·대웅제약...,http://www.financialreview.co.kr/news/articleView.html?idxno=45657,
+482520,교보16호스팩,KOSDAQ,제외,,2026-10-27,2026-10-27,1,[더벨][큐로드 IPO] 게임 QA 시장 점유율 15%…독립계 1위 입지,https://www.thebell.co.kr/free/content/ArticleView.asp?key=202610190252509320102982,스팩(사업 없음)
+002720,국제약품,KOSPI,제외,,2026-10-27,2026-10-28,1,[오늘의 제약리뷰] 유한양행·국제약품·일동제약·동아제약·대웅제약...,http://www.financialreview.co.kr/news/articleView.html?idxno=45657,"제약 리뷰 나열 기사, 1위 근거 없음"
 000270,기아,KOSPI,후보,,2026-10-26,2026-10-26,2,전 세계 전기차 성장세 식는데 현대차·기아는 20% 성장... 무슨 일이 있...,https://www.insight.co.kr/news/576695,유럽 PBV 한정
 086450,동국제약,KOSDAQ,후보,,2026-10-26,2026-10-28,2,"동국제약 '유레스코정', 비뇨의학회서 급여 적용 필요성 논의",https://www.mdtoday.co.kr/news/articleView.html?idxno=620515,일부 품목 한정
-000640,동아제약,KOSPI,후보,,2026-10-27,2026-10-28,1,[오늘의 제약리뷰] 유한양행·국제약품·일동제약·동아제약·대웅제약...,http://www.financialreview.co.kr/news/articleView.html?idxno=45657,
+000640,동아제약,KOSPI,제외,,2026-10-27,2026-10-28,1,[오늘의 제약리뷰] 유한양행·국제약품·일동제약·동아제약·대웅제약...,http://www.financialreview.co.kr/news/articleView.html?idxno=45657,"제약 리뷰 나열 기사, 1위 근거 없음"
 004000,롯데정밀화학,KOSPI,후보,,2026-10-26,2026-10-26,1,"롯데정밀화학 유록스, 벤츠 디젤차에 순정 요소수 공급..품질 신뢰도 ‘...",https://www.dailycar.co.kr/content/news.html?type=view&autoId=62487,"판매 1위, 점유율 근거 약함"
 007160,사조산업,KOSPI,후보,,2026-10-26,2026-10-26,1,[Who Is ?] 주진우 사조그룹 회장,https://www.businesspost.co.kr/BP?command=article_view&num=444313,맛살 1위 여부 불명확
 032830,삼성생명,KOSPI,후보,,2026-10-26,2026-10-27,1,"홍원학 삼성생명 대표, 신한 밀어내고 퇴직연금 1위 되찾았다",https://www.insightkorea.co.kr/news/articleView.html?idxno=256941,"적립금 순위, 점유율 근거 약함"
 043260,성호전자,KOSDAQ,후보,,2026-10-26,2026-10-26,1,"젠슨 황 찜한 'CPO' 세계 1위… 성호전자 ADS테크, 美서 235억원 수주 '전...",https://www.mt.co.kr/stock/2026/08/05/2026080510350251443,1위 근거는 자회사
 086520,에코프로,KOSDAQ,후보,,2026-10-27,2026-10-28,2,"[단독] 中배터리도 줄서는 에코프로…""유럽 양극재 장악""",https://www.hankyung.com/article/2026102659761,"1위는 CATL 등 고객사, 에코프로 자체 1위 근거 약함"
 084370,유진테크,KOSDAQ,후보,,2026-10-26,2026-10-26,1,"[진격의 ‘K-소부장’]① 한미반도체, TC본더 70% 점유…HPSP는 어닐링시...",https://www.dnews.co.kr/uhtml/view.jsp?idxno=202609291526064290776,점유율이 눈에 띈다는 표현뿐
-249420,일동제약,KOSPI,후보,,2026-10-27,2026-10-28,1,[오늘의 제약리뷰] 유한양행·국제약품·일동제약·동아제약·대웅제약...,http://www.financialreview.co.kr/news/articleView.html?idxno=45657,
+249420,일동제약,KOSPI,제외,,2026-10-27,2026-10-28,1,[오늘의 제약리뷰] 유한양행·국제약품·일동제약·동아제약·대웅제약...,http://www.financialreview.co.kr/news/articleView.html?idxno=45657,"제약 리뷰 나열 기사, 1위 근거 없음"
 192820,코스맥스,KOSPI,후보,,2026-10-27,2026-10-28,1,로레알도 인정한 K-뷰티 열풍… 코스맥스와 협력해 해외 공략 확대,https://www.viva100.com/article/20261026500828,프로페셔널 사업부 1위 주체가 로레알인지 불분명
 128940,한미약품,KOSPI,후보,,2026-10-26,2026-10-26,3,"""이런 약 처음 봤다…한국인들 너무 부러워"" 외국인들 'K약국'서 감탄하...",https://view.asiae.co.kr/article/2026100616064437085,1위 근거는 계열사 JVM
 408470,한패스,KOSDAQ,후보,해외송금 업계 1위 수준,2026-10-26,2026-10-26,3,"해외송금업체 '배보다 배꼽이 더 큰' 장사…고객 늘어도 적자, 가격 올리...",https://www.topdaily.kr/articles/112439,업계 1위가 점유율인지 불분명
