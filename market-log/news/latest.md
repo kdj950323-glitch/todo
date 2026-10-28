@@ -1,21 +1,32 @@
 <callout icon="📰" color="gray_bg">
-	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-10-27, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
-	전체 48건(🟢 호재 23 · 🔴 악재 8 · 🟡 불확실 15 · ⚪ 중립 2), 오늘 새로 추가 7건, 이번 정리로 삭제 0건.
+	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-10-28, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
+	전체 57건(🟢 호재 29 · 🔴 악재 10 · 🟡 불확실 16 · ⚪ 중립 2), 오늘 새로 추가 9건, 이번 정리로 삭제 0건.
 </callout>
 ## 오늘 새로 추가된 뉴스
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
-<tr><td>10-28 08:24</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>수주·계약</td><td>[(미국 특징주) 오라클, 엔비디아 AI 칩 계약 확대…구글 TPU·세레브라스...](https://www.newspim.com/news/view/20261028000065)</td><td>newspim.com</td><td>오라클이 엔비디아 AI 칩 계약을 확대했다는 보도(구글 TPU 등 경쟁 언급 포함).</td></tr>
-<tr><td>10-28 07:59</td><td>AVGO 브로드컴</td><td>🟢 호재</td><td>투자의견</td><td>[메타 유증 흥행·브로드컴 목표가 상향…빅테크 훈풍 속 차별화 장세 (美...](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610280012&t=NN)</td><td>wowtv.co.kr</td><td>브로드컴 목표가 상향 소식이 빅테크 강세장에서 전해졌다는 보도.</td></tr>
-<tr><td>10-28 07:02</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>M&A</td><td>[(Invest)'고래' 스페이스X-테슬라 합병 추진에 부담 커진 '새우' 미래에...](https://www.investchosun.com/site/data/html_dir/2026/10/27/2026102780135.html)</td><td>investchosun.com</td><td>스페이스X-테슬라 합병 추진 소식에 소액주주 부담이 커졌다는 보도(합병 여부는 확정 전).</td></tr>
-<tr><td>10-28 06:32</td><td>AMZN 아마존</td><td>🟢 호재</td><td>투자의견</td><td>[아마존, 3분기 실적 앞두고 월가 매수 의견 집중…목표주가 330달러](https://www.thefairnews.co.kr/news/articleView.html?idxno=92097)</td><td>thefairnews.co.kr</td><td>3분기 실적을 앞두고 월가 매수 의견이 집중되고 목표주가 330달러가 제시됐다는 보도.</td></tr>
-<tr><td>10-28 01:15</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>투자의견</td><td>[(GAM) 록히드마틴 ② F-35 족쇄 풀고 미사일로 날았다...5일새 16% 급등](https://www.newspim.com/news/view/20261028000013)</td><td>newspim.com</td><td>F-35 부담이 풀리고 미사일 부문이 부각되며 5일간 16% 급등했다는 보도.</td></tr>
-<tr><td>10-27 15:50</td><td>PLTR 팔란티어</td><td>🟡 불확실</td><td>실적·가이던스</td><td>["팔란티어, 실적 발표로 사상 최고가 경신 가능성"](https://news.einfomax.co.kr/news/articleView.html?idxno=4441383)</td><td>news.einfomax.co.kr</td><td>실적 발표로 사상 최고가를 경신할 가능성이 있다는 전망 보도.</td></tr>
-<tr><td>10-27 15:31</td><td>GOOGL 알파벳</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[메타는 7% 급락했지만…구글은 AI 투자 부담·부유세 우려 덜어](https://www.newsis.com/view/NISX20261027_0003842730)</td><td>newsis.com</td><td>메타가 급락했지만 구글은 AI 투자 부담과 부유세 우려가 덜하다는 분석, 28일 실적 발표 예정.</td></tr>
+<tr><td>10-29 08:24</td><td>GOOGL 알파벳</td><td>🔴 악재</td><td>실적·가이던스</td><td>[알파벳, 어닝 쇼크…"내년 자본지출도 큰 폭 증가", 주가 10% 급락](https://www.mt.co.kr/world/2026/10/29/2026102908033322253)</td><td>mt.co.kr</td><td>알파벳이 3분기 어닝 쇼크 속에 내년 자본지출도 큰 폭 늘어날 전망이라는 보도, 시간외 주가 약 10% 급락.</td></tr>
+<tr><td>10-29 08:13</td><td>GOOGL 알파벳</td><td>🔴 악재</td><td>실적·가이던스</td><td>[알파벳, 3분기 매출 25% 증가에도 급락…AI 투자 부담 확대](https://www.etnews.com/20261029000019)</td><td>etnews.com</td><td>알파벳이 3분기 매출 25% 증가에도 AI 투자 부담 확대로 급락했다는 보도.</td></tr>
+<tr><td>10-29 07:46</td><td>MSFT 마이크로소프트</td><td>🟢 호재</td><td>실적·가이던스</td><td>[MS 분기 매출 124조 원으로 19% 급증...'애저' 48% 폭풍 성장 덕](https://www.ytn.co.kr/_ln/0104_202610290746192594)</td><td>ytn.co.kr</td><td>MS 분기 매출이 19% 늘고 애저가 48% 성장했다는 보도.</td></tr>
+<tr><td>10-29 07:20</td><td>SNDK 샌디스크</td><td>🟢 호재</td><td>업황</td><td>[(속보) 마이크론·오라클·샌디스크 급등…엔비디아·테슬라·애플은 하...](https://www.cbci.co.kr/news/articleView.html?idxno=620562)</td><td>cbci.co.kr</td><td>마이크론·샌디스크가 급등하고 엔비디아·테슬라·애플은 하락했다는 장 마감 속보.</td></tr>
+<tr><td>10-29 07:08</td><td>MRVL 마벨</td><td>🟡 불확실</td><td>M&A</td><td>[시간외 루멘텀 17% 상승·마벨 8% 하락…인수 협상 보도](https://www.tokenpost.kr/news/breaking/428930)</td><td>tokenpost.kr</td><td>마벨이 루멘텀 인수 협상 중이라는 보도에 시간외 루멘텀 17% 상승, 마벨 8% 하락(확정 전).</td></tr>
+<tr><td>10-29 00:21</td><td>AVGO 브로드컴</td><td>🟢 호재</td><td>투자의견</td><td>["앤트로픽·오픈AI 돈줄 풀리면 수혜"…브로드컴 목표가 '상향'](https://www.newsis.com/view/NISX20261028_0003844688)</td><td>newsis.com</td><td>앤트로픽·오픈AI 자금 조달 시 수혜 기대로 브로드컴 목표가가 상향됐다는 보도.</td></tr>
+<tr><td>10-29 00:18</td><td>AMD AMD</td><td>🟢 호재</td><td>실적·가이던스</td><td>[AMD 데이터센터 매출 107% 급증…월가 목표가 상향](https://www.thefairnews.co.kr/news/articleView.html?idxno=92254)</td><td>thefairnews.co.kr</td><td>AMD 데이터센터 매출이 107% 급증하고 월가 목표가가 상향됐다는 보도.</td></tr>
+<tr><td>10-28 17:50</td><td>META 메타</td><td>🟢 호재</td><td>투자의견</td><td>[메타 목표주가 920→940달러 상향, JP모건 '비중 확대' 유지](https://www.tokenpost.kr/news/market/427397)</td><td>tokenpost.kr</td><td>JP모건이 메타 목표주가를 920→940달러로 상향하고 비중 확대를 유지했다는 보도.</td></tr>
+<tr><td>10-28 08:38</td><td>PLTR 팔란티어</td><td>🟢 호재</td><td>투자의견</td><td>[팔란티어 3분기 실적 발표 카운트다운…로젠블랫, 목표가 260 달러로 상...](https://news.einfomax.co.kr/news/articleView.html?idxno=4441493)</td><td>news.einfomax.co.kr</td><td>팔란티어 3분기 실적 발표를 앞두고 로젠블랫이 목표가를 260달러로 상향했다는 보도.</td></tr>
 </table>
 ## 최근 14일 전체 (최신순)
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
+<tr><td>10-29 08:24</td><td>GOOGL 알파벳</td><td>🔴 악재</td><td>실적·가이던스</td><td>[알파벳, 어닝 쇼크…"내년 자본지출도 큰 폭 증가", 주가 10% 급락](https://www.mt.co.kr/world/2026/10/29/2026102908033322253)</td><td>mt.co.kr</td><td>알파벳이 3분기 어닝 쇼크 속에 내년 자본지출도 큰 폭 늘어날 전망이라는 보도, 시간외 주가 약 10% 급락.</td></tr>
+<tr><td>10-29 08:13</td><td>GOOGL 알파벳</td><td>🔴 악재</td><td>실적·가이던스</td><td>[알파벳, 3분기 매출 25% 증가에도 급락…AI 투자 부담 확대](https://www.etnews.com/20261029000019)</td><td>etnews.com</td><td>알파벳이 3분기 매출 25% 증가에도 AI 투자 부담 확대로 급락했다는 보도.</td></tr>
+<tr><td>10-29 07:46</td><td>MSFT 마이크로소프트</td><td>🟢 호재</td><td>실적·가이던스</td><td>[MS 분기 매출 124조 원으로 19% 급증...'애저' 48% 폭풍 성장 덕](https://www.ytn.co.kr/_ln/0104_202610290746192594)</td><td>ytn.co.kr</td><td>MS 분기 매출이 19% 늘고 애저가 48% 성장했다는 보도.</td></tr>
+<tr><td>10-29 07:20</td><td>SNDK 샌디스크</td><td>🟢 호재</td><td>업황</td><td>[(속보) 마이크론·오라클·샌디스크 급등…엔비디아·테슬라·애플은 하...](https://www.cbci.co.kr/news/articleView.html?idxno=620562)</td><td>cbci.co.kr</td><td>마이크론·샌디스크가 급등하고 엔비디아·테슬라·애플은 하락했다는 장 마감 속보.</td></tr>
+<tr><td>10-29 07:08</td><td>MRVL 마벨</td><td>🟡 불확실</td><td>M&A</td><td>[시간외 루멘텀 17% 상승·마벨 8% 하락…인수 협상 보도](https://www.tokenpost.kr/news/breaking/428930)</td><td>tokenpost.kr</td><td>마벨이 루멘텀 인수 협상 중이라는 보도에 시간외 루멘텀 17% 상승, 마벨 8% 하락(확정 전).</td></tr>
+<tr><td>10-29 00:21</td><td>AVGO 브로드컴</td><td>🟢 호재</td><td>투자의견</td><td>["앤트로픽·오픈AI 돈줄 풀리면 수혜"…브로드컴 목표가 '상향'](https://www.newsis.com/view/NISX20261028_0003844688)</td><td>newsis.com</td><td>앤트로픽·오픈AI 자금 조달 시 수혜 기대로 브로드컴 목표가가 상향됐다는 보도.</td></tr>
+<tr><td>10-29 00:18</td><td>AMD AMD</td><td>🟢 호재</td><td>실적·가이던스</td><td>[AMD 데이터센터 매출 107% 급증…월가 목표가 상향](https://www.thefairnews.co.kr/news/articleView.html?idxno=92254)</td><td>thefairnews.co.kr</td><td>AMD 데이터센터 매출이 107% 급증하고 월가 목표가가 상향됐다는 보도.</td></tr>
+<tr><td>10-28 17:50</td><td>META 메타</td><td>🟢 호재</td><td>투자의견</td><td>[메타 목표주가 920→940달러 상향, JP모건 '비중 확대' 유지](https://www.tokenpost.kr/news/market/427397)</td><td>tokenpost.kr</td><td>JP모건이 메타 목표주가를 920→940달러로 상향하고 비중 확대를 유지했다는 보도.</td></tr>
+<tr><td>10-28 08:38</td><td>PLTR 팔란티어</td><td>🟢 호재</td><td>투자의견</td><td>[팔란티어 3분기 실적 발표 카운트다운…로젠블랫, 목표가 260 달러로 상...](https://news.einfomax.co.kr/news/articleView.html?idxno=4441493)</td><td>news.einfomax.co.kr</td><td>팔란티어 3분기 실적 발표를 앞두고 로젠블랫이 목표가를 260달러로 상향했다는 보도.</td></tr>
 <tr><td>10-28 08:24</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>수주·계약</td><td>[(미국 특징주) 오라클, 엔비디아 AI 칩 계약 확대…구글 TPU·세레브라스...](https://www.newspim.com/news/view/20261028000065)</td><td>newspim.com</td><td>오라클이 엔비디아 AI 칩 계약을 확대했다는 보도(구글 TPU 등 경쟁 언급 포함).</td></tr>
 <tr><td>10-28 07:59</td><td>AVGO 브로드컴</td><td>🟢 호재</td><td>투자의견</td><td>[메타 유증 흥행·브로드컴 목표가 상향…빅테크 훈풍 속 차별화 장세 (美...](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610280012&t=NN)</td><td>wowtv.co.kr</td><td>브로드컴 목표가 상향 소식이 빅테크 강세장에서 전해졌다는 보도.</td></tr>
 <tr><td>10-28 07:02</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>M&A</td><td>[(Invest)'고래' 스페이스X-테슬라 합병 추진에 부담 커진 '새우' 미래에...](https://www.investchosun.com/site/data/html_dir/2026/10/27/2026102780135.html)</td><td>investchosun.com</td><td>스페이스X-테슬라 합병 추진 소식에 소액주주 부담이 커졌다는 보도(합병 여부는 확정 전).</td></tr>
