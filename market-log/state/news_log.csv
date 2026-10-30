@@ -1,4 +1,14 @@
 first_seen,pub,ticker,name,impact,type,title,press,link,summary
+2026-10-30,2026-10-31 08:32,INTC,인텔,악재,실적·가이던스,AI 투자 우려에 뉴욕증시 일제히 하락…‘실적 부진’ 인텔 28%↓,joongang.co.kr,https://www.joongang.co.kr/article/25474611,"실적 부진 속 인텔 주가가 28% 급락, AI 투자 우려와 함께 뉴욕증시가 일제히 하락."
+2026-10-30,2026-10-31 08:20,AMZN,아마존,호재,실적·가이던스,"[美증시 특징주] 아마존, 알파벳과 달리 주가 '선방'…클라우드 매출 폭...",mediapen.com,https://www.mediapen.com/news/view/1134080,알파벳과 달리 아마존 주가는 클라우드 매출 증가에 힘입어 상대적으로 선방했다는 보도.
+2026-10-30,2026-10-31 07:04,INTC,인텔,악재,실적·가이던스,어닝 서프라이즈에도 주가 폭락한 인텔…시장의 시선은 '현금 흐름',news.einfomax.co.kr,https://news.einfomax.co.kr/news/articleView.html?idxno=4442300,실적은 시장 예상을 웃돌았지만 현금흐름 우려로 주가가 폭락했다는 분석 기사.
+2026-10-30,2026-10-31 06:58,MU,마이크론,악재,업황,"마이크론, 메모리 호황에도 주가 5.32% 급락…AI 특수 속 PC 시장 둔화 우...",jemin.com,https://www.jemin.com/news/articleView.html?idxno=845796,메모리 호황 속에서도 PC 시장 둔화 우려로 주가가 5.32% 하락.
+2026-10-30,2026-10-31 06:12,AMD,AMD,악재,업황,"AMD, 인텔발 충격에 주가 11%대 급락…PC 시장 위축 우려 속 실적 발표 ...",jemin.com,https://www.jemin.com/news/articleView.html?idxno=845794,"인텔발 충격과 PC 시장 위축 우려로 AMD 주가가 11%대 하락, 실적 발표를 앞두고 있다."
+2026-10-30,2026-10-31 06:00,GOOGL,알파벳,악재,실적·가이던스,쓴 만큼 못 버는 AI…알파벳 시총 669조 증발에 삼전·닉스 ‘비상’,joongang.co.kr,https://www.joongang.co.kr/article/25474593,AI 투자 대비 수익 우려로 알파벳 시가총액이 크게 줄었다는 보도.
+2026-10-30,2026-10-31 04:04,SPCX,스페이스X,불확실,투자의견,"스페이스X, 목표주가 상향 봇물에도 시총 534조원 날려",fnnews.com,https://www.fnnews.com/news/202610310331347987,목표주가 상향이 잇따랐음에도 시가총액이 크게 줄었다는 보도.
+2026-10-30,2026-10-30 23:28,GOOGL,알파벳,악재,투자의견,"29일 알파벳 약 13% 하락, JP모건 등 5곳 목표가 낮춰",tokenpost.kr,https://www.tokenpost.kr/news/market/430248,알파벳이 29일 약 13% 하락했고 JP모건 등 5곳이 목표가를 낮췄다는 보도.
+2026-10-30,2026-10-30 14:30,SNDK,샌디스크,호재,실적·가이던스,"샌디스크, AI 데이터센터 수요 급증에 실적 호조…매출 378% 증가",biz.chosun.com,https://biz.chosun.com/it-science/ict/2026/10/30/2GIME5GVQ5EWJKSOYBEHRNUQGU/?utm_source=naver&utm_medium=original&utm_campaign=biz,"AI 데이터센터 수요 증가로 샌디스크 실적이 호조, 매출이 378% 증가했다는 보도."
+2026-10-30,2026-10-30 10:45,PLTR,팔란티어,호재,투자의견,"JP모건, 팔란티어 비중확대 '최선호주'…""AI주권 주목""",biz.sbs.co.kr,https://biz.sbs.co.kr/article_hub/20000343245?division=NAVER,JP모건이 팔란티어에 대해 비중확대 의견과 최선호주 선정을 밝혔다는 보도.
 2026-10-29,2026-10-30 08:30,AMZN,아마존,악재,실적·가이던스,"아마존, 연말 매출 전망에 제동…인공지능 투자 확대 속 시간외 주가 5%...",jemin.com,https://www.jemin.com/news/articleView.html?idxno=845752,아마존이 연말 매출 전망에 제동이 걸리고 AI 투자를 확대하면서 시간외 주가가 약 5% 하락했다는 보도.
 2026-10-29,2026-10-30 08:25,GOOGL,알파벳,악재,실적·가이던스,아시아 증시 '검은 금요일' 오나…알파벳 이어 아마존·인텔 실적 쇼크,newspim.com,https://www.newspim.com/news/view/20261030000091,알파벳 급락에 이어 아마존·인텔 실적 쇼크가 이어지며 아시아 증시 부담이 커졌다는 보도.
 2026-10-29,2026-10-30 08:20,INTC,인텔,악재,실적·가이던스,"인텔, AI 매출 급성장에도…4분기 부정적 전망에 주가 20% ↓",jasm.co.kr,https://www.jasm.co.kr/news/view/323510/?sc=Naver,인텔의 AI 매출이 빠르게 늘었지만 4분기 전망이 부정적이어서 주가가 약 20% 하락했다는 보도.
