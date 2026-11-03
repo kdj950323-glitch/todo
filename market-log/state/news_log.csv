@@ -1,4 +1,15 @@
 first_seen,pub,ticker,name,impact,type,title,press,link,summary
+2026-11-03,2026-11-04 08:18,AMD,AMD,호재,실적·가이던스,리사 수의 자신감 통했다…AMD 4분기 매출 전망 170억달러 제시,pinpointnews.co.kr,https://www.pinpointnews.co.kr/news/articleView.html?idxno=501073,AMD가 4분기 매출 전망을 170억달러로 제시했다는 보도.
+2026-11-03,2026-11-04 08:12,AMD,AMD,호재,실적·가이던스,"AMD, 3분기 매출 ‘사상최고’ 18조원…주가 시간외서 7% 급등",news.kbs.co.kr,https://news.kbs.co.kr/news/pc/view/view.do?ncd=8703357&ref=A,AMD가 3분기 매출 사상 최고를 기록했고 시간외 주가가 약 7% 올랐다는 보도.
+2026-11-03,2026-11-04 06:42,INTC,인텔,불확실,실적·가이던스,인텔과 다르다…AMD 3분기 실적·가이던스 호조에 시간외 주가 9% 급등,news.einfomax.co.kr,https://news.einfomax.co.kr/news/articleView.html?idxno=4442842,AMD 실적·가이던스 호조에 시간외 주가가 9% 올랐다는 보도에서 인텔과 대비됐다는 내용.
+2026-11-03,2026-11-04 04:56,MRVL,마벨,불확실,M&A,"엔비디아 젠슨 황, 마벨·루멘텀 초대형 합병 지지…AI 데이터센터 광통...",jemin.com,https://www.jemin.com/news/articleView.html?idxno=846080,엔비디아 젠슨 황이 마벨·루멘텀 합병을 지지했다는 보도.
+2026-11-03,2026-11-04 03:50,PLTR,팔란티어,불확실,실적·가이던스,"팔란티어 '깜짝 실적'에도 하락…""총 계약 가치 성장 둔화""",fnnews.com,https://www.fnnews.com/news/202611040333378929,팔란티어가 깜짝 실적에도 하락했고 총 계약 가치 성장 둔화가 거론됐다는 보도.
+2026-11-03,2026-11-03 23:30,SPCX,스페이스X,호재,투자의견,"스페이스X 목표가 248→268달러, 필립증권은 '매수'로 상향",tokenpost.kr,https://www.tokenpost.kr/news/market/432043,스페이스X 목표가가 248→268달러로 오르고 필립증권이 '매수'로 상향했다는 보도.
+2026-11-03,2026-11-03 17:55,MRVL,마벨,악재,M&A,"""너무 비싸게 샀나""…마벨, 루멘텀 인수발표 후 급락",hankyung.com,https://www.hankyung.com/article/2026110336551,마벨이 루멘텀 인수 발표 후 급락해 '비싸게 샀나'라는 시각이 나온다는 보도.
+2026-11-03,2026-11-03 16:06,META,알파벳,불확실,업황,"메타, 200억달러 회사채 추진…알파벳·오라클도 자금 조달",fnnews.com,https://www.fnnews.com/news/202611031528465952,메타가 200억달러 회사채를 추진하고 알파벳·오라클도 자금 조달에 나선다는 보도.
+2026-11-03,2026-11-03 15:46,TSM,TSMC,불확실,업황,"머스크, 테라팹 운영권 재협상 가능성…TSMC 건설·운영 거론",tokenpost.kr,https://www.tokenpost.kr/news/tech/431839,머스크가 테라팹 운영권을 재협상할 가능성과 TSMC 건설·운영이 거론된다는 보도.
+2026-11-03,2026-11-03 11:09,GOOGL,알파벳,중립,업황,"구글 모회사 알파벳, AI 투자 위해 9조원 채권 발행…수요 3배 몰려",news1.kr,https://www.news1.kr/world/international-economy/6341092,알파벳이 AI 투자를 위해 9조원 규모 채권을 발행했고 수요가 3배 몰렸다는 보도.
+2026-11-03,2026-11-03 10:10,GOOGL,알파벳,악재,업황,"레딧, 매출 늘었는데 주가 29% ↓…구글 AI 검색 탓",junggi.co.kr,https://www.junggi.co.kr/news/articleView.html?idxno=38336,레딧이 매출 증가에도 구글 AI 검색 영향으로 주가가 29% 하락했다는 보도.
 2026-11-02,2026-11-03 08:08,AAPL,애플,악재,실적·가이던스,"애플 ""메모리값 전례 없는 수준""…호실적에도 시간외 4% 급락",hankyung.com,https://www.hankyung.com/article/202611031658i,애플이 메모리 가격 부담을 언급했고 호실적에도 시간외 주가가 4% 가까이 하락했다는 보도.
 2026-11-02,2026-11-03 07:50,AMD,AMD,불확실,실적·가이던스,AMD($AMD) 2일 7.522% 하락…3일 3분기 실적 발표,tokenpost.kr,https://www.tokenpost.kr/news/market/431641,AMD가 2일 7.5% 하락했고 3일 3분기 실적 발표를 앞두고 있다는 보도.
 2026-11-02,2026-11-03 07:48,MRVL,마벨,불확실,M&A,"AI 반도체·광통신 '공룡' 탄생…마벨, 155조원에 루멘텀 인수",edaily.co.kr,https://www.edaily.co.kr/News/Read?newsId=02860166645642112&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article,"마벨이 루멘텀을 1150억달러에 인수하기로 합의했고 이날 마벨 12.7%, 루멘텀 18.6% 하락했다는 보도."
