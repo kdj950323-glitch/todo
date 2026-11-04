@@ -1,25 +1,36 @@
 <callout icon="📰" color="gray_bg">
-	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-11-03, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
-	전체 101건(🟢 호재 41 · 🔴 악재 30 · 🟡 불확실 26 · ⚪ 중립 4), 오늘 새로 추가 11건, 이번 정리로 삭제 0건.
+	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-11-04, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
+	전체 111건(🟢 호재 41 · 🔴 악재 34 · 🟡 불확실 32 · ⚪ 중립 4), 오늘 새로 추가 11건, 이번 정리로 삭제 1건.
 </callout>
 ## 오늘 새로 추가된 뉴스
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
-<tr><td>11-04 08:18</td><td>AMD AMD</td><td>🟢 호재</td><td>실적·가이던스</td><td>[리사 수의 자신감 통했다…AMD 4분기 매출 전망 170억달러 제시](https://www.pinpointnews.co.kr/news/articleView.html?idxno=501073)</td><td>pinpointnews.co.kr</td><td>AMD가 4분기 매출 전망을 170억달러로 제시했다는 보도.</td></tr>
-<tr><td>11-04 08:12</td><td>AMD AMD</td><td>🟢 호재</td><td>실적·가이던스</td><td>[AMD, 3분기 매출 ‘사상최고’ 18조원…주가 시간외서 7% 급등](https://news.kbs.co.kr/news/pc/view/view.do?ncd=8703357&ref=A)</td><td>news.kbs.co.kr</td><td>AMD가 3분기 매출 사상 최고를 기록했고 시간외 주가가 약 7% 올랐다는 보도.</td></tr>
-<tr><td>11-04 06:42</td><td>INTC 인텔</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[인텔과 다르다…AMD 3분기 실적·가이던스 호조에 시간외 주가 9% 급등](https://news.einfomax.co.kr/news/articleView.html?idxno=4442842)</td><td>news.einfomax.co.kr</td><td>AMD 실적·가이던스 호조에 시간외 주가가 9% 올랐다는 보도에서 인텔과 대비됐다는 내용.</td></tr>
-<tr><td>11-04 04:56</td><td>MRVL 마벨</td><td>🟡 불확실</td><td>M&A</td><td>[엔비디아 젠슨 황, 마벨·루멘텀 초대형 합병 지지…AI 데이터센터 광통...](https://www.jemin.com/news/articleView.html?idxno=846080)</td><td>jemin.com</td><td>엔비디아 젠슨 황이 마벨·루멘텀 합병을 지지했다는 보도.</td></tr>
-<tr><td>11-04 03:50</td><td>PLTR 팔란티어</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[팔란티어 '깜짝 실적'에도 하락…"총 계약 가치 성장 둔화"](https://www.fnnews.com/news/202611040333378929)</td><td>fnnews.com</td><td>팔란티어가 깜짝 실적에도 하락했고 총 계약 가치 성장 둔화가 거론됐다는 보도.</td></tr>
-<tr><td>11-03 23:30</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>투자의견</td><td>[스페이스X 목표가 248→268달러, 필립증권은 '매수'로 상향](https://www.tokenpost.kr/news/market/432043)</td><td>tokenpost.kr</td><td>스페이스X 목표가가 248→268달러로 오르고 필립증권이 '매수'로 상향했다는 보도.</td></tr>
-<tr><td>11-03 17:55</td><td>MRVL 마벨</td><td>🔴 악재</td><td>M&A</td><td>["너무 비싸게 샀나"…마벨, 루멘텀 인수발표 후 급락](https://www.hankyung.com/article/2026110336551)</td><td>hankyung.com</td><td>마벨이 루멘텀 인수 발표 후 급락해 '비싸게 샀나'라는 시각이 나온다는 보도.</td></tr>
-<tr><td>11-03 16:06</td><td>META 알파벳</td><td>🟡 불확실</td><td>업황</td><td>[메타, 200억달러 회사채 추진…알파벳·오라클도 자금 조달](https://www.fnnews.com/news/202611031528465952)</td><td>fnnews.com</td><td>메타가 200억달러 회사채를 추진하고 알파벳·오라클도 자금 조달에 나선다는 보도.</td></tr>
-<tr><td>11-03 15:46</td><td>TSM TSMC</td><td>🟡 불확실</td><td>업황</td><td>[머스크, 테라팹 운영권 재협상 가능성…TSMC 건설·운영 거론](https://www.tokenpost.kr/news/tech/431839)</td><td>tokenpost.kr</td><td>머스크가 테라팹 운영권을 재협상할 가능성과 TSMC 건설·운영이 거론된다는 보도.</td></tr>
-<tr><td>11-03 11:09</td><td>GOOGL 알파벳</td><td>⚪ 중립</td><td>업황</td><td>[구글 모회사 알파벳, AI 투자 위해 9조원 채권 발행…수요 3배 몰려](https://www.news1.kr/world/international-economy/6341092)</td><td>news1.kr</td><td>알파벳이 AI 투자를 위해 9조원 규모 채권을 발행했고 수요가 3배 몰렸다는 보도.</td></tr>
-<tr><td>11-03 10:10</td><td>GOOGL 알파벳</td><td>🔴 악재</td><td>업황</td><td>[레딧, 매출 늘었는데 주가 29% ↓…구글 AI 검색 탓](https://www.junggi.co.kr/news/articleView.html?idxno=38336)</td><td>junggi.co.kr</td><td>레딧이 매출 증가에도 구글 AI 검색 영향으로 주가가 29% 하락했다는 보도.</td></tr>
+<tr><td>11-05 08:34</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>소송·규제</td><td>[美 민주당 압승에 머스크 텍사스 사업 '흔들'…스페이스X·테슬라 규제 ...](https://www.theguru.co.kr/news/article.html?no=109279)</td><td>theguru.co.kr</td><td>중간선거 결과로 머스크의 텍사스 사업과 스페이스X·테슬라 규제 환경이 흔들릴 수 있다는 보도.</td></tr>
+<tr><td>11-05 08:26</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>업황</td><td>[미 중간선거 민주당 장악에 뉴욕증시 폭등… 엔비디아·반도체 폭락](https://www.gukjenews.com/news/articleView.html?idxno=3742783)</td><td>gukjenews.com</td><td>미 중간선거 결과를 계기로 뉴욕증시가 오르는 가운데 엔비디아·반도체주는 급락했다는 보도.</td></tr>
+<tr><td>11-05 08:00</td><td>MU 마이크론</td><td>🔴 악재</td><td>업황</td><td>['블루 쓰나미'에 AI 제동 공포...마이크론 7% 급락·애플은 5.3% 폭등](https://www.g-enews.com/view.php?ud=202611050749505192e250e8e188_1)</td><td>g-enews.com</td><td>'블루 쓰나미' 우려 속에 마이크론이 7% 급락했다는 보도.</td></tr>
+<tr><td>11-05 06:58</td><td>AMD AMD</td><td>🟡 불확실</td><td>투자의견</td><td>[AMD 호실적에도 갈린 월가 시선…씨티 "800달러" vs JP모간 "중립" ( 글로...](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611050007&t=NN)</td><td>wowtv.co.kr</td><td>AMD 호실적에도 씨티는 목표가 800달러, JP모간은 중립으로 월가 시선이 갈렸다는 보도.</td></tr>
+<tr><td>11-05 06:56</td><td>AMD AMD</td><td>🟡 불확실</td><td>투자의견</td><td>[AMD 목표주가 월가 평가 엇갈려…스티펠·DA데이비슨 상향, BofA 하향](https://www.thefairnews.co.kr/news/articleView.html?idxno=93090)</td><td>thefairnews.co.kr</td><td>AMD 목표주가를 스티펠·DA데이비슨은 올리고 BofA는 내렸다는 보도.</td></tr>
+<tr><td>11-05 06:00</td><td>INTC 인텔</td><td>🔴 악재</td><td>업황</td><td>["CPU 뜬다더니 인텔 쇼크"…운용사 야심작 ETF 일주일 만에 -18%](https://www.news1.kr/finance/general-stock/6343299)</td><td>news1.kr</td><td>인텔 관련 ETF가 출시 일주일 만에 18% 하락했다는 보도.</td></tr>
+<tr><td>11-05 05:42</td><td>LMT 록히드마틴</td><td>🔴 악재</td><td>소송·규제</td><td>[록히드마틴·RTX 흔든 미국 중간선거… 장기 수요 전망에도 방산주 급락](https://www.news2day.co.kr/article/20261105500015)</td><td>news2day.co.kr</td><td>중간선거 영향으로 록히드마틴·RTX 등 방산주가 급락했다는 보도.</td></tr>
+<tr><td>11-05 05:42</td><td>LMT 록히드마틴</td><td>🔴 악재</td><td>소송·규제</td><td>[(美증시 특징주) 방산주 '폭삭', 록히드마틴 급락…민주당발 국방예산 ...](https://www.mediapen.com/news/view/1135276)</td><td>mediapen.com</td><td>민주당 국방예산 우려로 방산주와 록히드마틴이 급락했다는 보도.</td></tr>
+<tr><td>11-05 05:30</td><td>PLTR 팔란티어</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[팔란티어, 분기 매출 96% 급증에도 주가 약세…AI 성장 기대와 실적 검증...](https://www.jemin.com/news/articleView.html?idxno=846201)</td><td>jemin.com</td><td>팔란티어가 분기 매출 96% 급증에도 주가가 약세를 보였다는 보도.</td></tr>
+<tr><td>11-04 17:06</td><td>MRVL 마벨</td><td>🟡 불확실</td><td>M&A</td><td>[마벨, 루멘텀 품고 AI 광통신 시장 정조준…154조원 인수로 브로드컴 추...](https://www.jemin.com/news/articleView.html?idxno=846137)</td><td>jemin.com</td><td>마벨이 약 154조원 규모로 루멘텀을 인수해 AI 광통신 시장을 겨냥한다는 보도.</td></tr>
+<tr><td>11-04 15:10</td><td>PLTR 팔란티어</td><td>🔴 악재</td><td>실적·가이던스</td><td>[팔란티어(PLTR), 매출은 96% 점프·신규 계약은 급감...주가도 '뚝'](http://coinreaders.com/267424)</td><td>coinreaders.com</td><td>팔란티어 매출은 96% 늘었지만 신규 계약이 급감했고 주가가 하락했다는 보도.</td></tr>
 </table>
 ## 최근 14일 전체 (최신순)
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
+<tr><td>11-05 08:34</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>소송·규제</td><td>[美 민주당 압승에 머스크 텍사스 사업 '흔들'…스페이스X·테슬라 규제 ...](https://www.theguru.co.kr/news/article.html?no=109279)</td><td>theguru.co.kr</td><td>중간선거 결과로 머스크의 텍사스 사업과 스페이스X·테슬라 규제 환경이 흔들릴 수 있다는 보도.</td></tr>
+<tr><td>11-05 08:26</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>업황</td><td>[미 중간선거 민주당 장악에 뉴욕증시 폭등… 엔비디아·반도체 폭락](https://www.gukjenews.com/news/articleView.html?idxno=3742783)</td><td>gukjenews.com</td><td>미 중간선거 결과를 계기로 뉴욕증시가 오르는 가운데 엔비디아·반도체주는 급락했다는 보도.</td></tr>
+<tr><td>11-05 08:00</td><td>MU 마이크론</td><td>🔴 악재</td><td>업황</td><td>['블루 쓰나미'에 AI 제동 공포...마이크론 7% 급락·애플은 5.3% 폭등](https://www.g-enews.com/view.php?ud=202611050749505192e250e8e188_1)</td><td>g-enews.com</td><td>'블루 쓰나미' 우려 속에 마이크론이 7% 급락했다는 보도.</td></tr>
+<tr><td>11-05 06:58</td><td>AMD AMD</td><td>🟡 불확실</td><td>투자의견</td><td>[AMD 호실적에도 갈린 월가 시선…씨티 "800달러" vs JP모간 "중립" ( 글로...](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611050007&t=NN)</td><td>wowtv.co.kr</td><td>AMD 호실적에도 씨티는 목표가 800달러, JP모간은 중립으로 월가 시선이 갈렸다는 보도.</td></tr>
+<tr><td>11-05 06:56</td><td>AMD AMD</td><td>🟡 불확실</td><td>투자의견</td><td>[AMD 목표주가 월가 평가 엇갈려…스티펠·DA데이비슨 상향, BofA 하향](https://www.thefairnews.co.kr/news/articleView.html?idxno=93090)</td><td>thefairnews.co.kr</td><td>AMD 목표주가를 스티펠·DA데이비슨은 올리고 BofA는 내렸다는 보도.</td></tr>
+<tr><td>11-05 06:00</td><td>INTC 인텔</td><td>🔴 악재</td><td>업황</td><td>["CPU 뜬다더니 인텔 쇼크"…운용사 야심작 ETF 일주일 만에 -18%](https://www.news1.kr/finance/general-stock/6343299)</td><td>news1.kr</td><td>인텔 관련 ETF가 출시 일주일 만에 18% 하락했다는 보도.</td></tr>
+<tr><td>11-05 05:42</td><td>LMT 록히드마틴</td><td>🔴 악재</td><td>소송·규제</td><td>[록히드마틴·RTX 흔든 미국 중간선거… 장기 수요 전망에도 방산주 급락](https://www.news2day.co.kr/article/20261105500015)</td><td>news2day.co.kr</td><td>중간선거 영향으로 록히드마틴·RTX 등 방산주가 급락했다는 보도.</td></tr>
+<tr><td>11-05 05:42</td><td>LMT 록히드마틴</td><td>🔴 악재</td><td>소송·규제</td><td>[(美증시 특징주) 방산주 '폭삭', 록히드마틴 급락…민주당발 국방예산 ...](https://www.mediapen.com/news/view/1135276)</td><td>mediapen.com</td><td>민주당 국방예산 우려로 방산주와 록히드마틴이 급락했다는 보도.</td></tr>
+<tr><td>11-05 05:30</td><td>PLTR 팔란티어</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[팔란티어, 분기 매출 96% 급증에도 주가 약세…AI 성장 기대와 실적 검증...](https://www.jemin.com/news/articleView.html?idxno=846201)</td><td>jemin.com</td><td>팔란티어가 분기 매출 96% 급증에도 주가가 약세를 보였다는 보도.</td></tr>
+<tr><td>11-04 17:06</td><td>MRVL 마벨</td><td>🟡 불확실</td><td>M&A</td><td>[마벨, 루멘텀 품고 AI 광통신 시장 정조준…154조원 인수로 브로드컴 추...](https://www.jemin.com/news/articleView.html?idxno=846137)</td><td>jemin.com</td><td>마벨이 약 154조원 규모로 루멘텀을 인수해 AI 광통신 시장을 겨냥한다는 보도.</td></tr>
+<tr><td>11-04 15:10</td><td>PLTR 팔란티어</td><td>🔴 악재</td><td>실적·가이던스</td><td>[팔란티어(PLTR), 매출은 96% 점프·신규 계약은 급감...주가도 '뚝'](http://coinreaders.com/267424)</td><td>coinreaders.com</td><td>팔란티어 매출은 96% 늘었지만 신규 계약이 급감했고 주가가 하락했다는 보도.</td></tr>
 <tr><td>11-04 08:18</td><td>AMD AMD</td><td>🟢 호재</td><td>실적·가이던스</td><td>[리사 수의 자신감 통했다…AMD 4분기 매출 전망 170억달러 제시](https://www.pinpointnews.co.kr/news/articleView.html?idxno=501073)</td><td>pinpointnews.co.kr</td><td>AMD가 4분기 매출 전망을 170억달러로 제시했다는 보도.</td></tr>
 <tr><td>11-04 08:12</td><td>AMD AMD</td><td>🟢 호재</td><td>실적·가이던스</td><td>[AMD, 3분기 매출 ‘사상최고’ 18조원…주가 시간외서 7% 급등](https://news.kbs.co.kr/news/pc/view/view.do?ncd=8703357&ref=A)</td><td>news.kbs.co.kr</td><td>AMD가 3분기 매출 사상 최고를 기록했고 시간외 주가가 약 7% 올랐다는 보도.</td></tr>
 <tr><td>11-04 06:42</td><td>INTC 인텔</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[인텔과 다르다…AMD 3분기 실적·가이던스 호조에 시간외 주가 9% 급등](https://news.einfomax.co.kr/news/articleView.html?idxno=4442842)</td><td>news.einfomax.co.kr</td><td>AMD 실적·가이던스 호조에 시간외 주가가 9% 올랐다는 보도에서 인텔과 대비됐다는 내용.</td></tr>
@@ -120,7 +131,6 @@
 <tr><td>10-21 08:54</td><td>NFLX 넷플릭스</td><td>🔴 악재</td><td>구조조정</td><td>[넷플릭스, 3년 만에 최저 매출 증가율…직원 1000명 감원](https://www.hankyung.com/article/202610214873i)</td><td>hankyung.com</td><td>매출 증가율이 3년 만에 가장 낮았고 직원 약 1,000명을 감원한다는 보도. 시간외 주가 5.9% 하락.</td></tr>
 <tr><td>10-21 05:52</td><td>NOC 노스롭그루먼</td><td>🟢 호재</td><td>실적</td><td>[(뉴욕증시) 3M·노스롭그루먼 호실적에 다우 529p 급등](https://www.g-enews.com/view.php?ud=202610210547377375e250e8e188_1)</td><td>g-enews.com</td><td>3M과 함께 호실적을 발표해 다우지수 529포인트 급등을 이끈 종목으로 보도(조선·와우티비 기사에 따르면 수주잔고 사상 최대).</td></tr>
 <tr><td>10-21 03:50</td><td>RTX RTX</td><td>🟢 호재</td><td>가이던스</td><td>[RTX, 연간 전망 3분기 연속 상향…수주잔고 3400억달러 사상 최대](https://www.tokenpost.kr/news/market/425144)</td><td>tokenpost.kr</td><td>연간 전망을 3분기 연속 상향하고 수주잔고가 3,400억 달러로 사상 최대라는 보도.</td></tr>
-<tr><td>10-20 14:46</td><td>WFC 웰스파고</td><td>🔴 악재</td><td>업황</td><td>[(미국 특징주) 웰스파고 "美 3분기 어닝 시즌 최악 수준의 출발"](https://www.newspim.com/news/view/20261020000840)</td><td>newspim.com</td><td>웰스파고 보고서가 이번 3분기 어닝 시즌을 "역대 가장 부진한 시작 중 하나"로 평가(EPS가 컨센서스를 0.3% 하회). 은행주는 2008년 이후 가장 긴 주간 하락세라는 보도.</td></tr>
 </table>
 ## 읽는 법과 한계
 - 기사 후보는 종목명(별칭)이 제목에 있고 실적·수주·소송·규제·목표가·인수합병 등 영향 키워드가 있는 것만 봅니다. 키워드가 없는 기사나 시황 기사 속 단순 언급은 빠질 수 있습니다.
