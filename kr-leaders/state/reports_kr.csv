@@ -1,4 +1,24 @@
 id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
+97820,2026-11-06,089860,롯데렌탈,하나증권,3Q26 Re: 바닥을 찍은 중고차 시장,Buy,57000,52900,https://m.stock.naver.com/research/company/97820,,,,
+97818,2026-11-06,033780,KT&G,하나증권,3Q26 Re: 높아진 기대 충족 + 새로운 주주환원 발표,Buy,240000,194200,https://m.stock.naver.com/research/company/97818,,,,
+97814,2026-11-06,071050,한국금융지주,하나증권,3Q26 Re - 비우호적 시장 환경에 따른 실적 부진,Buy,249000,142900,https://m.stock.naver.com/research/company/97814,,,,
+97810,2026-11-06,033780,KT&G,유안타증권,"성장의 결실, 주주가치로 돌아오다",Buy,280000,194200,https://m.stock.naver.com/research/company/97810,,,,
+97808,2026-11-06,033780,KT&G,DS투자증권,밸류업 모범생,매수,250000,194200,https://m.stock.naver.com/research/company/97808,,,,
+97804,2026-11-06,033780,KT&G,교보증권,더 강해진 주주환원!,Buy,250000,194200,https://m.stock.naver.com/research/company/97804,,,,
+97792,2026-11-06,089860,롯데렌탈,대신증권,"3Q 렌탈 실적 호조, 26년/27년 최고 실적!",Buy,60000,52900,https://m.stock.naver.com/research/company/97792,,,,
+97790,2026-11-06,033780,KT&G,한화투자증권,2027~2030년 누적 주주환원 5조원 계획,Buy,250000,194200,https://m.stock.naver.com/research/company/97790,,,,
+97787,2026-11-06,010130,고려아연,한화투자증권,3Q26 Review: 은 가격과 환율이 동시에 낮춘 이익,Buy,1270000,989000,https://m.stock.naver.com/research/company/97787,,,,
+97774,2026-11-06,010130,고려아연,iM증권,도전적 환경에 직면하다,Buy,1250000,989000,https://m.stock.naver.com/research/company/97774,모멘텀,근거 약함,"3Q 실적 부진, 모멘텀 둔화",귀금속 가격 급락
+97768,2026-11-06,051910,LG화학,신한투자증권,시선은 본업과 주주환원으로,매수,370000,246000,https://m.stock.naver.com/research/company/97768,,,,
+97767,2026-11-06,051910,LG화학,유진투자증권,Non-Petchem 개선 중,Buy,310000,246000,https://m.stock.naver.com/research/company/97767,,,,
+97766,2026-11-06,010130,고려아연,신한투자증권,이(실적)가 없으면 잇몸(주주환원)으로,매수,1500000,989000,https://m.stock.naver.com/research/company/97766,,,,
+97764,2026-11-06,051910,LG화학,iM증권,4분기까지는 눈높이 하향 조정 필요,Buy,370000,246000,https://m.stock.naver.com/research/company/97764,,,,
+97758,2026-11-06,071050,한국금융지주,iM증권,3Q26 Review: 운용 중심으로 부진한 실적 시현,Buy,198000,147100,https://m.stock.naver.com/research/company/97758,,,,
+97757,2026-11-06,071050,한국금융지주,SK증권,"3Q26 Review: 감익 예상은 했지만, 환율까지 억까해",매수,274000,147100,https://m.stock.naver.com/research/company/97757,,,,
+97748,2026-11-06,033780,KT&G,신한투자증권,"위기에는 KT&G, 주주에게는 5조원",매수,230000,194200,https://m.stock.naver.com/research/company/97748,신성장,근거 약함,주주환원 논리 중심,낮은 ROE
+97747,2026-11-06,033780,KT&G,키움증권,2026~30년 연평균 두 자릿수 DPS 성장률 기대,Buy,264000,194200,https://m.stock.naver.com/research/company/97747,,,,
+97739,2026-11-06,051910,LG화학,미래에셋증권,화학 단기 실적 우려 vs. 양극재 회복,매수,370000,246000,https://m.stock.naver.com/research/company/97739,,,,
+97732,2026-11-06,012800,대창,서울평가정보,황동 소재의 생산·기술 경쟁력과 글로벌 공급망 기반의 비철금속 전문기업,없음,,,https://m.stock.naver.com/research/company/97732,,,,
 97706,2026-11-05,145020,휴젤,교보증권,3Q26 Review: 칼을 뽑았으니 끝장을 보자,Buy,310000,184000,https://m.stock.naver.com/research/company/97706,,,,
 97689,2026-11-05,145020,휴젤,대신증권,3Q는 화나도 팔 때는 아님,Buy,280000,184000,https://m.stock.naver.com/research/company/97689,,,,
 97672,2026-11-05,145020,휴젤,신한투자증권,미국 재정비에 쉬어간 실적,매수,280000,184000,https://m.stock.naver.com/research/company/97672,,,,
@@ -9,6 +29,7 @@ id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
 97623,2026-11-04,051900,LG생활건강,키움증권,방향성은 좋지만 지속성 확인이 필요한 시점,MarketPerform,280000,262000,https://m.stock.naver.com/research/company/97623,,,,
 97621,2026-11-04,222800,심텍,키움증권,"강한 실적, 강한 가이던스, 차별화된 성장 포인트",Buy,190000,112300,https://m.stock.naver.com/research/company/97621,서프라이즈,모멘텀,"3Q26 영업이익 1,018억원(YoY +722%), SOCAMM2 등 고부가 제품 비중 확대로 OPM 19%",달러 매출채권 평가손실 등 환율 변동 영향
 97613,2026-11-04,222800,심텍,대신증권,3Q 이익은 깜작! 소캠2 등 고부가 매출 확대,Buy,170000,112300,https://m.stock.naver.com/research/company/97613,수혜,모멘텀,"3Q 영업이익 컨센서스 19% 상회, 소캠2 모듈 매출 569억원(+35% QoQ), 하반기 영업이익 상반기 대비 +185% 추정","매출은 컨센서스 소폭 하회, 환율 하락 부담"
+97612,2026-11-04,071050,한국금융지주,대신증권,업황에 장사 없음,Buy,200000,147600,https://m.stock.naver.com/research/company/97612,,,,
 97604,2026-11-04,089590,제주항공,한화투자증권,체질 개선 환율 유류비 서프라이즈,Buy,7500,5720,https://m.stock.naver.com/research/company/97604,서프라이즈,단기 이벤트,3Q 영업이익 549억원이나 정비부채 환입 약 400억원 등 일회성 요인이 크게 기여,일회성 소멸 시 감익 가능
 97602,2026-11-04,051900,LG생활건강,한화투자증권,바닥 확인 완료,Buy,350000,262000,https://m.stock.naver.com/research/company/97602,,,,
 97598,2026-11-04,222800,심텍,교보증권,빠르게 개선되는 수익성에 주목,Buy,180000,112300,https://m.stock.naver.com/research/company/97598,,,,
@@ -115,10 +136,12 @@ id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
 97185,2026-10-29,000660,SK하이닉스,유진투자증권,이번은 다르다고 할 수 있는 근거,StrongBuy,3700000,1341000,https://m.stock.naver.com/research/company/97185,,,,
 97184,2026-10-29,000660,SK하이닉스,메리츠증권,3Q26 OP 80.1조원 실적 서프라이즈 예상,Buy,3200000,1681000,https://m.stock.naver.com/research/company/97184,서프라이즈,모멘텀,"3Q26 영업이익 80.1조원 전망(컨센서스 74조), HBM4 공급 본격화","원화 강세, 메모리 판가 변동"
 97164,2026-10-28,095340,ISC,하나증권,병목 해소와 판가인상이 실적 견인 전망,Buy,250000,151300,https://m.stock.naver.com/research/company/97164,,,,
+97155,2026-10-28,170900,동아에스티,유안타증권,비용 효율화로 챙긴 수익성,Buy,51000,34900,https://m.stock.naver.com/research/company/97155,,,,
 97153,2026-10-28,068270,셀트리온,현대차증권,3Q26 Review: 예상보다 더 잘되고 있다,Buy,300000,188600,https://m.stock.naver.com/research/company/97153,서프라이즈,모멘텀,"3Q26 매출 1조5,755억(YoY+53.1%)·영업이익 5,253억(OPM 33.3%), 3분기 연속 컨센서스 상회; 신규 제품 5종이 바이오시밀러 매출 증가분의 77%",환율 하락에 따른 외화채권 환산손실로 순이익 영향
 97149,2026-10-28,068270,셀트리온,대신증권,"신제품 성장 가속화, 높아지는 2027년 기대감",Buy,290000,188600,https://m.stock.naver.com/research/company/97149,,,,
 97136,2026-10-28,095340,ISC,IBK투자증권,"잠시 늦춘 걸음, 성장 방향은 그대로",Buy,180000,151300,https://m.stock.naver.com/research/company/97136,,,,
 97130,2026-10-28,068270,셀트리온,IBK투자증권,실적으로 증명한 성장성,매수,280000,188600,https://m.stock.naver.com/research/company/97130,,,,
+97125,2026-10-28,170900,동아에스티,iM증권,에스티라는 별은 항상 빛나고 있다,Buy,50000,34900,https://m.stock.naver.com/research/company/97125,,,,
 97124,2026-10-28,068270,셀트리온,iM증권,"예정된 잔치, 먹을 게 참 많았다",Buy,270000,188600,https://m.stock.naver.com/research/company/97124,,,,
 97113,2026-10-28,068270,셀트리온,키움증권,바람직한 신규제품의 성장. 기대치 연속 상회! 4분기도?,없음,,,https://m.stock.naver.com/research/company/97113,,,,
 97090,2026-10-27,322000,HD현대에너지솔루션,DS투자증권,충격적인 실적,매수,170000,96300,https://m.stock.naver.com/research/company/97090,,,,
@@ -129,6 +152,7 @@ id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
 97059,2026-10-27,005940,NH투자증권,키움증권,3Q26 Re: 거래대금 감소 영향 외에는 선방,Buy,36000,22550,https://m.stock.naver.com/research/company/97059,,,,
 97057,2026-10-27,005940,NH투자증권,iM증권,거래대금 하락에도 우려보다 선방한 운용실적,Buy,29000,22550,https://m.stock.naver.com/research/company/97057,,,,
 97037,2026-10-26,089860,롯데렌탈,유진투자증권,3Q26 Preview: 대주주 변경과 호실적,Buy,59000,50800,https://m.stock.naver.com/research/company/97037,성장 동력,근거 약함,대주주 변경 후 신규 투자로 성장 동력 재점화 가능성,인수 초기 불확실성
+97034,2026-10-26,079160,CJ CGV,신한투자증권,3Q26 호실적과 계속 봐야하는 이유,매수,6300,4970,https://m.stock.naver.com/research/company/97034,서프라이즈 재평가,단기 이벤트,"3Q26 서프라이즈, 이후 화력 낮아질 전망",영화 흥행 편차
 97009,2026-10-23,014830,유니드,하나증권,외부 변수로 실적 부진 vs. 염화칼륨 상방 압력 확대,Buy,70000,54200,https://m.stock.naver.com/research/company/97009,,,,
 97000,2026-10-23,068270,셀트리온,SK증권,"옴리클로, 3대시장 First-mover의 완성",매수,280000,194300,https://m.stock.naver.com/research/company/97000,,,,
 96985,2026-10-23,068270,셀트리온,iM증권,WAC 2026 참관 후기: 꽃가루 휘날리며,Buy,260000,194300,https://m.stock.naver.com/research/company/96985,,,,
