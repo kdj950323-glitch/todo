@@ -1,4 +1,11 @@
 id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
+97916,2026-11-09,021240,코웨이,한화투자증권,3Q26 Review : 국내와 해외의 엇갈린 실적,Buy,150000,109800,https://m.stock.naver.com/research/company/97916,,,,
+97882,2026-11-09,079160,CJ CGV,대신증권,CGV가 보여줄 극장의 미래,Buy,8500,5160,https://m.stock.naver.com/research/company/97882,,,,
+97870,2026-11-09,011780,금호석유화학,유진투자증권,3Q 적자가 4Q 흑자로,Buy,177000,92500,https://m.stock.naver.com/research/company/97870,,,,
+97869,2026-11-09,011780,금호석유화학,신한투자증권,"역래깅 통과, 이제는 판가 전가",매수,130000,92500,https://m.stock.naver.com/research/company/97869,,,,
+97864,2026-11-09,011780,금호석유화학,미래에셋증권,실적 회복 방향성은 유효할 전망,매수,140000,92500,https://m.stock.naver.com/research/company/97864,,,,
+97847,2026-11-09,021240,코웨이,신한투자증권,과거의 영광을 넘어 새로운 전성기로,매수,130000,107600,https://m.stock.naver.com/research/company/97847,,,,
+97829,2026-11-09,071050,한국금융지주,키움증권,3Q26 Re: 어려워진 업황이 실적 악화로,Buy,250000,121600,https://m.stock.naver.com/research/company/97829,,,,
 97820,2026-11-06,089860,롯데렌탈,하나증권,3Q26 Re: 바닥을 찍은 중고차 시장,Buy,57000,52900,https://m.stock.naver.com/research/company/97820,,,,
 97818,2026-11-06,033780,KT&G,하나증권,3Q26 Re: 높아진 기대 충족 + 새로운 주주환원 발표,Buy,240000,194200,https://m.stock.naver.com/research/company/97818,,,,
 97814,2026-11-06,071050,한국금융지주,하나증권,3Q26 Re - 비우호적 시장 환경에 따른 실적 부진,Buy,249000,142900,https://m.stock.naver.com/research/company/97814,,,,
@@ -144,6 +151,7 @@ id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
 97125,2026-10-28,170900,동아에스티,iM증권,에스티라는 별은 항상 빛나고 있다,Buy,50000,34900,https://m.stock.naver.com/research/company/97125,,,,
 97124,2026-10-28,068270,셀트리온,iM증권,"예정된 잔치, 먹을 게 참 많았다",Buy,270000,188600,https://m.stock.naver.com/research/company/97124,,,,
 97113,2026-10-28,068270,셀트리온,키움증권,바람직한 신규제품의 성장. 기대치 연속 상회! 4분기도?,없음,,,https://m.stock.naver.com/research/company/97113,,,,
+97102,2026-10-28,046440,KG파이낸셜,한국IR협의회,PG사에서 디지털 금융 인프라 기업으로!,없음,,,https://m.stock.naver.com/research/company/97102,재평가,근거 약함,"주주환원·신사업 기반 재평가 논리 중심, 2026 영업이익 +2.2% 수준",스테이블코인·선정산 사업 성과가 아직 가시화되지 않음
 97090,2026-10-27,322000,HD현대에너지솔루션,DS투자증권,충격적인 실적,매수,170000,96300,https://m.stock.naver.com/research/company/97090,,,,
 97089,2026-10-27,322000,HD현대에너지솔루션,교보증권,3Q26 Review: 환율이 뼈아프다,Buy,184000,96300,https://m.stock.naver.com/research/company/97089,,,,
 97083,2026-10-27,005940,NH투자증권,하나증권,3Q26 Re - 컨센 8% 상회,Buy,36000,22700,https://m.stock.naver.com/research/company/97083,,,,
