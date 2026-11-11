@@ -1,4 +1,14 @@
 id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
+98015,2026-11-11,097950,CJ제일제당,한화투자증권,더디지만 방향은 회복세,Buy,260000,177600,https://m.stock.naver.com/research/company/98015,,,,
+98013,2026-11-11,097950,CJ제일제당,하나증권,3Q26 Re: 희망적인 내용,Buy,370000,177600,https://m.stock.naver.com/research/company/98013,,,,
+98011,2026-11-11,000120,CJ대한통운,하나증권,3Q26 Re: 저점 매수 관점에서 접근 가능,Buy,100000,67600,https://m.stock.naver.com/research/company/98011,,,,
+98005,2026-11-11,097950,CJ제일제당,유안타증권,"이익 회복의 방향은 확인, 속도는 지켜볼 필요",Buy,260000,177600,https://m.stock.naver.com/research/company/98005,,,,
+98002,2026-11-11,000120,CJ대한통운,유안타증권,외형 성장에도 아쉬운 수익성,Buy,100000,67800,https://m.stock.naver.com/research/company/98002,,,,
+97998,2026-11-11,000120,CJ대한통운,미래에셋증권,"견조한 매출 성장, 마진 개선 준비 완료",매수,120000,67800,https://m.stock.naver.com/research/company/97998,,,,
+97997,2026-11-11,068270,셀트리온,미래에셋증권,"Golden Decade, 셀트리온의 시간",매수,350000,203000,https://m.stock.naver.com/research/company/97997,,,,
+97985,2026-11-11,097950,CJ제일제당,신한투자증권,반격의 시작은 바이오,Buy,260000,177600,https://m.stock.naver.com/research/company/97985,수혜,근거 약함,"바이오 시황 회복 기대, 수치 근거 없음",중국발 공급 증가와 경쟁 심화
+97982,2026-11-11,000120,CJ대한통운,신한투자증권,천릿길도 벌크업부터,매수,100000,67800,https://m.stock.naver.com/research/company/97982,,,,
+97966,2026-11-11,097950,CJ제일제당,키움증권,수익성 방어 역량 입증,Buy,260000,177600,https://m.stock.naver.com/research/company/97966,,,,
 97956,2026-11-10,089590,제주항공,한화투자증권,NDR 후기: 가장 탄력적인 모델,Buy,9000,6830,https://m.stock.naver.com/research/company/97956,서프라이즈,근거 약함,"NDR 후기, 3Q 서프라이즈 이후 4Q는 비수기·유가 상승 우려","4분기 이익 둔화 예상, 동남아 수요 부진"
 97955,2026-11-10,251970,펌텍코리아,한화투자증권,프리미엄 받아 마땅한,Buy,110000,69000,https://m.stock.naver.com/research/company/97955,,,,
 97954,2026-11-10,005300,롯데칠성,한화투자증권,증익 구간 진입,Buy,130000,110100,https://m.stock.naver.com/research/company/97954,,,,
@@ -95,6 +105,7 @@ id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
 97334,2026-10-30,010140,삼성중공업,대신증권,단계별로 천천히 좋아지는 중,Buy,26000,15720,https://m.stock.naver.com/research/company/97334,,,,
 97331,2026-10-30,005930,삼성전자,대신증권,결국 제자리를 찾아갈 것,Buy,500000,231000,https://m.stock.naver.com/research/company/97331,,,,
 97325,2026-10-30,010140,삼성중공업,미래에셋증권,방어 성공 and beyond,매수,24000,15720,https://m.stock.naver.com/research/company/97325,,,,
+97323,2026-10-30,489790,한화비전,SK증권,"시큐리티, 세미텍 모두 좋았다",매수,80000,49100,https://m.stock.naver.com/research/company/97323,,,,
 97322,2026-10-30,010140,삼성중공업,SK증권,편안한 실적과 기대되는 FDC,매수,27000,15720,https://m.stock.naver.com/research/company/97322,,,,
 97318,2026-10-30,010140,삼성중공업,신한투자증권,"일감은 넉넉, 이익은 꾸준히",매수,25000,15720,https://m.stock.naver.com/research/company/97318,,,,
 97317,2026-10-30,005930,삼성전자,신한투자증권,전인미답의 길,매수,450000,232000,https://m.stock.naver.com/research/company/97317,,,,
