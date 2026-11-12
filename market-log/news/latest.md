@@ -1,24 +1,34 @@
 <callout icon="📰" color="gray_bg">
-	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-11-11, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
-	전체 118건(🟢 호재 36 · 🔴 악재 44 · 🟡 불확실 33 · ⚪ 중립 5), 오늘 새로 추가 10건, 이번 정리로 삭제 9건.
+	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-11-12, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
+	전체 121건(🟢 호재 31 · 🔴 악재 48 · 🟡 불확실 36 · ⚪ 중립 6), 오늘 새로 추가 10건, 이번 정리로 삭제 7건.
 </callout>
 ## 오늘 새로 추가된 뉴스
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
-<tr><td>11-12 08:34</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>경영진</td><td>[엔비디아 시간외 4% 하락…젠슨 황 두 번째 관계 의혹 보도](https://www.tokenpost.kr/news/breaking/436843)</td><td>tokenpost.kr</td><td>시간외 약 4% 하락을 전하며 CEO 관련 두 번째 의혹 보도를 배경으로 거론했다는 보도(SNS 주장 인용, 확정 아님).</td></tr>
-<tr><td>11-12 08:20</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>경영진</td><td>[젠슨 황 해임 준비 소식…엔비디아 주가, 시간외 거래서 8% 급락](https://www.mk.co.kr/article/12205951)</td><td>mk.co.kr</td><td>WSJ 보도를 인용해 엔비디아 이사회가 젠슨 황 CEO 해임을 준비 중이라는 소식에 시간외 거래에서 8% 급락했다는 보도.</td></tr>
-<tr><td>11-12 07:58</td><td>MU 마이크론</td><td>🟢 호재</td><td>업황</td><td>[(속보)AI반도체주 일제히 급등…마이크론 시총 하루새 130조원 껑충](https://www.munhwa.com/article/11630713?ref=naver)</td><td>munhwa.com</td><td>AI 반도체주가 일제히 올랐고 마이크론이 하루 11% 가량 급등했다는 보도.</td></tr>
-<tr><td>11-12 07:32</td><td>TSLA 테슬라</td><td>🟢 호재</td><td>신제품 승인</td><td>[(美증시 특징주) 테슬라 또 상승, 4일째 랠리…핀란드, 자율주행시스템...](https://www.mediapen.com/news/view/1136841)</td><td>mediapen.com</td><td>핀란드의 자율주행보조시스템 승인에 테슬라가 4일째 상승해 390.84달러에 마감했다는 보도.</td></tr>
-<tr><td>11-12 00:31</td><td>TSM TSMC</td><td>🟡 불확실</td><td>업황</td><td>[반도체 공급망의 ‘AI 살리기’… TSMC, 오픈AI-앤스로픽에 5억달러씩 투...](https://www.donga.com/news/Economy/article/all/20261111/135009501/2)</td><td>donga.com</td><td>TSMC가 오픈AI·앤스로픽에 각각 5억 달러 지분 투자에 나섰다는 보도.</td></tr>
-<tr><td>11-11 19:59</td><td>TSM TSMC</td><td>🟢 호재</td><td>실적·가이던스</td><td>[(올댓차이나) 대만 증시, TSMC 급등에 사흘 연속 상승 마감…3.62%↑](https://www.newsis.com/view/NISX20261111_0003864499)</td><td>newsis.com</td><td>TSMC가 양호한 10월 매출을 발표하자 주가가 큰 폭으로 올랐고 대만 증시가 3.62% 상승 마감했다는 보도.</td></tr>
-<tr><td>11-11 17:57</td><td>SPCX 스페이스X</td><td>🟡 불확실</td><td>수급</td><td>[테슬라 팔고 스페이스X로…서학개미, 머스크 제국 내 ‘머니무브’](https://www.sedaily.com/article/20113162?ref=naver)</td><td>sedaily.com</td><td>국내 투자자 자금이 테슬라에서 스페이스X로 이동한 정황이 있다는 보도.</td></tr>
-<tr><td>11-11 17:02</td><td>GS 골드만삭스</td><td>⚪ 중립</td><td>업황</td><td>[골드만삭스(GS) CEO, 데이터센터 규제 공포 일축..."정치적 소음일 뿐"](http://coinreaders.com/269325)</td><td>coinreaders.com</td><td>골드만삭스 CEO가 데이터센터 규제 우려를 정치적 소음으로 일축했다는 보도.</td></tr>
-<tr><td>11-11 06:46</td><td>BLK 블랙록</td><td>🔴 악재</td><td>업황</td><td>[블랙록(BLK) IBIT 7거래일 연속 순유출...비트코인 ETF 이탈, 언제 멈추나](http://coinreaders.com/269181)</td><td>coinreaders.com</td><td>블랙록 비트코인 ETF IBIT에서 7거래일 연속 자금이 빠져나갔다는 보도.</td></tr>
-<tr><td>11-10 17:47</td><td>GOOGL 알파벳</td><td>🟡 불확실</td><td>업황</td><td>[구글 새 TPU, AMD는 헬리오스 영업 전쟁…엔비디아 틈 파고든다](https://www.sedaily.com/article/20112614?ref=naver)</td><td>sedaily.com</td><td>구글 새 TPU와 AMD 헬리오스가 엔비디아 틈새를 노린다는 보도, 오펜하이머가 AMD 목표가 600달러를 제시.</td></tr>
+<tr><td>11-13 08:32</td><td>SPCX 스페이스X</td><td>🟡 불확실</td><td>업황</td><td>["미래에셋증권, 스페이스X 투자 손실로 적자 전환…목표가↓"-키움](https://www.hankyung.com/article/2026111342376)</td><td>hankyung.com</td><td>키움이 미래에셋증권의 스페이스X 투자 손실 적자 전환과 목표가 하향을 전했다는 보도.</td></tr>
+<tr><td>11-13 08:27</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>업황</td><td>[엔비디아 주가 폭락은 매수 기회?…미국 개미들 30분간 1천억 원대 매수](https://news.sbs.co.kr/news/endPage.do?news_id=N1008844184&plink=ORI&cooper=NAVER)</td><td>news.sbs.co.kr</td><td>엔비디아 급락 때 미국 개인투자자가 30분간 1천억 원대를 순매수했다는 보도.</td></tr>
+<tr><td>11-13 08:26</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>경영진</td><td>[젠슨 황, 33년 만에 엔비디아서 퇴장…AI업계 충격파](http://www.choicenews.co.kr/news/articleView.html?idxno=173154)</td><td>choicenews.co.kr</td><td>젠슨 황이 33년 만에 엔비디아에서 퇴장했다는 보도(제목 기준).</td></tr>
+<tr><td>11-13 08:25</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>경영진</td><td>[33년만에 수장교체 엔비디아, '재무통' 크레스 임시 CEO 누구](https://www.mt.co.kr/world/2026/11/13/2026111308100287698)</td><td>mt.co.kr</td><td>수장 교체 후 재무 담당 크레스가 임시 CEO를 맡는다는 보도(제목 기준).</td></tr>
+<tr><td>11-13 08:22</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>경영진</td><td>[젠슨 황 퇴진·유가 급등에 뉴욕증시 하락…엔비디아 4.3%↓](https://news.sbs.co.kr/news/endPage.do?news_id=N1008844169&plink=ORI&cooper=NAVER)</td><td>news.sbs.co.kr</td><td>젠슨 황 퇴진과 유가 급등 속에 뉴욕증시가 하락했고 엔비디아가 4.3% 내렸다는 보도.</td></tr>
+<tr><td>11-13 08:08</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>M&A</td><td>[테슬라·스페이스X 합병 임박?…역대 최대 거래 12월 발표 가능성](https://www.digitaltoday.co.kr/news/articleView.html?idxno=715143)</td><td>digitaltoday.co.kr</td><td>테슬라·스페이스X 합병이 임박했고 12월 발표 가능성이 있다는 보도(확정 아님).</td></tr>
+<tr><td>11-13 07:54</td><td>MSFT 마이크로소프트</td><td>🟢 호재</td><td>수주·계약</td><td>[세레브라스, MS에 AI칩 공급…깜짝 실적에 시간외 14% 급등](https://news.einfomax.co.kr/news/articleView.html?idxno=4444537)</td><td>news.einfomax.co.kr</td><td>세레브라스가 MS에 AI칩을 공급하고 깜짝 실적에 시간외 14% 급등했다는 보도(MS 직접 영향은 불명).</td></tr>
+<tr><td>11-12 23:02</td><td>INTC 인텔</td><td>🔴 악재</td><td>업황</td><td>[인텔(INTC), 1개월간 40% 폭락에 매물 폭탄까지...8,700만 주 시장에 쏟아...](http://coinreaders.com/269719)</td><td>coinreaders.com</td><td>인텔이 1개월간 40% 폭락했고 8,700만 주 물량이 시장에 나왔다는 보도.</td></tr>
+<tr><td>11-12 21:10</td><td>TSM TSMC</td><td>🔴 악재</td><td>경영진</td><td>[젠슨 황 퇴진 위기에 대만 반도체 공급망 긴장…"증설 속도 늦어질 수도...](https://www.news1.kr/world/international-economy/6352591)</td><td>news1.kr</td><td>젠슨 황 퇴진 위기에 대만 반도체 공급망이 긴장했고 증설 속도가 늦어질 수 있다는 보도.</td></tr>
+<tr><td>11-12 19:12</td><td>PLTR 팔란티어</td><td>⚪ 중립</td><td>업황</td><td>[팔란티어(PLTR) 선행 PER 67배…매출 96% 성장에도 '비싸다'](http://coinreaders.com/269664)</td><td>coinreaders.com</td><td>팔란티어 선행 PER 67배로 매출 96% 성장에도 비싸다는 평가가 나왔다는 보도.</td></tr>
 </table>
 ## 최근 14일 전체 (최신순)
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
+<tr><td>11-13 08:32</td><td>SPCX 스페이스X</td><td>🟡 불확실</td><td>업황</td><td>["미래에셋증권, 스페이스X 투자 손실로 적자 전환…목표가↓"-키움](https://www.hankyung.com/article/2026111342376)</td><td>hankyung.com</td><td>키움이 미래에셋증권의 스페이스X 투자 손실 적자 전환과 목표가 하향을 전했다는 보도.</td></tr>
+<tr><td>11-13 08:27</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>업황</td><td>[엔비디아 주가 폭락은 매수 기회?…미국 개미들 30분간 1천억 원대 매수](https://news.sbs.co.kr/news/endPage.do?news_id=N1008844184&plink=ORI&cooper=NAVER)</td><td>news.sbs.co.kr</td><td>엔비디아 급락 때 미국 개인투자자가 30분간 1천억 원대를 순매수했다는 보도.</td></tr>
+<tr><td>11-13 08:26</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>경영진</td><td>[젠슨 황, 33년 만에 엔비디아서 퇴장…AI업계 충격파](http://www.choicenews.co.kr/news/articleView.html?idxno=173154)</td><td>choicenews.co.kr</td><td>젠슨 황이 33년 만에 엔비디아에서 퇴장했다는 보도(제목 기준).</td></tr>
+<tr><td>11-13 08:25</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>경영진</td><td>[33년만에 수장교체 엔비디아, '재무통' 크레스 임시 CEO 누구](https://www.mt.co.kr/world/2026/11/13/2026111308100287698)</td><td>mt.co.kr</td><td>수장 교체 후 재무 담당 크레스가 임시 CEO를 맡는다는 보도(제목 기준).</td></tr>
+<tr><td>11-13 08:22</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>경영진</td><td>[젠슨 황 퇴진·유가 급등에 뉴욕증시 하락…엔비디아 4.3%↓](https://news.sbs.co.kr/news/endPage.do?news_id=N1008844169&plink=ORI&cooper=NAVER)</td><td>news.sbs.co.kr</td><td>젠슨 황 퇴진과 유가 급등 속에 뉴욕증시가 하락했고 엔비디아가 4.3% 내렸다는 보도.</td></tr>
+<tr><td>11-13 08:08</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>M&A</td><td>[테슬라·스페이스X 합병 임박?…역대 최대 거래 12월 발표 가능성](https://www.digitaltoday.co.kr/news/articleView.html?idxno=715143)</td><td>digitaltoday.co.kr</td><td>테슬라·스페이스X 합병이 임박했고 12월 발표 가능성이 있다는 보도(확정 아님).</td></tr>
+<tr><td>11-13 07:54</td><td>MSFT 마이크로소프트</td><td>🟢 호재</td><td>수주·계약</td><td>[세레브라스, MS에 AI칩 공급…깜짝 실적에 시간외 14% 급등](https://news.einfomax.co.kr/news/articleView.html?idxno=4444537)</td><td>news.einfomax.co.kr</td><td>세레브라스가 MS에 AI칩을 공급하고 깜짝 실적에 시간외 14% 급등했다는 보도(MS 직접 영향은 불명).</td></tr>
+<tr><td>11-12 23:02</td><td>INTC 인텔</td><td>🔴 악재</td><td>업황</td><td>[인텔(INTC), 1개월간 40% 폭락에 매물 폭탄까지...8,700만 주 시장에 쏟아...](http://coinreaders.com/269719)</td><td>coinreaders.com</td><td>인텔이 1개월간 40% 폭락했고 8,700만 주 물량이 시장에 나왔다는 보도.</td></tr>
+<tr><td>11-12 21:10</td><td>TSM TSMC</td><td>🔴 악재</td><td>경영진</td><td>[젠슨 황 퇴진 위기에 대만 반도체 공급망 긴장…"증설 속도 늦어질 수도...](https://www.news1.kr/world/international-economy/6352591)</td><td>news1.kr</td><td>젠슨 황 퇴진 위기에 대만 반도체 공급망이 긴장했고 증설 속도가 늦어질 수 있다는 보도.</td></tr>
+<tr><td>11-12 19:12</td><td>PLTR 팔란티어</td><td>⚪ 중립</td><td>업황</td><td>[팔란티어(PLTR) 선행 PER 67배…매출 96% 성장에도 '비싸다'](http://coinreaders.com/269664)</td><td>coinreaders.com</td><td>팔란티어 선행 PER 67배로 매출 96% 성장에도 비싸다는 평가가 나왔다는 보도.</td></tr>
 <tr><td>11-12 08:34</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>경영진</td><td>[엔비디아 시간외 4% 하락…젠슨 황 두 번째 관계 의혹 보도](https://www.tokenpost.kr/news/breaking/436843)</td><td>tokenpost.kr</td><td>시간외 약 4% 하락을 전하며 CEO 관련 두 번째 의혹 보도를 배경으로 거론했다는 보도(SNS 주장 인용, 확정 아님).</td></tr>
 <tr><td>11-12 08:20</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>경영진</td><td>[젠슨 황 해임 준비 소식…엔비디아 주가, 시간외 거래서 8% 급락](https://www.mk.co.kr/article/12205951)</td><td>mk.co.kr</td><td>WSJ 보도를 인용해 엔비디아 이사회가 젠슨 황 CEO 해임을 준비 중이라는 소식에 시간외 거래에서 8% 급락했다는 보도.</td></tr>
 <tr><td>11-12 07:58</td><td>MU 마이크론</td><td>🟢 호재</td><td>업황</td><td>[(속보)AI반도체주 일제히 급등…마이크론 시총 하루새 130조원 껑충](https://www.munhwa.com/article/11630713?ref=naver)</td><td>munhwa.com</td><td>AI 반도체주가 일제히 올랐고 마이크론이 하루 11% 가량 급등했다는 보도.</td></tr>
@@ -130,13 +140,6 @@
 <tr><td>10-29 07:08</td><td>MRVL 마벨</td><td>🟡 불확실</td><td>M&A</td><td>[시간외 루멘텀 17% 상승·마벨 8% 하락…인수 협상 보도](https://www.tokenpost.kr/news/breaking/428930)</td><td>tokenpost.kr</td><td>마벨이 루멘텀 인수 협상 중이라는 보도에 시간외 루멘텀 17% 상승, 마벨 8% 하락(확정 전).</td></tr>
 <tr><td>10-29 00:21</td><td>AVGO 브로드컴</td><td>🟢 호재</td><td>투자의견</td><td>["앤트로픽·오픈AI 돈줄 풀리면 수혜"…브로드컴 목표가 '상향'](https://www.newsis.com/view/NISX20261028_0003844688)</td><td>newsis.com</td><td>앤트로픽·오픈AI 자금 조달 시 수혜 기대로 브로드컴 목표가가 상향됐다는 보도.</td></tr>
 <tr><td>10-29 00:18</td><td>AMD AMD</td><td>🟢 호재</td><td>실적·가이던스</td><td>[AMD 데이터센터 매출 107% 급증…월가 목표가 상향](https://www.thefairnews.co.kr/news/articleView.html?idxno=92254)</td><td>thefairnews.co.kr</td><td>AMD 데이터센터 매출이 107% 급증하고 월가 목표가가 상향됐다는 보도.</td></tr>
-<tr><td>10-28 17:50</td><td>META 메타</td><td>🟢 호재</td><td>투자의견</td><td>[메타 목표주가 920→940달러 상향, JP모건 '비중 확대' 유지](https://www.tokenpost.kr/news/market/427397)</td><td>tokenpost.kr</td><td>JP모건이 메타 목표주가를 920→940달러로 상향하고 비중 확대를 유지했다는 보도.</td></tr>
-<tr><td>10-28 08:38</td><td>PLTR 팔란티어</td><td>🟢 호재</td><td>투자의견</td><td>[팔란티어 3분기 실적 발표 카운트다운…로젠블랫, 목표가 260 달러로 상...](https://news.einfomax.co.kr/news/articleView.html?idxno=4441493)</td><td>news.einfomax.co.kr</td><td>팔란티어 3분기 실적 발표를 앞두고 로젠블랫이 목표가를 260달러로 상향했다는 보도.</td></tr>
-<tr><td>10-28 08:24</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>수주·계약</td><td>[(미국 특징주) 오라클, 엔비디아 AI 칩 계약 확대…구글 TPU·세레브라스...](https://www.newspim.com/news/view/20261028000065)</td><td>newspim.com</td><td>오라클이 엔비디아 AI 칩 계약을 확대했다는 보도(구글 TPU 등 경쟁 언급 포함).</td></tr>
-<tr><td>10-28 07:59</td><td>AVGO 브로드컴</td><td>🟢 호재</td><td>투자의견</td><td>[메타 유증 흥행·브로드컴 목표가 상향…빅테크 훈풍 속 차별화 장세 (美...](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202610280012&t=NN)</td><td>wowtv.co.kr</td><td>브로드컴 목표가 상향 소식이 빅테크 강세장에서 전해졌다는 보도.</td></tr>
-<tr><td>10-28 07:02</td><td>TSLA 테슬라</td><td>🟡 불확실</td><td>M&A</td><td>[(Invest)'고래' 스페이스X-테슬라 합병 추진에 부담 커진 '새우' 미래에...](https://www.investchosun.com/site/data/html_dir/2026/10/27/2026102780135.html)</td><td>investchosun.com</td><td>스페이스X-테슬라 합병 추진 소식에 소액주주 부담이 커졌다는 보도(합병 여부는 확정 전).</td></tr>
-<tr><td>10-28 06:32</td><td>AMZN 아마존</td><td>🟢 호재</td><td>투자의견</td><td>[아마존, 3분기 실적 앞두고 월가 매수 의견 집중…목표주가 330달러](https://www.thefairnews.co.kr/news/articleView.html?idxno=92097)</td><td>thefairnews.co.kr</td><td>3분기 실적을 앞두고 월가 매수 의견이 집중되고 목표주가 330달러가 제시됐다는 보도.</td></tr>
-<tr><td>10-28 01:15</td><td>LMT 록히드마틴</td><td>🟢 호재</td><td>투자의견</td><td>[(GAM) 록히드마틴 ② F-35 족쇄 풀고 미사일로 날았다...5일새 16% 급등](https://www.newspim.com/news/view/20261028000013)</td><td>newspim.com</td><td>F-35 부담이 풀리고 미사일 부문이 부각되며 5일간 16% 급등했다는 보도.</td></tr>
 </table>
 ## 읽는 법과 한계
 - 기사 후보는 종목명(별칭)이 제목에 있고 실적·수주·소송·규제·목표가·인수합병 등 영향 키워드가 있는 것만 봅니다. 키워드가 없는 기사나 시황 기사 속 단순 언급은 빠질 수 있습니다.
