@@ -1,4 +1,14 @@
 id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
+98258,2026-11-16,004370,농심,한화투자증권,더 높이 뛰기 위한 도움닫기,Buy,550000,366500,https://m.stock.naver.com/research/company/98258,,,,
+98247,2026-11-16,004370,농심,하나증권,3Q26 Re: 시장 기대 하회,Buy,540000,366500,https://m.stock.naver.com/research/company/98247,,,,
+98245,2026-11-16,251970,펌텍코리아,유안타증권,"비수기 없는 성장, 용기 부족은 기회",Buy,108000,73900,https://m.stock.naver.com/research/company/98245,,,,
+98242,2026-11-16,004370,농심,유안타증권,예상보다 깊어진 비용 부담,Buy,570000,366500,https://m.stock.naver.com/research/company/98242,,,,
+98241,2026-11-16,006800,미래에셋증권,유안타증권,"어느정도 예상된 손실, 4분기도 비용 부담",Buy,40000,21350,https://m.stock.naver.com/research/company/98241,,,,
+98237,2026-11-16,319660,피에스케이,대신증권,이익 전망 상향,Buy,150000,97800,https://m.stock.naver.com/research/company/98237,,,,
+98229,2026-11-16,263860,지니언스,유진투자증권,3Q26 Review: AI보안 투자 수요 증가 수혜 지속,없음,,34300,https://m.stock.naver.com/research/company/98229,서프라이즈 수혜,모멘텀,"3Q26 영업이익 38억원(+253% YoY), 매출 +32%, 컨센서스 대비 크게 상회, 4Q 성수기 기대","공공·국방 수주 의존, 분기 실적 변동성"
+98227,2026-11-16,372910,한컴라이프케어,유진투자증권,3Q26 Review: 여전히 방산 사업이 성장을 견인,없음,,1615,https://m.stock.naver.com/research/company/98227,,,,
+98216,2026-11-16,092870,엑시콘,신한투자증권,"2027년, 두 개의 성장 엔진",없음,,61700,https://m.stock.naver.com/research/company/98216,레벨업,근거 약함,,본문 요약이 짧아 구체 수치 근거 부족
+98198,2026-11-16,004370,농심,키움증권,내년 해외 매출 반등과 가격 전가력에 주목,Buy,580000,366500,https://m.stock.naver.com/research/company/98198,,,,
 98166,2026-11-13,263860,지니언스,유안타증권,더 이상 늦을 수 없는 보안투자,없음,,31350,https://m.stock.naver.com/research/company/98166,,,,
 98164,2026-11-13,009150,삼성전기,SK증권,"NDR 후기: ""가격 저항이 없다 & 기판 탑 2 도약”",없음,,,https://m.stock.naver.com/research/company/98164,,,,
 98163,2026-11-13,095340,ISC,SK증권,시의적절한 증설 대응,매수,200000,143400,https://m.stock.naver.com/research/company/98163,,,,
@@ -77,6 +87,8 @@ id,date,code,name,broker,title,opinion,goal,price,link,hits,verdict,note,risk
 97758,2026-11-06,071050,한국금융지주,iM증권,3Q26 Review: 운용 중심으로 부진한 실적 시현,Buy,198000,147100,https://m.stock.naver.com/research/company/97758,,,,
 97757,2026-11-06,071050,한국금융지주,SK증권,"3Q26 Review: 감익 예상은 했지만, 환율까지 억까해",매수,274000,147100,https://m.stock.naver.com/research/company/97757,,,,
 97753,2026-11-06,282330,BGF리테일,신한투자증권,이제는 편의점의 시간,매수,170000,150200,https://m.stock.naver.com/research/company/97753,,,,
+97751,2026-11-06,041830,인바디,미래에셋증권,쌀쌀해진 시장에 뜨거운 어닝 서프라이즈,매수,100000,57300,https://m.stock.naver.com/research/company/97751,서프라이즈,모멘텀,"3Q26 영업이익 193억원(+97% YoY, 마진 27%), 북미 매출 +34%","국내 매출 -15%, 의료기기 -5%로 일부 부문 부진"
+97750,2026-11-06,041830,인바디,키움증권,"환율 내려, 이익 올려",없음,,57300,https://m.stock.naver.com/research/company/97750,,,,
 97748,2026-11-06,033780,KT&G,신한투자증권,"위기에는 KT&G, 주주에게는 5조원",매수,230000,194200,https://m.stock.naver.com/research/company/97748,신성장,근거 약함,주주환원 논리 중심,낮은 ROE
 97747,2026-11-06,033780,KT&G,키움증권,2026~30년 연평균 두 자릿수 DPS 성장률 기대,Buy,264000,194200,https://m.stock.naver.com/research/company/97747,,,,
 97745,2026-11-06,282330,BGF리테일,키움증권,4분기 이후 동일점 성장률 변화에 주목,Buy,182000,150200,https://m.stock.naver.com/research/company/97745,,,,
