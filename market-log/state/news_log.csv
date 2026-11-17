@@ -1,4 +1,11 @@
 first_seen,pub,ticker,name,impact,type,title,press,link,summary
+2026-11-17,2026-11-18 08:30,NVDA,엔비디아,호재,실적·가이던스,"젠슨 황 떠난 엔비디아, 첫 실적 발표서 '어닝 서프라이즈'⋯매출 103% 급...",autodaily.co.kr,https://www.autodaily.co.kr/news/articleView.html?idxno=602186,"젠슨 황이 떠난 뒤 첫 실적 발표에서 어닝 서프라이즈, 매출이 103% 늘었다는 보도(제목 기준)."
+2026-11-17,2026-11-18 08:30,NVDA,엔비디아,불확실,실적·가이던스,"[김대호 진단] 엔비디아 실적발표 ""매출총이익률 이상신호""",g-enews.com,https://www.g-enews.com/view.php?ud=202611180827147698906806b77b_1,실적 발표에서 매출총이익률에 이상 신호가 있다는 진단 칼럼(제목 기준).
+2026-11-17,2026-11-18 08:22,NVDA,엔비디아,호재,실적·가이던스,"엔비디아, 호실적에 시간 외 거래에서 주가 3%대 반등",ytn.co.kr,https://www.ytn.co.kr/_ln/0104_202611180822230755,호실적에 시간 외 거래에서 주가가 3%대 반등했다는 보도(제목 기준).
+2026-11-17,2026-11-18 08:19,NVDA,엔비디아,호재,수주·계약,"""엔비디아와 신규계약"" 삼성전기, 프리마켓서 7% 급등",newsis.com,https://www.newsis.com/view/NISX20261118_0003872434,엔비디아와 신규 계약을 맺은 삼성전기가 프리마켓에서 7% 급등했다는 보도(제목 기준).
+2026-11-17,2026-11-18 07:08,TSM,TSMC,악재,업황,AI 반도체에 거래 집중됐지만 주가는 뒷걸음…TSMC ADR 4% 급락,pinpointnews.co.kr,https://www.pinpointnews.co.kr/news/articleView.html?idxno=505227,AI 반도체에 거래가 집중됐지만 TSMC ADR이 4% 급락했다는 보도(제목 기준).
+2026-11-17,2026-11-18 05:22,SPCX,스페이스X,호재,업황,[美증시 특징주] 스페이스X 하락장서 홀로 급등…엔비디아 스페이스X 지...,mediapen.com,https://www.mediapen.com/news/view/1138137,하락장에서 스페이스X가 홀로 급등했다는 특징주 보도(제목 기준).
+2026-11-17,2026-11-17 09:26,BAC,뱅크오브아메리카,불확실,투자의견,"BofA, 이자이익 늘었지만 버크셔는 또 매도…주가 50달러 선",thefairnews.co.kr,https://www.thefairnews.co.kr/news/articleView.html?idxno=94432,BofA 이자이익은 늘었지만 버크셔가 또 매도했다는 보도(제목 기준).
 2026-11-16,2026-11-17 08:26,NVDA,엔비디아,악재,업황,[뉴욕증시] 엔비디아 쇼크에 일제히 급락…나스닥 2.49%↓,segyebiz.com,http://www.segyebiz.com/newsView/20261117502931?OutUrl=naver,뉴욕증시가 엔비디아 쇼크로 일제히 급락하고 나스닥이 2.49% 내렸다는 보도(제목 기준).
 2026-11-16,2026-11-17 08:24,NVDA,엔비디아,악재,경영진,"엔비디아, ‘이사회 젠슨 황 복귀 논의 없다’에 4%대 하락 [뉴욕증시 무...",etoday.co.kr,https://www.etoday.co.kr/news/view/2648970,엔비디아 이사회가 젠슨 황 복귀를 논의하지 않는다고 밝힌 뒤 4%대 하락했다는 보도(제목 기준).
 2026-11-16,2026-11-17 08:24,NVDA,엔비디아,악재,업황,엔비디아 4%·반도체지수 5% ↓…금·비트코인도 피난처 못 됐다,junggi.co.kr,https://www.junggi.co.kr/news/articleView.html?idxno=38524,"엔비디아 4%, 반도체지수 5% 하락했고 금·비트코인도 피난처가 되지 못했다는 보도(제목 기준)."
@@ -102,6 +109,3 @@ first_seen,pub,ticker,name,impact,type,title,press,link,summary
 2026-11-02,2026-11-03 07:06,AMZN,아마존,호재,투자의견,기술주 차익실현 속 엇갈린 뉴욕증시… 아마존 반등 vs 엔비디아·메타...,wowtv.co.kr,http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611030007&t=NN,아마존이 AWS 반등을 배경으로 목표주가 330달러 상향 소식과 함께 장 초반 반등했다는 보도.
 2026-11-02,2026-11-03 06:32,PLTR,팔란티어,호재,실적·가이던스,"[미국 특징주] 팔란티어, AI 수요에 4분기 매출 전망 예상 상회…연간 전...",newspim.com,https://www.newspim.com/news/view/20261103000029,팔란티어가 4분기 매출 전망을 예상 이상으로 내놨고 시간외 주가는 소폭 반등했다는 보도.
 2026-11-02,2026-11-03 04:58,CVX,셰브론,호재,투자의견,셰브론 3분기 순이익 180% 급증…월가 목표주가 잇단 상향,thefairnews.co.kr,https://www.thefairnews.co.kr/news/articleView.html?idxno=92803,셰브론 3분기 순이익이 180% 늘었고 웰스파고가 목표주가를 268달러로 올렸다는 보도.
-2026-11-02,2026-11-02 16:48,GOOGL,알파벳,악재,업황,"AI가 검색 삼킨다… 구글 상장 후 최대 폭락, 네이버 영향은",biz.chosun.com,https://biz.chosun.com/it-science/ict/2026/11/02/X5SX7AQBBJBZ7CU2P55YQ4EMLY/?utm_source=naver&utm_medium=original&utm_campaign=biz,알파벳 주가가 상장 이후 최대 폭으로 하락했다는 보도.
-2026-11-02,2026-11-02 12:21,SNDK,샌디스크,호재,투자의견,"모건스탠리 “샌디스크, AI 데이터센터가 키웠다”…파두에도 호재",edaily.co.kr,https://www.edaily.co.kr/News/Read?newsId=03076646645641784&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article,모건스탠리가 샌디스크에 비중확대 의견과 목표주가 1750달러를 유지했다는 보도.
-2026-11-02,2026-11-02 00:02,LLY,일라이릴리,호재,실적·가이던스,일라이릴리 3분기 매출 39% 늘어 244억달러…연간 전망 또 상향,thefairnews.co.kr,https://www.thefairnews.co.kr/news/articleView.html?idxno=92622,일라이릴리 3분기 매출이 39% 늘었고 실적 발표일 주가가 6.6% 올랐다는 보도.

@@ -1,22 +1,28 @@
 <callout icon="📰" color="gray_bg">
-	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-11-16, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
-	전체 106건(🟢 호재 23 · 🔴 악재 42 · 🟡 불확실 36 · ⚪ 중립 5), 오늘 새로 추가 8건, 이번 정리로 삭제 24건.
+	**종목 주요 뉴스** — 관심종목과 대형주 추적 종목(약 70개)의 네이버 뉴스 중 주가에 영향을 줄 만한 기사만 모았습니다. 기준일 2026-11-17, 발행일 기준 최근 14일치만 유지하고 그 전 기사는 자동으로 지웁니다. 영향 판단(호재·악재)은 기사 제목·요약만 보고 한 참고 분류이며 매수·매도 추천이 아닙니다.
+	전체 110건(🟢 호재 25 · 🔴 악재 42 · 🟡 불확실 38 · ⚪ 중립 5), 오늘 새로 추가 7건, 이번 정리로 삭제 3건.
 </callout>
 ## 오늘 새로 추가된 뉴스
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
-<tr><td>11-17 08:26</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>업황</td><td>[(뉴욕증시) 엔비디아 쇼크에 일제히 급락…나스닥 2.49%↓](http://www.segyebiz.com/newsView/20261117502931?OutUrl=naver)</td><td>segyebiz.com</td><td>뉴욕증시가 엔비디아 쇼크로 일제히 급락하고 나스닥이 2.49% 내렸다는 보도(제목 기준).</td></tr>
-<tr><td>11-17 08:24</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>경영진</td><td>[엔비디아, ‘이사회 젠슨 황 복귀 논의 없다’에 4%대 하락 (뉴욕증시 무...](https://www.etoday.co.kr/news/view/2648970)</td><td>etoday.co.kr</td><td>엔비디아 이사회가 젠슨 황 복귀를 논의하지 않는다고 밝힌 뒤 4%대 하락했다는 보도(제목 기준).</td></tr>
-<tr><td>11-17 08:24</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>업황</td><td>[엔비디아 4%·반도체지수 5% ↓…금·비트코인도 피난처 못 됐다](https://www.junggi.co.kr/news/articleView.html?idxno=38524)</td><td>junggi.co.kr</td><td>엔비디아 4%, 반도체지수 5% 하락했고 금·비트코인도 피난처가 되지 못했다는 보도(제목 기준).</td></tr>
-<tr><td>11-17 08:22</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>소송·규제</td><td>["젠슨 황 없는 엔비디아, 수출통제 강화까지 겹쳤다"](https://www.gukjenews.com/news/articleView.html?idxno=3754115)</td><td>gukjenews.com</td><td>젠슨 황 부재에 수출통제 강화까지 겹쳤다는 보도(제목 기준).</td></tr>
-<tr><td>11-16 23:12</td><td>SPCX 씨티그룹</td><td>🟡 불확실</td><td>투자의견</td><td>[스페이스X(SPCX) 목표주가 280달러로…씨티 "상승 여력 101%"](http://coinreaders.com/270718)</td><td>coinreaders.com</td><td>씨티가 스페이스X(SPCX) 목표주가를 280달러로 제시했다는 보도(제목 기준, 종목 연관은 확인 필요).</td></tr>
-<tr><td>11-16 19:12</td><td>PLTR 팔란티어</td><td>🟢 호재</td><td>투자의견</td><td>[팔란티어 목표가 248달러로 상향…필립증권 전망, 8월 11일보다 15.3%](https://www.tokenpost.kr/news/market/439020)</td><td>tokenpost.kr</td><td>필립증권이 팔란티어 목표가를 248달러로 상향했다는 보도(제목 기준).</td></tr>
-<tr><td>11-16 15:38</td><td>TSM TSMC</td><td>🔴 악재</td><td>업황</td><td>[(종합) 대만 TSMC 5%, 대만 증시 6%↓...아시아 증시, 반도체주 중심으로...](http://www.beyondpost.co.kr/view.php?ud=2026111615281459992aaae0046f_30)</td><td>beyondpost.co.kr</td><td>TSMC 5%, 대만 증시 6% 하락 등 아시아 증시가 반도체주 중심으로 약세였다는 보도(제목 기준).</td></tr>
-<tr><td>11-16 15:18</td><td>GOOGL 알파벳</td><td>🟢 호재</td><td>수주·계약</td><td>[구글 TPU의 엔비디아 역습…오픈AI·앤스로픽 대규모 주문 확보](https://www.g-enews.com/view.php?ud=202611161513372660e250e8e188_1)</td><td>g-enews.com</td><td>구글 TPU가 오픈AI·앤스로픽의 대규모 주문을 확보했다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 08:30</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>실적·가이던스</td><td>[젠슨 황 떠난 엔비디아, 첫 실적 발표서 '어닝 서프라이즈'⋯매출 103% 급...](https://www.autodaily.co.kr/news/articleView.html?idxno=602186)</td><td>autodaily.co.kr</td><td>젠슨 황이 떠난 뒤 첫 실적 발표에서 어닝 서프라이즈, 매출이 103% 늘었다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 08:30</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[(김대호 진단) 엔비디아 실적발표 "매출총이익률 이상신호"](https://www.g-enews.com/view.php?ud=202611180827147698906806b77b_1)</td><td>g-enews.com</td><td>실적 발표에서 매출총이익률에 이상 신호가 있다는 진단 칼럼(제목 기준).</td></tr>
+<tr><td>11-18 08:22</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>실적·가이던스</td><td>[엔비디아, 호실적에 시간 외 거래에서 주가 3%대 반등](https://www.ytn.co.kr/_ln/0104_202611180822230755)</td><td>ytn.co.kr</td><td>호실적에 시간 외 거래에서 주가가 3%대 반등했다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 08:19</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>수주·계약</td><td>["엔비디아와 신규계약" 삼성전기, 프리마켓서 7% 급등](https://www.newsis.com/view/NISX20261118_0003872434)</td><td>newsis.com</td><td>엔비디아와 신규 계약을 맺은 삼성전기가 프리마켓에서 7% 급등했다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 07:08</td><td>TSM TSMC</td><td>🔴 악재</td><td>업황</td><td>[AI 반도체에 거래 집중됐지만 주가는 뒷걸음…TSMC ADR 4% 급락](https://www.pinpointnews.co.kr/news/articleView.html?idxno=505227)</td><td>pinpointnews.co.kr</td><td>AI 반도체에 거래가 집중됐지만 TSMC ADR이 4% 급락했다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 05:22</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>업황</td><td>[(美증시 특징주) 스페이스X 하락장서 홀로 급등…엔비디아 스페이스X 지...](https://www.mediapen.com/news/view/1138137)</td><td>mediapen.com</td><td>하락장에서 스페이스X가 홀로 급등했다는 특징주 보도(제목 기준).</td></tr>
+<tr><td>11-17 09:26</td><td>BAC 뱅크오브아메리카</td><td>🟡 불확실</td><td>투자의견</td><td>[BofA, 이자이익 늘었지만 버크셔는 또 매도…주가 50달러 선](https://www.thefairnews.co.kr/news/articleView.html?idxno=94432)</td><td>thefairnews.co.kr</td><td>BofA 이자이익은 늘었지만 버크셔가 또 매도했다는 보도(제목 기준).</td></tr>
 </table>
 ## 최근 14일 전체 (최신순)
 <table header-row="true">
 <tr><td>발행(KST)</td><td>종목</td><td>영향</td><td>유형</td><td>기사</td><td>언론사</td><td>한 줄 요약</td></tr>
+<tr><td>11-18 08:30</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>실적·가이던스</td><td>[젠슨 황 떠난 엔비디아, 첫 실적 발표서 '어닝 서프라이즈'⋯매출 103% 급...](https://www.autodaily.co.kr/news/articleView.html?idxno=602186)</td><td>autodaily.co.kr</td><td>젠슨 황이 떠난 뒤 첫 실적 발표에서 어닝 서프라이즈, 매출이 103% 늘었다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 08:30</td><td>NVDA 엔비디아</td><td>🟡 불확실</td><td>실적·가이던스</td><td>[(김대호 진단) 엔비디아 실적발표 "매출총이익률 이상신호"](https://www.g-enews.com/view.php?ud=202611180827147698906806b77b_1)</td><td>g-enews.com</td><td>실적 발표에서 매출총이익률에 이상 신호가 있다는 진단 칼럼(제목 기준).</td></tr>
+<tr><td>11-18 08:22</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>실적·가이던스</td><td>[엔비디아, 호실적에 시간 외 거래에서 주가 3%대 반등](https://www.ytn.co.kr/_ln/0104_202611180822230755)</td><td>ytn.co.kr</td><td>호실적에 시간 외 거래에서 주가가 3%대 반등했다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 08:19</td><td>NVDA 엔비디아</td><td>🟢 호재</td><td>수주·계약</td><td>["엔비디아와 신규계약" 삼성전기, 프리마켓서 7% 급등](https://www.newsis.com/view/NISX20261118_0003872434)</td><td>newsis.com</td><td>엔비디아와 신규 계약을 맺은 삼성전기가 프리마켓에서 7% 급등했다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 07:08</td><td>TSM TSMC</td><td>🔴 악재</td><td>업황</td><td>[AI 반도체에 거래 집중됐지만 주가는 뒷걸음…TSMC ADR 4% 급락](https://www.pinpointnews.co.kr/news/articleView.html?idxno=505227)</td><td>pinpointnews.co.kr</td><td>AI 반도체에 거래가 집중됐지만 TSMC ADR이 4% 급락했다는 보도(제목 기준).</td></tr>
+<tr><td>11-18 05:22</td><td>SPCX 스페이스X</td><td>🟢 호재</td><td>업황</td><td>[(美증시 특징주) 스페이스X 하락장서 홀로 급등…엔비디아 스페이스X 지...](https://www.mediapen.com/news/view/1138137)</td><td>mediapen.com</td><td>하락장에서 스페이스X가 홀로 급등했다는 특징주 보도(제목 기준).</td></tr>
+<tr><td>11-17 09:26</td><td>BAC 뱅크오브아메리카</td><td>🟡 불확실</td><td>투자의견</td><td>[BofA, 이자이익 늘었지만 버크셔는 또 매도…주가 50달러 선](https://www.thefairnews.co.kr/news/articleView.html?idxno=94432)</td><td>thefairnews.co.kr</td><td>BofA 이자이익은 늘었지만 버크셔가 또 매도했다는 보도(제목 기준).</td></tr>
 <tr><td>11-17 08:26</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>업황</td><td>[(뉴욕증시) 엔비디아 쇼크에 일제히 급락…나스닥 2.49%↓](http://www.segyebiz.com/newsView/20261117502931?OutUrl=naver)</td><td>segyebiz.com</td><td>뉴욕증시가 엔비디아 쇼크로 일제히 급락하고 나스닥이 2.49% 내렸다는 보도(제목 기준).</td></tr>
 <tr><td>11-17 08:24</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>경영진</td><td>[엔비디아, ‘이사회 젠슨 황 복귀 논의 없다’에 4%대 하락 (뉴욕증시 무...](https://www.etoday.co.kr/news/view/2648970)</td><td>etoday.co.kr</td><td>엔비디아 이사회가 젠슨 황 복귀를 논의하지 않는다고 밝힌 뒤 4%대 하락했다는 보도(제목 기준).</td></tr>
 <tr><td>11-17 08:24</td><td>NVDA 엔비디아</td><td>🔴 악재</td><td>업황</td><td>[엔비디아 4%·반도체지수 5% ↓…금·비트코인도 피난처 못 됐다](https://www.junggi.co.kr/news/articleView.html?idxno=38524)</td><td>junggi.co.kr</td><td>엔비디아 4%, 반도체지수 5% 하락했고 금·비트코인도 피난처가 되지 못했다는 보도(제목 기준).</td></tr>
@@ -120,9 +126,6 @@
 <tr><td>11-03 07:06</td><td>AMZN 아마존</td><td>🟢 호재</td><td>투자의견</td><td>[기술주 차익실현 속 엇갈린 뉴욕증시… 아마존 반등 vs 엔비디아·메타...](http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611030007&t=NN)</td><td>wowtv.co.kr</td><td>아마존이 AWS 반등을 배경으로 목표주가 330달러 상향 소식과 함께 장 초반 반등했다는 보도.</td></tr>
 <tr><td>11-03 06:32</td><td>PLTR 팔란티어</td><td>🟢 호재</td><td>실적·가이던스</td><td>[(미국 특징주) 팔란티어, AI 수요에 4분기 매출 전망 예상 상회…연간 전...](https://www.newspim.com/news/view/20261103000029)</td><td>newspim.com</td><td>팔란티어가 4분기 매출 전망을 예상 이상으로 내놨고 시간외 주가는 소폭 반등했다는 보도.</td></tr>
 <tr><td>11-03 04:58</td><td>CVX 셰브론</td><td>🟢 호재</td><td>투자의견</td><td>[셰브론 3분기 순이익 180% 급증…월가 목표주가 잇단 상향](https://www.thefairnews.co.kr/news/articleView.html?idxno=92803)</td><td>thefairnews.co.kr</td><td>셰브론 3분기 순이익이 180% 늘었고 웰스파고가 목표주가를 268달러로 올렸다는 보도.</td></tr>
-<tr><td>11-02 16:48</td><td>GOOGL 알파벳</td><td>🔴 악재</td><td>업황</td><td>[AI가 검색 삼킨다… 구글 상장 후 최대 폭락, 네이버 영향은](https://biz.chosun.com/it-science/ict/2026/11/02/X5SX7AQBBJBZ7CU2P55YQ4EMLY/?utm_source=naver&utm_medium=original&utm_campaign=biz)</td><td>biz.chosun.com</td><td>알파벳 주가가 상장 이후 최대 폭으로 하락했다는 보도.</td></tr>
-<tr><td>11-02 12:21</td><td>SNDK 샌디스크</td><td>🟢 호재</td><td>투자의견</td><td>[모건스탠리 “샌디스크, AI 데이터센터가 키웠다”…파두에도 호재](https://www.edaily.co.kr/News/Read?newsId=03076646645641784&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article)</td><td>edaily.co.kr</td><td>모건스탠리가 샌디스크에 비중확대 의견과 목표주가 1750달러를 유지했다는 보도.</td></tr>
-<tr><td>11-02 00:02</td><td>LLY 일라이릴리</td><td>🟢 호재</td><td>실적·가이던스</td><td>[일라이릴리 3분기 매출 39% 늘어 244억달러…연간 전망 또 상향](https://www.thefairnews.co.kr/news/articleView.html?idxno=92622)</td><td>thefairnews.co.kr</td><td>일라이릴리 3분기 매출이 39% 늘었고 실적 발표일 주가가 6.6% 올랐다는 보도.</td></tr>
 </table>
 ## 읽는 법과 한계
 - 기사 후보는 종목명(별칭)이 제목에 있고 실적·수주·소송·규제·목표가·인수합병 등 영향 키워드가 있는 것만 봅니다. 키워드가 없는 기사나 시황 기사 속 단순 언급은 빠질 수 있습니다.
